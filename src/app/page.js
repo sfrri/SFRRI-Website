@@ -1,97 +1,72 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import { News } from './components/News.js'
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
+import theme from './theme';
+import { News1, News2 } from './components/News.js'
+import Paper from '@mui/material/Paper';
+import HomeNews from './components/HomeNews.js'
+import Grid from '@mui/material/Grid';
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <News />
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+export default async function HomePage() {
+    "use server";
+    return (
+        <main>
+            <HomeNews>
+                <Grid container spacing={2} sx={{ position: 'relative', }}>
+                    <Grid item xs={12}>
+                        <h2>Latest News</h2>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <News1 />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <News2 />
+                    </Grid>
+                </Grid>
+            </HomeNews>
+            <Grid container spacing={2} sx={{ position: 'relative', marginBottom: '20px' }}>
+                <Grid item xs={12} sm={6} md={3}>
+                    <Paper variant="padded" />
+                </Grid>
+                <Grid item xs={12} sm={6} md={3}>
+                    <Paper variant="padded" />
+                </Grid>
+                <Grid item xs={12} sm={6} md={3}>
+                    <Paper variant="padded" />
+                </Grid>
+                <Grid item xs={12} sm={6} md={3}>
+                    <Paper variant="padded" />
+                </Grid>
+            </Grid>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            <Paper variant="padded" >
+                <Grid container spacing={2} sx={{ position: 'relative', marginBottom: '20px' }}>
+                    <Grid item xs={12} sm={6}>
+                        <h3>About</h3>
+                        <p>The Society for Free Radical Research founded in the United Kingdom in 1982 is an International Society with the following rules (as amended by resolution of the members dated September 11, 1998). The International Society is a charitable voluntary, non-profit making institution.</p>
+                        <p>The object of the International Society is to advance education in free radical processes with particular reference to those of industrial and medical importance, such education being for the benefit of the public.</p>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                        <Paper variant="padded" />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <h3>Objectives</h3>
+                        <ul>
+                            <li>to provide continuing education and training to scientists with an active interest in Free Radical Research</li>
+                            <li>to provide a forum for discussions</li>
+                            <li>to receive and apply donations, subscriptions and funds from persons or organizations</li>
+                            <li>to invest and deal with the International Society's money not immediately required for its objects in or upon any investments, securities or property;</li>
+                            <li>to do all other lawful things necessary to advance the object</li>
+                            <li>to promote research and publication of its beneficial findings</li>
+                        </ul>
+                    </Grid>
+                </Grid>
+            </Paper>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+        </main>
+    );
 }
