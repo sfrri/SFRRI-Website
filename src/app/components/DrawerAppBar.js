@@ -25,14 +25,14 @@ import theme from '../theme';
 const drawerWidth = 240;
 const navItems = {
     'Home': '',
-    'Society': 'Society',
-    'SFRR Societies': 'SFRR-Societies',
-    'Membership': 'Membership',
-    'Conferences': 'Conferences',
-    'Related Meetings': 'Related-Meetings',
-    'SFRRI Outreach': 'SFRRI-Outreach',
-    'Journals': 'Journals',
-    'Education': 'Education',
+    'Society': 'society',
+    'SFRR Societies': 'sfrr-societies',
+    'Membership': 'membership',
+    'Conferences': 'conferences',
+    'Related Meetings': 'related-meetings',
+    'SFRRI Outreach': 'sfrri-outreach',
+    'Journals': 'journals',
+    'Education': 'education',
 };
 
 let entries = Object.entries(navItems)
