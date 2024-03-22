@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import Paper from '@mui/material/Paper';
 
 export const News1 = () => {
     return (
-      <div>
+        <>
         <p><Link href='/presidential-address'>President’s Welcome Message 2024</Link></p>
         <p><a href="downloads/SFRRI_Letter_to_Regional_SFRR_Executives_and_Member_12-09-23.pdf">President's Letter | Extension of SFRRI Officers Term for 1-year</a></p>
         <p>SFRRI 2023 Award Lectures</p>
@@ -33,13 +34,13 @@ export const News1 = () => {
           <span className="italic">Further information:</span> <a href="https://sfrbm.org/" target="_blank">sfrbm.org</a>
         </p>
         <hr />
-      </div>
+      </>
       )
   }
 
 export const News2 = () => {
     return (
-      <div>
+        <>
         <p>
           <span className="italic">May 29-31, 2024</span><br />
           <span className="bold">16<sup>th</sup> International Conference on Reactive Oxygen and Nitrogen Species in Plants</span><br />
@@ -74,7 +75,7 @@ export const News2 = () => {
         <p style={{ fontVariant: 'small-caps', textTransform: 'capitalize', }}>
           <a href="downloads/In_Memoriam_William_Austin_Pryor_(1929-2019).pdf">William Austin Pryor</a>
         </p>
-      </div>
+        </>
     )
 }
 
