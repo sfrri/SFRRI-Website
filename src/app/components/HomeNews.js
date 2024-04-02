@@ -8,10 +8,13 @@ export default async function HomePage({children}) {
             variant="padded" 
             className={'MuiPaper-elevation3'}
             sx={{
-                marginBottom: '20px',
+                marginBottom: '10px',
                 backgroundImage: 'url(/static/images/Hinge_top_vials_on_a_vial_rack.jpg)',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
                 color: '#fff',
                 position: 'relative',
+                borderRadius: '3px',
                 '&::before': {
                     content: '""',
                     position: 'absolute',
@@ -21,7 +24,10 @@ export default async function HomePage({children}) {
                     left: 0,
                     backgroundColor: 'rgba(57, 51, 39, 0.65)',
                     backgroundColor: 'rgba(5, 0, 10, 0.75)',
-                }
+                },
+                '& hr': {
+                    display: 'none',
+                },
             }}
         >
             {children}
