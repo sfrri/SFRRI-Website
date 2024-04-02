@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { Paper, Link } from '@mui/material/';
-import PaperPadded from '../components/PaperPadded';
-
 
 export default async function PresidentialAddress() {
     "use server";
