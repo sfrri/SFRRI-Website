@@ -78,7 +78,7 @@ function DrawerAppBar(props) {
     const [open, setOpen] = React.useState(0);
 
     const handleClickListCollapse = (num) => {
-        open === 0 ? setOpen(num) : setOpen(0)
+        open === 0 ? setOpen(num) : open === num ? setOpen(0) : setOpen(num)
     };
     
     const handleDrawerToggle = () => {
@@ -101,9 +101,11 @@ function DrawerAppBar(props) {
                         </ListItemButton>
                         <Collapse in={open === i} timeout="auto" unmountOnExit>
                             <List component="div" disablePadding>
-                            <ListItemButton component={Link} href={`/${kebabize(item.name)}`} sx={{ pl: 4 }}>
-                                <ListItemText onClick={handleDrawerToggle} primary="Starred" />
-                            </ListItemButton>
+                                {item.subMenu.map(subMeunItem => {
+                                    return <ListItemButton component={Link} href={`/${kebabize(subMeunItem.name)}`} sx={{ pl: 4 }}>
+                                    <ListItemText onClick={handleDrawerToggle} primary={subMeunItem.name} />
+                                </ListItemButton>
+                                })}
                             </List>
                         </Collapse>
                     </React.Fragment>
