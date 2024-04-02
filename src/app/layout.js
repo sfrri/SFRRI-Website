@@ -5,7 +5,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 import CssBaseline from '@mui/material/CssBaseline';
 //import { AppBar, Toolbar } from "@mui/material";
-import DrawerAppBar from './components/DrawerAppBar.js'
+import DrawerAppBar from './components/DrawerAppBar.js';
 import { Container, Box, Typography, Link, Toolbar } from "@mui/material";
 import Footer from './components/Footer.js';
 
@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
                             />
                             {/*<AppBar sx={{display: {xs: 'block', lg: 'none'}}} />
                         <Toolbar  sx={{display: {xs: 'none', lg: 'block'}}}/>*/}
-                            <Container maxWidth="lg" sx={{ marginTop: '15px', }}>
+                            <Container maxWidth="lg" sx={{ marginTop: '10px', }}>
                                 {children}
                             </Container>
                             <Box component="footer">
