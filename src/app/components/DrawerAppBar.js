@@ -101,9 +101,9 @@ function DrawerAppBar(props) {
                         </ListItemButton>
                         <Collapse in={open === i} timeout="auto" unmountOnExit>
                             <List component="div" disablePadding>
-                                {item.subMenu.map(subMeunItem => {
-                                    return <ListItemButton component={Link} href={`/${kebabize(subMeunItem.name)}`} sx={{ pl: 4 }}>
-                                    <ListItemText onClick={handleDrawerToggle} primary={subMeunItem.name} />
+                                {item.subMenu.map(subMenuItem => {
+                                    return <ListItemButton component={Link} href={`/${kebabize(subMenuItem.name)}`} sx={{ pl: 4 }} key={subMenuItem.name}>
+                                    <ListItemText onClick={handleDrawerToggle} primary={subMenuItem.name} />
                                 </ListItemButton>
                                 })}
                             </List>
