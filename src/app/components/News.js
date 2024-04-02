@@ -4,8 +4,8 @@ import Paper from '@mui/material/Paper';
 export const News1 = () => {
     return (
         <>
-        <p><Link href='/presidential-address'>President's Welcome Message 2024</Link></p>
-        <p><a href="downloads/SFRRI_Letter_to_Regional_SFRR_Executives_and_Member_12-09-23.pdf" target="_blank">President's Letter | Extension of SFRRI Officers Term for 1-year</a></p>
+        <p><Link href='/presidential-address'>President&apos;s Welcome Message 2024</Link></p>
+        <p><a href="downloads/SFRRI_Letter_to_Regional_SFRR_Executives_and_Member_12-09-23.pdf" target="_blank">President&apos;s Letter | Extension of SFRRI Officers Term for 1-year</a></p>
         <p>SFRRI 2023 Award Lectures</p>
         <ul>
             <li><a href="https://lpi.oregonstate.edu/faculty-staff/maret-traber" target="_blank">Prof. Maret Traber</a> - Trevor Slater Award</li>
@@ -22,7 +22,7 @@ export const News1 = () => {
         <hr />
         <p>
           <span className="italic">June 5-7, 2024</span><br />
-          <span className="bold">Society for Free Radical Research - Europe Meeting 'From Molecules to Tissues: Redox Biology in Action'</span><br />
+          <span className="bold">Society for Free Radical Research - Europe Meeting &apos;From Molecules to Tissues: Redox Biology in Action&apos;</span><br />
           <span className="italic">Location:</span> Istanbul, Turkey<br />
           <span className="italic">Further information:</span> <a href="http://redoxistanbul2024.com" target="_blank">http://redoxistanbul2024.com</a>
         </p>
