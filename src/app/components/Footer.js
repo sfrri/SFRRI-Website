@@ -61,6 +61,8 @@ export default async function Footer() {
                             <Image
                                 src={`/static/images/SFRRI-footer-logo.png?w=164&h=164&fit=crop&auto=format`}
                                 alt="SFRRI footer logo"
+                                width={275}
+                                height={80}
                                 loading="lazy"
                                 draggable="false"
                                 sx={{
