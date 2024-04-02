@@ -31,7 +31,7 @@ const colLinks = [
 const navColumns = [];
 for (let i = 0; i < colLinks.length; i++) {
     navColumns.push(
-        <Grid item xs={12} sm={6} md={3} key={i} sx={{borderLeft: '1px solid rgba(255,255,255,0.5)', paddingTop: '0 !important', marginTop:'16px', }}>
+        <Grid item xs={12} sm={6} md={2.8} key={i} sx={{borderLeft: {xs: 'none', sm: '1px solid rgba(255,255,255,0.5)',}, paddingTop: '0 !important', marginTop:'16px', }}>
             <List>
                 {colLinks[i].map(item =>
                     <ListItem key={item} sx={{listStyle: 'none', }}><Link variant='HomeNav' href={`/${kebabize(item)}`}>{item}</Link></ListItem>
@@ -56,25 +56,32 @@ export default async function Footer() {
         >
             <Container maxWidth="lg">
                 <Grid container spacing={2} sx={{ position: 'relative' }}>
-                    <Grid item xs={12} sm={6} md={3} sx={{ display: 'flex', alignItems: 'center', }}>
-                        <Link href="/" sx={{ display: 'inline-block' }}>
-                            <Image
-                                src={`/static/images/SFRRI-footer-logo.png?w=164&h=164&fit=crop&auto=format`}
-                                alt="SFRRI footer logo"
-                                width={275}
-                                height={80}
-                                loading="lazy"
-                                draggable="false"
-                                sx={{
-                                    marginRight: '20px',
-                                    opacity: 0.5,
+                    <Grid item xs={12} sm={6} md={3.4} sx={{ paddingRight: '32px',/*display: 'flex', alignItems: 'center', justifyContent: 'space-evenly',*/ }}>
+                        <Link href="/">
+                        <Image
+                            src={`/static/images/SFRRI-footer-logo.png`}
+                            alt="SFRRI footer logo"
+                            layout="responsive"
+                            width={275}
+                            height={80}/**/
+                            loading="lazy"
+                            draggable="false"
+                            style={{
+                                width: 'auto',
+                                maxWidth: '275px',
+                                margin:'32px 0 0 0',
+                                //marginRight: '20px',
+                                //minWidth: '200px',
+                                //display: {xs: 'block', ml: 'none', lg: 'block',},
+                                //objectFit: 'contain',
+                                /*opacity: 0.5,
+                                transition: 'opacity 300ms',
+                                '&:hover': {
+                                    opacity: 1,
                                     transition: 'opacity 300ms',
-                                    '&:hover': {
-                                        opacity: 1,
-                                        transition: 'opacity 300ms',
-                                    }
-                                }}
-                            />
+                                }*/
+                            }}
+                        />
                         </Link>
                     </Grid>
                     {navColumns}
