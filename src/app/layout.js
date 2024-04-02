@@ -7,6 +7,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 //import { AppBar, Toolbar } from "@mui/material";
 import DrawerAppBar from './components/DrawerAppBar.js'
 import { Container, Box, Typography, Link, Toolbar } from "@mui/material";
+import Footer from './components/Footer.js';
 
 function Copyright() {
     return (
@@ -52,23 +53,21 @@ export default function RootLayout({ children }) {
                             <Container maxWidth="lg" sx={{ marginTop: '15px', }}>
                                 {children}
                             </Container>
-                            <Box
-                                component="footer"
-                                sx={{
-                                    py: 3,
-                                    px: 2,
-                                    mt: 'auto',
-                                    //backgroundColor: backgroundColor(theme),
-                                    backgroundColor: '#111',
-                                    marginTop: '20px',
-                                }}
-                            >
-                                <Container maxWidth="lg">
-                                    <Typography variant="body1">
-                                        My sticky footer can be found here.
-                                    </Typography>
-                                    <Copyright />
-                                </Container>
+                            <Box component="footer">
+                                <Footer />
+                                <Box
+                                    sx={{
+                                        py: 3,
+                                        px: 2,
+                                        mt: 'auto',
+                                        //backgroundColor: backgroundColor(theme),
+                                        backgroundColor: '#111',
+                                    }}
+                                >
+                                    <Container maxWidth="lg">
+                                        <Copyright />
+                                    </Container>
+                                </Box>
                             </Box>
                         </Box>
                     </ThemeProvider>
