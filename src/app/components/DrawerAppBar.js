@@ -23,37 +23,39 @@ import BasicMenu from './BasicMenu';
 import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import { Container } from '@mui/material';
+import Image from 'next/image';
 
 const drawerWidth = 240;
 const navItems = [
-    {name: 'Home'},
+    { name: 'Home' },
     {
-        name: 'Society', 
-        subMenu:[
-            {name: 'Presidential Address'}, 
-            {name: 'SFRRI Executive'}, 
-            {name: 'Past Presidents'}, 
-            {name: 'History'}, 
-            {name: 'Governance & Byelaws'}, 
-            {name: 'Trevor Slater Award & Fellowships'}, 
-            {name: 'Obituaries'},
+        name: 'Society',
+        subMenu: [
+            { name: 'Presidential Address' },
+            { name: 'SFRRI Executive' },
+            { name: 'Past Presidents' },
+            { name: 'History' },
+            { name: 'Governance & Byelaws' },
+            { name: 'Trevor Slater Award & Fellowships' },
+            { name: 'Obituaries' },
         ]
     },
-    {name: 'SFRR Societies'},
-    {name: 'Membership'},
+    { name: 'SFRR Societies' },
+    { name: 'Membership' },
     {
-        name: 'Conferences', 
-        subMenu:[
-            {name:'Future SFRRI Conferences'},
-            {name: 'Past SFRRI Conferences'},
-            {name: 'SFRRI Related Conferences'},
-            {name: 'Rules for Conference Organisation'},
+        name: 'Conferences',
+        subMenu: [
+            { name: 'Future SFRRI Conferences' },
+            { name: 'Past SFRRI Conferences' },
+            { name: 'SFRRI Related Conferences' },
+            { name: 'Rules for Conference Organisation' },
         ]
     },
-    {name: 'Related Meetings'},
-    {name: 'SFRRI Outreach'},
-    {name: 'Journals'},
-    {name: 'Education'},
+    { name: 'Related Meetings' },
+    { name: 'SFRRI Outreach' },
+    { name: 'Journals' },
+    { name: 'Education' },
 ];
 
 function HideOnScroll(props) {
@@ -80,45 +82,73 @@ function DrawerAppBar(props) {
     const handleClickListCollapse = (num) => {
         open === 0 ? setOpen(num) : open === num ? setOpen(0) : setOpen(num)
     };
-    
+
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
 
     const drawer = (
-        <Box sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                Society for Free Radical Research International
+        <Box sx={{ textAlign: 'center', background: '#222', }}>
+            <Typography variant="h6" sx={{
+                height: '172px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-around',
+                py: 2,
+                backgroundColor: '#447ac7',
+                background: 'radial-gradient(ellipse at top,#4282dd 0,#1d5097 90%)',
+            }}>
+                {/*Society for Free Radical Research International*/}
+                <Image
+                    src='/static/images/SFRRI-New-logo-no-mapx2.png'
+                    width={168}
+                    height={81}
+                    alt='SFRRI Logo'
+                />
             </Typography>
             <Divider />
-            <List>
+            <List
+                sx={{
+                    color: '#fff',
+                    background: '#222',
+                }}
+            >
                 {navItems.map((item, i) => (
                     item.subMenu != undefined ?
-                    <React.Fragment key={i}>
-                        <ListItemButton onClick={() => handleClickListCollapse(i)}>
-                            <ListItemText primary={item.name} />
-                            {open === i ? <ExpandLess /> : <ExpandMore />}
-                        </ListItemButton>
-                        <Collapse in={open === i} timeout="auto" unmountOnExit>
-                            <List component="div" disablePadding>
-                                {item.subMenu.map(subMenuItem => {
-                                    return <ListItemButton component={Link} href={`/${kebabize(subMenuItem.name)}`} sx={{ pl: 4 }} key={subMenuItem.name}>
-                                    <ListItemText onClick={handleDrawerToggle} primary={subMenuItem.name} />
+                        <React.Fragment key={item.name}>
+                            <ListItemButton onClick={() => handleClickListCollapse(i)}>
+                                <ListItemText primary={item.name} />
+                                {open === i ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <Collapse in={open === i} timeout="auto" unmountOnExit>
+                                <List component="div" disablePadding>
+                                    {item.subMenu.map(subMenuItem => {
+                                        return <React.Fragment key={subMenuItem.name}>
+                                            <Divider sx={{ background: '#333', }} />
+                                            <ListItemButton component={Link} href={`/${kebabize(subMenuItem.name)}`} sx={{ pl: 4 }}>
+                                                <ListItemText onClick={handleDrawerToggle} primary={subMenuItem.name} />
+                                            </ListItemButton>
+                                        </React.Fragment>
+                                    })}
+                                </List>
+                            </Collapse>
+                            <Divider sx={{ background: '#444', }} />
+                        </React.Fragment>
+                        :
+                        <>
+                            <ListItem key={item.name} disablePadding>
+                                <ListItemButton component={Link} href={`/${item.name === 'Home' ? '' : kebabize(item.name)}`} sx={{ textAlign: 'left' }}>
+                                    <ListItemText
+                                        onClick={handleDrawerToggle}
+                                        primary={item.name}
+                                        sx={{ display: 'flex', flexGrow: 1, }}
+                                    />
                                 </ListItemButton>
-                                })}
-                            </List>
-                        </Collapse>
-                    </React.Fragment>
-                    :
-                    <ListItem key={item.name} disablePadding>                       
-                            <ListItemButton component={Link} href={`/${item.name === 'Home' ? '' : kebabize(item.name)}`} sx={{ textAlign: 'left' }}>
-                                <ListItemText 
-                                    onClick={handleDrawerToggle} 
-                                    primary={item.name} 
-                                    sx={{display: 'flex', flexGrow: 1,}}
-                                />
-                            </ListItemButton>                       
-                    </ListItem>
+
+                            </ListItem>
+                            <Divider sx={{ background: '#444', }} />
+                        </>
                 ))}
             </List>
         </Box>
@@ -132,7 +162,7 @@ function DrawerAppBar(props) {
             <HideOnScroll {...props}>
                 <AppBar
                     sx={{
-                        height: '280px',
+                        height: { xs: '172px', lg: '280px', },
                         backgroundColor: '#111',
                         position: 'sticky',
                     }}
@@ -140,8 +170,9 @@ function DrawerAppBar(props) {
                 >
                     <Toolbar
                         sx={{
-                            flexDirection: 'column',
+                            flexDirection: { xs: 'row', lg: 'column' },
                             marginTop: 'auto',
+                            padding: { xs: '0 24px', lg: 0, },
                         }}
                     >
                         <IconButton
@@ -149,7 +180,7 @@ function DrawerAppBar(props) {
                             aria-label="open drawer"
                             edge="start"
                             onClick={handleDrawerToggle}
-                            sx={{ mr: 2, display: { lg: 'none' } }}
+                            sx={{ mr: 2, display: { lg: 'none' }, bottom: '8px', }}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -157,24 +188,27 @@ function DrawerAppBar(props) {
                             variant="h1"
                             component="div"
                             sx={{
+                                height: '70px',
+                                marginBottom: '10px',
                                 flexGrow: 1,
-                                display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },
-                                fontSize: '48px',
-                                background: 'url(/static/images/SFRRI-Logo.png) no-repeat',
-                                backgroundPosition: '0 2px',
+                                display: { xs: 'none', sm: 'block', md: 'block', lg: 'block' },
+                                //fontSize: '3rem',
+                                background: 'url(/static/images/SFRRI-Logox2.png) no-repeat',
+                                backgroundPosition: { xs: '0 -2px', lg: '0 2px', },
+                                backgroundSize: '70px',
                                 padding: '10px 0 10px 90px',
                             }}
                         >
                             <h1>Society for Free Radical Research International</h1>
                         </Typography>
-                        <Box sx={{ display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' } }}>
+                        <Box component={Container} sx={{ minWidth: '1200px', display: { xs: 'none', lg: 'flex' },/*flexDirection: 'row',*/ }}>
                             {navItems.map(item => (
-                                
+
                                 item.subMenu != undefined ?
 
-                                <BasicMenu name={item.name} subMenuItems={item.subMenu} key={item.name} />
-                                :
-                                <NavButton url={item.name === 'Home' ? '' : kebabize(item.name)} name={item.name} key={item.name} />
+                                    <BasicMenu name={item.name} subMenuItems={item.subMenu} key={item.name} />
+                                    :
+                                    <NavButton url={item.name === 'Home' ? '' : kebabize(item.name)} name={item.name} key={item.name} />
                             ))}
                         </Box>
                     </Toolbar>
@@ -191,7 +225,11 @@ function DrawerAppBar(props) {
                     }}
                     sx={{
                         display: { md: 'block', lg: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        '& .MuiDrawer-paper': {
+                            boxSizing: 'border-box',
+                            width: drawerWidth,
+                            background: '#222',
+                        },
                     }}
                 >
                     {drawer}
