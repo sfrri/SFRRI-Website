@@ -111,7 +111,7 @@ function DrawerAppBar(props) {
                     </React.Fragment>
                     :
                     <ListItem key={item.name} disablePadding>                       
-                            <ListItemButton component={Link} href={`/${kebabize(item.name)}`} sx={{ textAlign: 'left' }}>
+                            <ListItemButton component={Link} href={`/${item.name === 'Home' ? '' : kebabize(item.name)}`} sx={{ textAlign: 'left' }}>
                                 <ListItemText 
                                     onClick={handleDrawerToggle} 
                                     primary={item.name} 
@@ -174,7 +174,7 @@ function DrawerAppBar(props) {
 
                                 <BasicMenu name={item.name} subMenuItems={item.subMenu} key={item.name} />
                                 :
-                                <NavButton url={kebabize(item.name)} name={item.name} key={item.name} />
+                                <NavButton url={item.name === 'Home' ? '' : kebabize(item.name)} name={item.name} key={item.name} />
                             ))}
                         </Box>
                     </Toolbar>
