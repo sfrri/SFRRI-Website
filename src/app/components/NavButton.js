@@ -9,6 +9,8 @@ export const NavButton = ({url, name}) => {
             variant='HomeNav'
             href={`/${url}`}
             sx={{
+                flexGrow: 1,
+                height: '53px',
                 color: '#fff',
                 border: '1px solid #111',
                 borderBottom: '2px solid #111',
@@ -19,8 +21,9 @@ export const NavButton = ({url, name}) => {
                 fontSize: '18px',
                 textTransform: 'capitalize',
                 lineHeight: '50px',
-                padding: '0 18.33px',
-                padding: '0 15.86px',
+                //padding: '0 18.33px',
+                //padding: '0 15.86px',
+                //padding: '0 17.83px',
             }}
         >
             {name}

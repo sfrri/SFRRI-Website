@@ -27,7 +27,7 @@ export default async function HomePage() {
             <HomeNews sx={{ borderRadius: '3px',}}>
                 <Grid container spacing={1} sx={{ position: 'relative', borderRadius: '3px',}}>
                     <Grid item xs={12}>
-                        <h2>Latest News</h2>
+                        <h2 style={{fontSize: '3rem', letterSpacing: '-3px',}}>Latest News</h2>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <News1 />

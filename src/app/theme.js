@@ -36,7 +36,8 @@ const theme = createTheme({
             },*/
             style: ({ ownerState, theme }) => ({
                 padding: '30px',
-                boxShadow: theme.shadows[ownerState.elevation]
+                borderRadius: '3px',
+                boxShadow: theme.shadows[ownerState.elevation],
             })
           },
       ]
