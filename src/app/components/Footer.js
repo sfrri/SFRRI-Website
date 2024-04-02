@@ -6,6 +6,7 @@ import Link from '@mui/material/Link';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import { kebabize } from '../../utils';
+import Image from 'next/image';
 
 const colLinks = [
     [
@@ -57,7 +58,7 @@ export default async function Footer() {
                 <Grid container spacing={2} sx={{ position: 'relative' }}>
                     <Grid item xs={12} sm={6} md={3} sx={{ display: 'flex', alignItems: 'center', }}>
                         <Link href="/" sx={{ display: 'inline-block' }}>
-                            <img
+                            <Image
                                 src={`/static/images/SFRRI-footer-logo.png?w=164&h=164&fit=crop&auto=format`}
                                 alt="SFRRI footer logo"
                                 loading="lazy"
