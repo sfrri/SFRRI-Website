@@ -10,13 +10,22 @@ import { News1, News2 } from './components/News.js'
 import Paper from '@mui/material/Paper';
 import HomeNews from './components/HomeNews.js'
 import Grid from '@mui/material/Grid';
+import { ImageLink } from './components/ImageLink';
+import { kebabize } from '../utils';
+
+const imageLinkArr = [
+    { linkName: 'Related Meetings', bgImgUrl: '/static/images/Blood_clot_in_scanning_electron_microscopy.jpg', },
+    { linkName: 'Membership', bgImgUrl: '/static/images/BioProbes.jpg', },
+    { linkName: 'History', bgImgUrl: '/static/images/TrevorSlater.jpg', },
+    { linkName: 'Careers & Training', bgImgUrl: '/static/images/OxRadStress.jpg' },
+]
 
 export default async function HomePage() {
     "use server";
     return (
         <main>
-            <HomeNews>
-                <Grid container spacing={2} sx={{ position: 'relative', }}>
+            <HomeNews sx={{ borderRadius: '3px',}}>
+                <Grid container spacing={1} sx={{ position: 'relative', borderRadius: '3px',}}>
                     <Grid item xs={12}>
                         <h2>Latest News</h2>
                     </Grid>
@@ -28,25 +37,17 @@ export default async function HomePage() {
                     </Grid>
                 </Grid>
             </HomeNews>
-            <Grid container spacing={2} sx={{ position: 'relative', marginBottom: '20px' }}>
-                <Grid item xs={12} sm={6} md={3}>
-                    <Paper variant="padded" />
-                </Grid>
-                <Grid item xs={12} sm={6} md={3}>
-                    <Paper variant="padded" />
-                </Grid>
-                <Grid item xs={12} sm={6} md={3}>
-                    <Paper variant="padded" />
-                </Grid>
-                <Grid item xs={12} sm={6} md={3}>
-                    <Paper variant="padded" />
-                </Grid>
+            <Grid container spacing={1.25} sx={{ position: 'relative', marginBottom: '10px' }}>
+                {imageLinkArr.map( linkItem => {
+                    return <Grid item xs={12} sm={6} md={6} lg={3} key={linkItem.linkName}>
+                        <ImageLink linkName={linkItem.linkName} bgImgUrl={linkItem.bgImgUrl} />
+                    </Grid>
+                })}
             </Grid>
-
-            <Paper variant="padded" >
-                <Grid container spacing={2} sx={{ position: 'relative', marginBottom: '20px' }}>
+            <Paper variant="padded" sx={{borderRadius: '3px',}}>
+                <Grid container spacing={1} sx={{ position: 'relative', marginBottom: '10px' }}>
                     <Grid item xs={12} sm={6}>
-                        <h3>About</h3>
+                        <h4>About</h4>
                         <p>The Society for Free Radical Research founded in the United Kingdom in 1982 is an International Society with the following rules (as amended by resolution of the members dated September 11, 1998). The International Society is a charitable voluntary, non-profit making institution.</p>
                         <p>The object of the International Society is to advance education in free radical processes with particular reference to those of industrial and medical importance, such education being for the benefit of the public.</p>
                     </Grid>
@@ -54,7 +55,7 @@ export default async function HomePage() {
                         <Paper variant="padded" />
                     </Grid>
                     <Grid item xs={12}>
-                        <h3>Objectives</h3>
+                        <h4>Objectives</h4>
                         <ul>
                             <li>to provide continuing education and training to scientists with an active interest in Free Radical Research</li>
                             <li>to provide a forum for discussions</li>
@@ -66,7 +67,6 @@ export default async function HomePage() {
                     </Grid>
                 </Grid>
             </Paper>
-
         </main>
     );
 }
