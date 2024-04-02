@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Paper from '@mui/material/Paper';
 
 export const News1 = () => {
     return (

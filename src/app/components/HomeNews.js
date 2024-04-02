@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Paper, Box } from '@mui/material/';
+import { Paper } from '@mui/material/';
 
 export default async function HomePage({children}) {
     "use server";
