@@ -5,7 +5,7 @@ export const News1 = () => {
     return (
         <>
         <p><Link href='/presidential-address'>President’s Welcome Message 2024</Link></p>
-        <p><a href="downloads/SFRRI_Letter_to_Regional_SFRR_Executives_and_Member_12-09-23.pdf">President's Letter | Extension of SFRRI Officers Term for 1-year</a></p>
+        <p><a href="downloads/SFRRI_Letter_to_Regional_SFRR_Executives_and_Member_12-09-23.pdf" target="_blank">President's Letter | Extension of SFRRI Officers Term for 1-year</a></p>
         <p>SFRRI 2023 Award Lectures</p>
         <ul>
             <li><a href="https://lpi.oregonstate.edu/faculty-staff/maret-traber" target="_blank">Prof. Maret Traber</a> – Trevor Slater Award</li>
@@ -63,7 +63,7 @@ export const News2 = () => {
         <hr />
         <p>
           <span className="bold">SFRRI Outreach Meeting Sponsorship Form</span><br />
-          <a href="downloads/SFRRI_Outreach_Sponsorship_Application_Form_2019.doc">Please click here to download</a>
+          <a href="downloads/SFRRI_Outreach_Sponsorship_Application_Form_2019.doc" target="_blank">Please click here to download</a>
         </p>
         <hr />
         <p className="bold">In Memoriam</p>
@@ -77,16 +77,16 @@ export const News2 = () => {
           <a href="https://news.ki.se/professor-emeritus-sten-orrenius-has-died" target="_blank">Sten Orrensius</a>
         </p>
         <p style={{ fontVariant: 'small-caps', textTransform: 'capitalize', }}>
-          <a href="downloads/Letter_in_memory_of_Professor_Alberto_Boveris_10-04-20.pdf">Alberto Boveris</a>
+          <a href="downloads/Letter_in_memory_of_Professor_Alberto_Boveris_10-04-20.pdf" target="_blank">Alberto Boveris</a>
         </p>
         <p style={{ fontVariant: 'small-caps', textTransform: 'capitalize', }}>
           <a href="https://sites.unimi.it/HNECLUB/hne2020/obituary/" target="_blank">Peter Maria Eckl</a>
         </p>
         <p style={{ fontVariant: 'small-caps', textTransform: 'capitalize', }}>
-          <a href="downloads/In_Memoriam_Irwin_Fridovich.docx">Irwin Friedovich</a>
+          <a href="downloads/In_Memoriam_Irwin_Fridovich.docx" target="_blank">Irwin Friedovich</a>
         </p>
         <p style={{ fontVariant: 'small-caps', textTransform: 'capitalize', }}>
-          <a href="downloads/In_Memoriam_William_Austin_Pryor_(1929-2019).pdf">William Austin Pryor</a>
+          <a href="downloads/In_Memoriam_William_Austin_Pryor_(1929-2019).pdf" target="_blank">William Austin Pryor</a>
         </p>
         </>
     )
