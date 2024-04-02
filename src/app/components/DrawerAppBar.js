@@ -1,5 +1,4 @@
 'use client';
-
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
@@ -15,27 +14,47 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
-import ButtonGroup from '@mui/material/ButtonGroup';
 import Link from '@mui/material/Link';
-import theme from '../theme';
+import { NavButton } from './NavButton';
+import { kebabize } from '@/utils';
+import BasicMenu from './BasicMenu';
+import Collapse from '@mui/material/Collapse';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
 
 const drawerWidth = 240;
-const navItems = {
-    'Home': '',
-    'Society': 'society',
-    'SFRR Societies': 'sfrr-societies',
-    'Membership': 'membership',
-    'Conferences': 'conferences',
-    'Related Meetings': 'related-meetings',
-    'SFRRI Outreach': 'sfrri-outreach',
-    'Journals': 'journals',
-    'Education': 'education',
-};
-
-let entries = Object.entries(navItems)
+const navItems = [
+    {name: 'Home'},
+    {
+        name: 'Society', 
+        subMenu:[
+            {name: 'Presidential Address'}, 
+            {name: 'SFRRI Executive'}, 
+            {name: 'Past Presidents'}, 
+            {name: 'History'}, 
+            {name: 'Governance & Byelaws'}, 
+            {name: 'Trevor Slater Award & Fellowships'}, 
+            {name: 'Obituaries'},
+        ]
+    },
+    {name: 'SFRR Societies'},
+    {name: 'Membership'},
+    {
+        name: 'Conferences', 
+        subMenu:[
+            {name:'Future SFRRI Conferences'},
+            {name: 'Past SFRRI Conferences'},
+            {name: 'SFRRI Related Conferences'},
+            {name: 'Rules for Conference Organisation'},
+        ]
+    },
+    {name: 'Related Meetings'},
+    {name: 'SFRRI Outreach'},
+    {name: 'Journals'},
+    {name: 'Education'},
+];
 
 function HideOnScroll(props) {
     const { children, window } = props;
@@ -56,25 +75,47 @@ function HideOnScroll(props) {
 function DrawerAppBar(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(0);
 
+    const handleClickListCollapse = (num) => {
+        open === 0 ? setOpen(num) : setOpen(0)
+    };
+    
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+        <Box sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
                 Society for Free Radical Research International
             </Typography>
             <Divider />
             <List>
-                {entries.map(([key, val] = entry) => (
-                    <ListItem key={val} disablePadding>
-                        <Link href={`/${val}`}>
-                            <ListItemButton sx={{ textAlign: 'left' }}>
-                                <ListItemText primary={key} />
+                {navItems.map((item, i) => (
+                    item.subMenu != undefined ?
+                    <React.Fragment key={i}>
+                        <ListItemButton onClick={() => handleClickListCollapse(i)}>
+                            <ListItemText primary={item.name} />
+                            {open === i ? <ExpandLess /> : <ExpandMore />}
+                        </ListItemButton>
+                        <Collapse in={open === i} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                            <ListItemButton component={Link} href={`/${kebabize(item.name)}`} sx={{ pl: 4 }}>
+                                <ListItemText onClick={handleDrawerToggle} primary="Starred" />
                             </ListItemButton>
-                        </Link>
+                            </List>
+                        </Collapse>
+                    </React.Fragment>
+                    :
+                    <ListItem key={item.name} disablePadding>                       
+                            <ListItemButton component={Link} href={`/${kebabize(item.name)}`} sx={{ textAlign: 'left' }}>
+                                <ListItemText 
+                                    onClick={handleDrawerToggle} 
+                                    primary={item.name} 
+                                    sx={{display: 'flex', flexGrow: 1,}}
+                                />
+                            </ListItemButton>                       
                     </ListItem>
                 ))}
             </List>
@@ -117,36 +158,22 @@ function DrawerAppBar(props) {
                                 flexGrow: 1,
                                 display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },
                                 fontSize: '48px',
+                                background: 'url(/static/images/SFRRI-Logo.png) no-repeat',
+                                backgroundPosition: '0 2px',
+                                padding: '10px 0 10px 90px',
                             }}
                         >
-                            Society for Free Radical Research International
+                            <h1>Society for Free Radical Research International</h1>
                         </Typography>
                         <Box sx={{ display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' } }}>
-                            {/*<ButtonGroup variant="contained" aria-label="Basic button group">*/}
-                            {entries.map(([key, val] = entry) => (
-                                <Button
-                                    component={Link}
-                                    variant='HomeNav'
-                                    href={`/${val}`}
-                                    key={val}
-                                    sx={{
-                                        color: '#fff',
-                                        border: '1px solid #111',
-                                        borderBottom: '2px solid #111',
-                                        borderRadius: '3px',
-                                        //background: 'radial-gradient(ellipse at top,#4282dd 0,#1d5097 90%)',
-                                        background: 'radial-gradient(ellipse at center, #497abf 0, #1858b1 90%)',
-                                        //backgroundImage: 'radial-gradient(at 50% 100%, rgb(68, 122, 199) 0px, rgb(64, 124, 209) 75%)',
-                                        fontSize: '18px',
-                                        textTransform: 'capitalize',
-                                        lineHeight: '50px',
-                                        padding: '0 15.5px',
-                                    }}
-                                >
-                                    {key}
-                                </Button>
+                            {navItems.map(item => (
+                                
+                                item.subMenu != undefined ?
+
+                                <BasicMenu name={item.name} subMenuItems={item.subMenu} key={item.name} />
+                                :
+                                <NavButton url={kebabize(item.name)} name={item.name} key={item.name} />
                             ))}
-                            {/*</ButtonGroup>*/}
                         </Box>
                     </Toolbar>
                 </AppBar>
@@ -168,43 +195,6 @@ function DrawerAppBar(props) {
                     {drawer}
                 </Drawer>
             </nav>
-            {/*<Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
-          fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam,
-          aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis in
-          cum quibusdam sed quae, accusantium et aperiam? Quod itaque exercitationem,
-          at ab sequi qui modi delectus quia corrupti alias distinctio nostrum.
-          Minima ex dolor modi inventore sapiente necessitatibus aliquam fuga et. Sed
-          numquam quibusdam at officia sapiente porro maxime corrupti perspiciatis
-          asperiores, exercitationem eius nostrum consequuntur iure aliquam itaque,
-          assumenda et! Quibusdam temporibus beatae doloremque voluptatum doloribus
-          soluta accusamus porro reprehenderit eos inventore facere, fugit, molestiae
-          ab officiis illo voluptates recusandae. Vel dolor nobis eius, ratione atque
-          soluta, aliquam fugit qui iste architecto perspiciatis. Nobis, voluptatem!
-          Cumque, eligendi unde aliquid minus quis sit debitis obcaecati error,
-          delectus quo eius exercitationem tempore. Delectus sapiente, provident
-          corporis dolorum quibusdam aut beatae repellendus est labore quisquam
-          praesentium repudiandae non vel laboriosam quo ab perferendis velit ipsa
-          deleniti modi! Ipsam, illo quod. Nesciunt commodi nihil corrupti cum non
-          fugiat praesentium doloremque architecto laborum aliquid. Quae, maxime
-          recusandae? Eveniet dolore molestiae dicta blanditiis est expedita eius
-          debitis cupiditate porro sed aspernatur quidem, repellat nihil quasi
-          praesentium quia eos, quibusdam provident. Incidunt tempore vel placeat
-          voluptate iure labore, repellendus beatae quia unde est aliquid dolor
-          molestias libero. Reiciendis similique exercitationem consequatur, nobis
-          placeat illo laudantium! Enim perferendis nulla soluta magni error,
-          provident repellat similique cupiditate ipsam, et tempore cumque quod! Qui,
-          iure suscipit tempora unde rerum autem saepe nisi vel cupiditate iusto.
-          Illum, corrupti? Fugiat quidem accusantium nulla. Aliquid inventore commodi
-          reprehenderit rerum reiciendis! Quidem alias repudiandae eaque eveniet
-          cumque nihil aliquam in expedita, impedit quas ipsum nesciunt ipsa ullam
-          consequuntur dignissimos numquam at nisi porro a, quaerat rem repellendus.
-          Voluptates perspiciatis, in pariatur impedit, nam facilis libero dolorem
-          dolores sunt inventore perferendis, aut sapiente modi nesciunt.
-        </Typography>
-      </Box>*/}
         </>
     );
 }
