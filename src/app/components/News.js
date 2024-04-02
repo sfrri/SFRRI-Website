@@ -4,13 +4,13 @@ import Paper from '@mui/material/Paper';
 export const News1 = () => {
     return (
         <>
-        <p><Link href='/presidential-address'>President’s Welcome Message 2024</Link></p>
+        <p><Link href='/presidential-address'>President's Welcome Message 2024</Link></p>
         <p><a href="downloads/SFRRI_Letter_to_Regional_SFRR_Executives_and_Member_12-09-23.pdf" target="_blank">President's Letter | Extension of SFRRI Officers Term for 1-year</a></p>
         <p>SFRRI 2023 Award Lectures</p>
         <ul>
-            <li><a href="https://lpi.oregonstate.edu/faculty-staff/maret-traber" target="_blank">Prof. Maret Traber</a> – Trevor Slater Award</li>
-            <li><a href="https://en.wikipedia.org/wiki/Helmut_Sies" target="_blank">Prof. Helmut Sies</a> – Alberto Boveris Award</li>
-            <li><a href="https://www.uv.es/freshage/jose-vina.html" target="_blank">Prof. Jose Vina</a> – Lester Packer Award</li>
+            <li><a href="https://lpi.oregonstate.edu/faculty-staff/maret-traber" target="_blank">Prof. Maret Traber</a> - Trevor Slater Award</li>
+            <li><a href="https://en.wikipedia.org/wiki/Helmut_Sies" target="_blank">Prof. Helmut Sies</a> - Alberto Boveris Award</li>
+            <li><a href="https://www.uv.es/freshage/jose-vina.html" target="_blank">Prof. Jose Vina</a> - Lester Packer Award</li>
         </ul>
         <hr />
         <p>
