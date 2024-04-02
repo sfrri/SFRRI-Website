@@ -60,7 +60,7 @@ export default async function HomePage() {
                             <li>to provide continuing education and training to scientists with an active interest in Free Radical Research</li>
                             <li>to provide a forum for discussions</li>
                             <li>to receive and apply donations, subscriptions and funds from persons or organizations</li>
-                            <li>to invest and deal with the International Society's money not immediately required for its objects in or upon any investments, securities or property;</li>
+                            <li>to invest and deal with the International Society&apos;s money not immediately required for its objects in or upon any investments, securities or property;</li>
                             <li>to do all other lawful things necessary to advance the object</li>
                             <li>to promote research and publication of its beneficial findings</li>
                         </ul>
