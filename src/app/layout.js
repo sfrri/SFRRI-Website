@@ -8,6 +8,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import DrawerAppBar from './components/DrawerAppBar.js';
 import { Container, Box, Typography, Link, Toolbar } from "@mui/material";
 import Footer from './components/Footer.js';
+import Head from 'next/head';
 
 function Copyright() {
     return (
@@ -28,51 +29,62 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en">
-            <body
-            //className={inter.className}
-            >
-                <AppRouterCacheProvider options={{ key: 'css' }}>
-                    <ThemeProvider theme={theme}>
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                minHeight: '100vh',
-                            }}
-                        >
-                            <CssBaseline />
-                            <div id="blueBg" />
-                            <DrawerAppBar
+        <>
+            <Head>
+                <link 
+                    rel="preload" 
+                    href="/static/fonts/AvenirNext/AvenirNextLTPro-Bold.woff" 
+                    as="font" 
+                    type="font/woff" 
+                    crossorigin="anonymous" 
+                />
+            </Head>
+            <html lang="en">
+                <body
+                //className={inter.className}
+                >
+                    <AppRouterCacheProvider options={{ key: 'css' }}>
+                        <ThemeProvider theme={theme}>
+                            <Box
                                 sx={{
-                                    height: '280px',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    minHeight: '100vh',
                                 }}
-                            />
-                            {/*<AppBar sx={{display: {xs: 'block', lg: 'none'}}} />
-                        <Toolbar  sx={{display: {xs: 'none', lg: 'block'}}}/>*/}
-                            <Container maxWidth="lg" sx={{ marginTop: '10px', }}>
-                                {children}
-                            </Container>
-                            <Box component="footer">
-                                <Footer />
-                                <Box
+                            >
+                                <CssBaseline />
+                                <div id="blueBg" />
+                                <DrawerAppBar
                                     sx={{
-                                        py: 3,
-                                        px: 2,
-                                        mt: 'auto',
-                                        //backgroundColor: backgroundColor(theme),
-                                        backgroundColor: '#111',
+                                        height: '280px',
                                     }}
-                                >
-                                    <Container maxWidth="lg">
-                                        <Copyright />
-                                    </Container>
+                                />
+                                {/*<AppBar sx={{display: {xs: 'block', lg: 'none'}}} />
+                            <Toolbar  sx={{display: {xs: 'none', lg: 'block'}}}/>*/}
+                                <Container maxWidth="lg" sx={{ marginTop: '10px', }}>
+                                    {children}
+                                </Container>
+                                <Box component="footer">
+                                    <Footer />
+                                    <Box
+                                        sx={{
+                                            py: 3,
+                                            px: 2,
+                                            mt: 'auto',
+                                            //backgroundColor: backgroundColor(theme),
+                                            backgroundColor: '#111',
+                                        }}
+                                    >
+                                        <Container maxWidth="lg">
+                                            <Copyright />
+                                        </Container>
+                                    </Box>
                                 </Box>
                             </Box>
-                        </Box>
-                    </ThemeProvider>
-                </AppRouterCacheProvider>
-            </body>
-        </html>
+                        </ThemeProvider>
+                    </AppRouterCacheProvider>
+                </body>
+            </html>
+        </>
     );
 }
