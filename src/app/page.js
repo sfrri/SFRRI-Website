@@ -11,7 +11,7 @@ import Paper from '@mui/material/Paper';
 import HomeNews from './components/HomeNews.js'
 import Grid from '@mui/material/Grid';
 import { ImageLink } from './components/ImageLink';
-import { kebabize } from '../utils';
+import GMap from './components/GMap';
 
 const imageLinkArr = [
     { linkName: 'Related Meetings', bgImgUrl: '/static/images/Blood_clot_in_scanning_electron_microscopy.jpg', },
@@ -52,7 +52,7 @@ export default async function HomePage() {
                         <p>The object of the International Society is to advance education in free radical processes with particular reference to those of industrial and medical importance, such education being for the benefit of the public.</p>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <Paper variant="padded" />
+                        <GMap />
                     </Grid>
                     <Grid item xs={12}>
                         <h4>Objectives</h4>
