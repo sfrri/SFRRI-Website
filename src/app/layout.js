@@ -33,9 +33,9 @@ export default function RootLayout({ children }) {
             <Head>
                 <link 
                     rel="preload" 
-                    href="/static/fonts/AvenirNext/AvenirNextLTPro-Bold.woff" 
+                    href="/static/fonts/AvenirNext/AvenirNextCyr-Bold.woff2" 
                     as="font" 
-                    type="font/woff" 
+                    type="font/woff2" 
                     crossorigin="anonymous" 
                 />
             </Head>
