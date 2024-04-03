@@ -223,6 +223,7 @@ function DrawerAppBar(props) {
                     ModalProps={{
                         keepMounted: true, // Better open performance on mobile.
                     }}
+                    disableScrollLock={ true }
                     sx={{
                         display: { md: 'block', lg: 'none' },
                         '& .MuiDrawer-paper': {
