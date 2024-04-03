@@ -88,70 +88,81 @@ function DrawerAppBar(props) {
     };
 
     const drawer = (
-        <Box sx={{ textAlign: 'center', background: '#222', }}>
-            <Typography variant="h6" sx={{
-                height: '172px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-around',
-                py: 2,
-                backgroundColor: '#447ac7',
-                background: 'radial-gradient(ellipse at top,#4282dd 0,#1d5097 90%)',
+        <div style={{height: '100%', position: 'relative', overflow:'hidden'}}>
+            <Box sx={{ 
+                textAlign: 'center', 
+                background: '#222', 
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                bottom: '-17px',
+                right: '-17px',
+                overflow: 'scroll',
             }}>
-                {/*Society for Free Radical Research International*/}
-                <Image
-                    src='/static/images/SFRRI-New-logo-no-mapx2.png'
-                    width={168}
-                    height={81}
-                    alt='SFRRI Logo'
-                />
-            </Typography>
-            <Divider />
-            <List
-                sx={{
-                    color: '#fff',
-                    background: '#222',
-                }}
-            >
-                {navItems.map((item, i) => (
-                    item.subMenu != undefined ?
-                        <React.Fragment key={item.name}>
-                            <ListItemButton onClick={() => handleClickListCollapse(i)}>
-                                <ListItemText primary={item.name} />
-                                {open === i ? <ExpandLess /> : <ExpandMore />}
-                            </ListItemButton>
-
-                            <Collapse in={open === i} timeout="auto" unmountOnExit>
-                                <List component="div" disablePadding>
-                                    {item.subMenu.map(subMenuItem => {
-                                        return <React.Fragment key={subMenuItem.name}>
-                                            <Divider sx={{ background: '#333', }} />
-                                            <ListItemButton component={Link} href={`/${kebabize(subMenuItem.name)}`} sx={{ pl: 4 }}>
-                                                <ListItemText onClick={handleDrawerToggle} primary={subMenuItem.name} />
-                                            </ListItemButton>
-                                        </React.Fragment>
-                                    })}
-                                </List>
-                            </Collapse>
-                            <Divider sx={{ background: '#444', }} />
-                        </React.Fragment>
-                        :
-                        <>
-                            <ListItem key={item.name} disablePadding>
-                                <ListItemButton component={Link} href={`/${item.name === 'Home' ? '' : kebabize(item.name)}`} sx={{ textAlign: 'left' }}>
-                                    <ListItemText
-                                        onClick={handleDrawerToggle}
-                                        primary={item.name}
-                                        sx={{ display: 'flex', flexGrow: 1, }}
-                                    />
+                <Typography variant="h6" sx={{
+                    height: '172px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-around',
+                    py: 2,
+                    backgroundColor: '#447ac7',
+                    background: 'radial-gradient(ellipse at top,#4282dd 0,#1d5097 90%)',
+                }}>
+                    {/*Society for Free Radical Research International*/}
+                    <Image
+                        src='/static/images/SFRRI-New-logo-no-mapx2.png'
+                        width={168}
+                        height={81}
+                        alt='SFRRI Logo'
+                    />
+                </Typography>
+                <Divider />
+                <List
+                    sx={{
+                        color: '#fff',
+                        background: '#222',
+                    }}
+                >
+                    {navItems.map((item, i) => (
+                        item.subMenu != undefined ?
+                            <React.Fragment key={item.name}>
+                                <ListItemButton onClick={() => handleClickListCollapse(i)}>
+                                    <ListItemText primary={item.name} />
+                                    {open === i ? <ExpandLess /> : <ExpandMore />}
                                 </ListItemButton>
 
-                            </ListItem>
-                            <Divider sx={{ background: '#444', }} />
-                        </>
-                ))}
-            </List>
-        </Box>
+                                <Collapse in={open === i} timeout="auto" unmountOnExit>
+                                    <List component="div" disablePadding>
+                                        {item.subMenu.map(subMenuItem => {
+                                            return <React.Fragment key={subMenuItem.name}>
+                                                <Divider sx={{ background: '#333', }} />
+                                                <ListItemButton component={Link} href={`/${kebabize(subMenuItem.name)}`} sx={{ pl: 4 }}>
+                                                    <ListItemText onClick={handleDrawerToggle} primary={subMenuItem.name} />
+                                                </ListItemButton>
+                                            </React.Fragment>
+                                        })}
+                                    </List>
+                                </Collapse>
+                                <Divider sx={{ background: '#444', }} />
+                            </React.Fragment>
+                            :
+                            <>
+                                <ListItem key={item.name} disablePadding>
+                                    <ListItemButton component={Link} href={`/${item.name === 'Home' ? '' : kebabize(item.name)}`} sx={{ textAlign: 'left' }}>
+                                        <ListItemText
+                                            onClick={handleDrawerToggle}
+                                            primary={item.name}
+                                            sx={{ display: 'flex', flexGrow: 1, }}
+                                        />
+                                    </ListItemButton>
+
+                                </ListItem>
+                                <Divider sx={{ background: '#444', }} />
+                            </>
+                    ))}
+                </List>
+            </Box>
+        </div>
     );
 
     const container = window !== undefined ? () => window().document.body : undefined;
@@ -225,6 +236,9 @@ function DrawerAppBar(props) {
                     }}
                     disableScrollLock={ true }
                     sx={{
+                        height: '100%',
+                        overflow: 'hidden',
+                        position: 'relative',
                         display: { md: 'block', lg: 'none' },
                         '& .MuiDrawer-paper': {
                             boxSizing: 'border-box',
