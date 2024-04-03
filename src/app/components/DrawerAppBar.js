@@ -26,7 +26,7 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import { Container } from '@mui/material';
 import Image from 'next/image';
 
-const drawerWidth = 240;
+const drawerWidth = 257;
 const navItems = [
     { name: 'Home' },
     {
@@ -88,16 +88,16 @@ function DrawerAppBar(props) {
     };
 
     const drawer = (
-        <div style={{height: '100%', position: 'relative', overflow:'hidden'}}>
+        /*<div style={{height: '100%', position: 'relative', overflow:'hidden'}}>*/
             <Box sx={{ 
                 textAlign: 'center', 
                 background: '#222', 
-                position: 'absolute',
+                /*position: 'absolute',
                 top: 0,
                 left: 0,
                 bottom: '-17px',
                 right: '-17px',
-                overflow: 'scroll',
+                overflow: 'scroll',*/
             }}>
                 <Typography variant="h6" sx={{
                     height: '172px',
@@ -162,7 +162,7 @@ function DrawerAppBar(props) {
                     ))}
                 </List>
             </Box>
-        </div>
+        /*</div>*/
     );
 
     const container = window !== undefined ? () => window().document.body : undefined;
@@ -202,7 +202,7 @@ function DrawerAppBar(props) {
                                 height: '70px',
                                 marginBottom: '10px',
                                 flexGrow: 1,
-                                display: { xs: 'none', sm: 'block', md: 'block', lg: 'block' },
+                                display: { xs: 'block', sm: 'block', md: 'block', lg: 'block' },
                                 //fontSize: '3rem',
                                 background: 'url(/static/images/SFRRI-Logox2.png) no-repeat',
                                 backgroundPosition: { xs: '0 -2px', lg: '0 2px', },
@@ -236,9 +236,9 @@ function DrawerAppBar(props) {
                     }}
                     disableScrollLock={ true }
                     sx={{
-                        height: '100%',
+                        /*height: '100%',
                         overflow: 'hidden',
-                        position: 'relative',
+                        position: 'relative',*/
                         display: { md: 'block', lg: 'none' },
                         '& .MuiDrawer-paper': {
                             boxSizing: 'border-box',
