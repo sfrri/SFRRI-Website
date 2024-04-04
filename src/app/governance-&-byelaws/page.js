@@ -9,7 +9,7 @@ export default async function GovernanceAndByelaws() {
                 <h2>SFRRI Governance & Byelaws</h2>
                 <p>The Society for Free Radical Research founded in the United Kingdom in 1982 is an International Society with the following rules (as amended by resolution of the members dated September 11, 1998).</p>
                 <h4>1. Name</h4>
-                <p>The name of the institution (hereafter called the "International Society") is The Society for Free Radical Research International.</p>
+                <p>The name of the institution (hereafter called the &quot;International Society&quot;) is The Society for Free Radical Research International.</p>
                 <h4>2. Status</h4>
                 <p>The International Society shall be charitable voluntary, non-profit making body of persons associated for the purposes hereinafter appearing.</p>
                 <h4>3. Objects and Power</h4>
@@ -17,7 +17,7 @@ export default async function GovernanceAndByelaws() {
                 <p>3.2 In furtherance of the above object the International Society shall have the following powers:</p>
                 <p>(a) to provide a forum for discussions;</p>
                 <p>(b) to receive and apply donations, subscriptions and funds from persons or organizations;</p>
-                <p>(c) to invest and deal with the International Society's money not immediately required for its objects in or upon any investments, securities or property;</p>
+                <p>(c) to invest and deal with the International Society&apos;s money not immediately required for its objects in or upon any investments, securities or property;</p>
                 <p>(d) to do all other lawful things necessary to advance the object;</p>
                 <p>(e) to promote research and publication of its beneficial results.</p>
                 <h4>4. Membership of the International Society</h4>
@@ -32,16 +32,16 @@ export default async function GovernanceAndByelaws() {
                 <p>(d) The International Committee will decide the venue and timing of the International Committee Meetings,</p>
                 <p>(e) The International Committee will assist in the coordination of International Meetings on free radicals. The timing and venue of the Biennial International Meetings will be the responsibility of the International Committee.</p>
                 <p>(f) A written resolution signed by all the members of the International Committee as valid as a resolution passed at a meeting (and for this purpose the resolution may be contained in more than one document and will be treated as passed on the date of the last signature).</p>
-                <p>(g) The International Committee will assist, to the extent possible, in interregional communications and distribute the International Members' Directory and an International Newsletter as required.</p>
+                <p>(g) The International Committee will assist, to the extent possible, in interregional communications and distribute the International Members&apos; Directory and an International Newsletter as required.</p>
                 <h4>6. Membership of a Member Society</h4>
                 <p>Membership of a Member Society shall be open to any person, irrespective of place of residence, subject to the approval of the Regional Committee.  Membership of a Member Society implies membership of the International Society.  The international Committee may elect persons of distinction in the fields of Honorary Members of the Society. Honorary members will have all the privileges of membership and not pay a subscription.</p>
                 <h4>7. Constituent Member Societies</h4>
                 <p>(a)    The International Committee will consider applications from established societies subject to the subsequent approval of the membership at the Biennial General Meeting.</p>
-                <p>(b)    Any Member Society may withdraw from the International Society at any time with ninety days' notice to the Secretary of the International Committee in writing and with forfeiture of all funds paid.</p>
+                <p>(b)    Any Member Society may withdraw from the International Society at any time with ninety days&apos; notice to the Secretary of the International Committee in writing and with forfeiture of all funds paid.</p>
                 <h4>8. Subscriptions</h4>
                 <p>The annual subscriptions for members shall be paid to the Regional Treasurer of the Member Society at a sum set by the General Meeting on the recommendation of the Committee.  An amount of the annual membership to for each Member Society, determined by the International Committee, shall be payable to the Treasurer of the International Society.  The annual subscription to the International Society shall be payable in advance.</p>
                 <h4>9. Procedure of Biennial General Business Meeting</h4>
-                <p>(a)    Biennial General Meeting of the International Society shall be held at the biennial scientific meeting of the International Society.  Twenty-eight days' notice, giving details of time, place, agenda, and resolutions to change this Constitution shall be given to the members.</p>
+                <p>(a)    Biennial General Meeting of the International Society shall be held at the biennial scientific meeting of the International Society.  Twenty-eight days&apos; notice, giving details of time, place, agenda, and resolutions to change this Constitution shall be given to the members.</p>
                 <p>(b)    A quorum for the General Business Meeting shall not be less than four members of the International Committee (one of whom should be an officer) with at least twenty-five ordinary members.</p>
                 <h4>10.   Procedure of Biennial General Business Meeting</h4>
                 <p>(a)    The President of the International Committee shall chair any General Business Meeting, If the President is unable to attend, the President-Elect/Secretary/Treasurer shall chair any business meeting.  If none of the officers is present within fifteen minutes after the time appointed for holding the meeting, then the numbers present, if sufficient to form a quorum shall choose a member of the Committee, or, if all members of the Committee present decline to preside, then they may choose any member present to preside;</p>
@@ -53,7 +53,7 @@ export default async function GovernanceAndByelaws() {
                 <p>(c)    In addition to the nominations from the nomination committee, any member may be entitled to nominate any other member for each office provided the nominee has consented to stand and is eligible for the office.  Nominations shall be seconded by five other members and shall be received in writing not less than twenty-eight days before. The date of Biennial General Meeting, if there has not been at least one nomination for each office the Secretary via in consultation with international Committee Members make such provision as ensures that there shall be at least one nominee for each office.</p>
                 <p>(d) (i)    The President and President elect shall serve for a period of two calendar years.</p>
                 <p>(ii)          The President-Elect shall serve as President in the two-year period following his/her election as President-Elect.</p>
-                <p>iii)         The Secretary and the Treasurer shall serve for four calendar years and shall be eligible for re-election to a second four-year term</p>
+                <p>(iii)         The Secretary and the Treasurer shall serve for four calendar years and shall be eligible for re-election to a second four-year term</p>
                 <p>(iv)        After his/her period of office, any officer of the International Committee shall be eligible to serve in another office, during the next four-year period, provided that they do not serve on the International Committee for more than four consecutive terms.</p>
                 <p>(v)          The election of all officers shall be completed at biennial meetings. Terms of office for all officers shall commence on the first day of January following the biennial meeting at which they were elected.</p>
                 <h4>12. Procedure at International Committee Meetings</h4>
