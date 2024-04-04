@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
@@ -45,7 +46,7 @@ export const ImageLink = ({ linkName, bgImgUrl }) => {
                 }}
                 color="text.secondary"
                 >
-                    <h3>{linkName.toString()}</h3>
+                    <h2>{linkName.toString()}</h2>
                 </Box>
             </Card>
         </Link>

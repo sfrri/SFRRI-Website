@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+//import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
@@ -6,9 +6,13 @@ import theme from './theme';
 import CssBaseline from '@mui/material/CssBaseline';
 //import { AppBar, Toolbar } from "@mui/material";
 import DrawerAppBar from './components/DrawerAppBar.js';
-import { Container, Box, Typography, Link, Toolbar } from "@mui/material";
+import { Container, Box, Typography/*, Link, Toolbar*/ } from "@mui/material";
 import Footer from './components/Footer.js';
 import Head from 'next/head';
+import NewsConditional from "./components/NewsConditional";
+import Grid from "@mui/material/Grid";
+import { News } from "./components/News";
+import Paper from "@mui/material/Paper";
 
 function Copyright() {
     return (
@@ -20,7 +24,7 @@ function Copyright() {
     );
 }
 
-const inter = Inter({ subsets: ["latin"] });
+//const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
     title: "Society for Free Radical Research International",
@@ -38,6 +42,9 @@ export default function RootLayout({ children }) {
                     type="font/woff2" 
                     crossorigin="anonymous" 
                 />
+                {/*<style jsx global>
+                    font to go here
+                </style>*/}
             </Head>
             <html lang="en">
                 <body
@@ -60,10 +67,24 @@ export default function RootLayout({ children }) {
                                     }}
                                 />
                                 {/*<AppBar sx={{display: {xs: 'block', lg: 'none'}}} />
-                            <Toolbar  sx={{display: {xs: 'none', lg: 'block'}}}/>*/}
+                            <Toolbar  sx={{display: {xs: 'none', lg: 'block'}}}/>*//*children={children}*/}
+
+                                {/*isHome === '/' ? {children}
+
+                                :
                                 <Container maxWidth="lg" sx={{ marginTop: '10px', }}>
-                                    {children}
-                                </Container>
+                                    <Grid container spacing={1}>
+                                        <Grid item xs={12} md={9}>
+                                            {children}
+                                        </Grid>
+                                        <Grid item xs={12} md={3}>
+                                            <Paper variant="padded" elevation={3}>
+                                                <News />
+                                            </Paper>
+                                        </Grid>
+                                    </Grid>
+                                </Container>*/}
+                                <NewsConditional>{children}</NewsConditional>
                                 <Box component="footer">
                                     <Footer />
                                     <Box

@@ -1,8 +1,9 @@
+'use client';
 import * as React from 'react';
 import { Paper } from '@mui/material/';
 
-export default async function HomePage({children}) {
-    "use server";
+export default async function HomeNews({children}) {
+    //"use server";
     return (
         <Paper 
             variant="padded" 
@@ -24,6 +25,9 @@ export default async function HomePage({children}) {
                     left: 0,
                     backgroundColor: 'rgba(57, 51, 39, 0.65)',
                     backgroundColor: 'rgba(5, 0, 10, 0.75)',
+                },
+                '& a': {
+                    color: '#fff',
                 },
                 '& hr': {
                     display: 'none',

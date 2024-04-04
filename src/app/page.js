@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -21,7 +22,7 @@ const imageLinkArr = [
 ]
 
 export default async function HomePage() {
-    "use server";
+    //"use server";
     return (
         <main>
             <HomeNews sx={{ borderRadius: '3px',}}>
@@ -47,7 +48,7 @@ export default async function HomePage() {
             <Paper variant="padded" sx={{borderRadius: '3px',}}>
                 <Grid container spacing={1} sx={{ position: 'relative', marginBottom: '10px' }}>
                     <Grid item xs={12} sm={6}>
-                        <h4>About</h4>
+                        <h3>About</h3>
                         <p>The Society for Free Radical Research founded in the United Kingdom in 1982 is an International Society with the following rules (as amended by resolution of the members dated September 11, 1998). The International Society is a charitable voluntary, non-profit making institution.</p>
                         <p>The object of the International Society is to advance education in free radical processes with particular reference to those of industrial and medical importance, such education being for the benefit of the public.</p>
                     </Grid>
@@ -55,7 +56,7 @@ export default async function HomePage() {
                         <GMap />
                     </Grid>
                     <Grid item xs={12}>
-                        <h4>Objectives</h4>
+                        <h3>Objectives</h3>
                         <ul>
                             <li>to provide continuing education and training to scientists with an active interest in Free Radical Research</li>
                             <li>to provide a forum for discussions</li>
