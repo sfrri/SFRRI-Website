@@ -89,6 +89,10 @@
   margin: 0;
 }
 
+html {
+    background-color: #111;
+}
+
 html,
 body {
   max-width: 100vw;
@@ -140,13 +144,16 @@ h2 {
 }
 
 h3 {
-    font-size: 1.8rem;
-    letter-spacing: -1px;
+    font-size: 3rem;
+    letter-spacing: -3px;
 }
 
 h4 {
-    font-size: 3rem;
-    letter-spacing: -3px;
+    
+    font-size: 1.375rem;
+    letter-spacing: -1px;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
 }
 
 a {
@@ -154,11 +161,19 @@ a {
     text-decoration: underline;
 }
 
-p {
-    margin-block-start: 1em;
+p a,
+ul a {
+    color: #4282dd;
+    font-weight: 500;
 }
 
-ul {
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    word-wrap: break-word;
+}
+
+ol, ul {
     margin-block-end: 1em;
     padding-inline-start: 40px;
 }
@@ -171,5 +186,5 @@ ul {
     background-color:#447ac7;
     background: radial-gradient(ellipse at top,#4282dd 0,#1d5097 90%);
     box-shadow: rgb(0 0 0 / 12%) 0px 1px 6px, rgb(0 0 0 / 12%) 0px 1px 4px;
-    z-index: -1;
+    z-index: 0;
   }
