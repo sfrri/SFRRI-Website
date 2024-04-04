@@ -2,8 +2,7 @@
 import * as React from 'react';
 import { Paper } from '@mui/material/';
 
-export default async function HomeNews({children}) {
-    //"use server";
+export default function HomeNews({children}) {
     return (
         <Paper 
             variant="padded" 

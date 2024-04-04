@@ -1,8 +1,7 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 
-export default async function WomeninScienceForum() {
-    //"use server";
+export default function WomeninScienceForum() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>

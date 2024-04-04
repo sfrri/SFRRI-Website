@@ -21,12 +21,11 @@ const imageLinkArr = [
     { linkName: 'Careers & Training', bgImgUrl: '/static/images/OxRadStress.jpg' },
 ]
 
-export default async function HomePage() {
-    //"use server";
+export default function HomePage() {
     return (
         <main>
             <HomeNews sx={{ borderRadius: '3px',}}>
-                <Grid container spacing={1} sx={{ position: 'relative', borderRadius: '3px',}}>
+                <Grid container spacing={5} sx={{ position: 'relative', borderRadius: '3px',}}>
                     <Grid item xs={12}>
                         <h2 style={{fontSize: '3rem', letterSpacing: '-3px',}}>Latest News</h2>
                     </Grid>
