@@ -23,7 +23,7 @@ import BasicMenu from './BasicMenu';
 import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import { Container } from '@mui/material';
+import Container from '@mui/material/Container';
 import Image from 'next/image';
 
 const drawerWidth = 257;
@@ -37,7 +37,8 @@ const navItems = [
             { name: 'Past Presidents' },
             { name: 'History' },
             { name: 'Governance & Byelaws' },
-            { name: 'Trevor Slater Award & Fellowships' },
+            { name: 'SFRRI Awards & Fellowships' },
+            { name: 'Women in Science Forum' },
             { name: 'Obituaries' },
         ]
     },

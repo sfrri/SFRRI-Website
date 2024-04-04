@@ -32,6 +32,7 @@ export const News1 = () => {
           <span className="italic">Location:</span> Savannah Convention Center, Savannah, Georgia, USA<br />
           <span className="italic">Further information:</span> <a href="https://sfrbm.org/" target="_blank">sfrbm.org</a>
         </p>
+        <hr />
         <p>
           <span className="italic">May 29-31, 2024</span><br />
           <span className="bold">16<sup>th</sup> International Conference on Reactive Oxygen and Nitrogen Species in Plants</span><br />
@@ -94,7 +95,7 @@ export const News2 = () => {
 export const News = () => {
     return (
       <div className="news">
-        <h3>News</h3>
+        <h2>News</h2>
         <News1 />
         <News2 />
       </div>

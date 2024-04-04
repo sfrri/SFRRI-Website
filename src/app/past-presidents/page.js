@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Paper } from '@mui/material/';
+import Paper from '@mui/material/Paper';
 
-export default async function PresidentialAddress() {
+export default async function PastPresidential() {
     "use server";
     return (
         <main>
