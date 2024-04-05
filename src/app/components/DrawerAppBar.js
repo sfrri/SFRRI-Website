@@ -171,7 +171,7 @@ function DrawerAppBar(props) {
     return (
         <>
             <CssBaseline />
-            <HideOnScroll {...props}>
+            {/* <HideOnScroll {...props}> */}
                 <AppBar
                     sx={{
                         height: { xs: '172px', lg: '280px', },
@@ -192,7 +192,15 @@ function DrawerAppBar(props) {
                             aria-label="open drawer"
                             edge="start"
                             onClick={handleDrawerToggle}
-                            sx={{ mr: 2, display: { lg: 'none' }, bottom: '8px', }}
+                            sx={{ 
+                                mr: 2, 
+                                display: { lg: 'none' }, 
+                                position: 'fixed',
+                                top: '12px',
+                                right: '-3px',
+                                bottom: 'auto',
+                                background: '#111', 
+                            }}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -225,7 +233,7 @@ function DrawerAppBar(props) {
                         </Box>
                     </Toolbar>
                 </AppBar>
-            </HideOnScroll>
+            {/* </HideOnScroll> */}
             <nav>
                 <Drawer
                     container={container}

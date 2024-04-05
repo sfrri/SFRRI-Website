@@ -4,7 +4,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 import CssBaseline from '@mui/material/CssBaseline';
-import DrawerAppBar from './components/DrawerAppBar.js';
+import DrawerMenuAppBar from './components/DrawerMenuAppBar.js';
 import { Container, Box, Typography } from "@mui/material";
 import Footer from './components/Footer.js';
 import Head from 'next/head';
@@ -57,11 +57,7 @@ export default function RootLayout({ children }) {
                             >
                                 <CssBaseline />
                                 <div id="blueBg" />
-                                <DrawerAppBar
-                                    sx={{
-                                        height: '280px',
-                                    }}
-                                />
+                                <DrawerMenuAppBar sx={{ height: '280px', }} />
 
                                 <NewsConditional children={children} />
 
