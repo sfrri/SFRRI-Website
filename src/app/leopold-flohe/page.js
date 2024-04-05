@@ -25,7 +25,7 @@ export default async function LeopoldFlohe() {
                             Medical Doctor 1968<br />
                             1962-1967: University of Tübingen (Biochemistry), Diplom 1967<br />
                             1971:University of Tübingen, Venia legendi in Biochemistry<br />
-                            1974: Bartholomews' Hospital, London: Training in Clinical Pharmacology</p>
+                            1974: Bartholomews&apos; Hospital, London: Training in Clinical Pharmacology</p>
 
                         <p><span className='bold'>Appointments</span><br />
                             1968-1971:University of Tübingen, Dept. Physiological Chemistry, Scientist (Assistant)<br />
@@ -48,7 +48,7 @@ export default async function LeopoldFlohe() {
                             1985: Claudius-Galenus-Preis (for production of urokinase by recombinant technology)<br />
                             1997: Honorary Degree (Dr. h. c.), University of Buenos Aires, Argentina (for achievements in parasitology)<br />
                             1997: Klaus Schwarz Commemorative Medal (for pioneering in selenium research)<br />
-                            1998:"Paper of the year" award (to P.H. student E. Nogoceke for discovery of the trypanosomatid peroxidase system); Science and Humanity Prize, Oxygen Club of California (for life time achievements)<br />
+                            1998:&quot;Paper of the year&quot; award (to P.H. student E. Nogoceke for discovery of the trypanosomatid peroxidase system); Science and Humanity Prize, Oxygen Club of California (for life time achievements)<br />
                             2006:Trevor Frank Slater Award and Gold Medal, SFRR International (for life time achievements)<br />
                             Redox Pioneer #3, Antioxid Redox Signal 2010.</p>
 
