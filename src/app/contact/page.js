@@ -13,7 +13,7 @@ export default async function Contact() {
                     c/o Cardiovascular Division<br />
                     BHF Centre of Research Excellence<br />
                     Faculty of Life Sciences & Medicine<br />
-                    King's College London<br />
+                    King&apos;s College London<br />
                     Franklin-Wilkins Building (Rm 3.01)<br />
                     150 Stamford Street<br />
                     London SE1 9NH<br />
