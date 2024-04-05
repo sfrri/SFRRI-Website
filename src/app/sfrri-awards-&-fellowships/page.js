@@ -9,7 +9,7 @@ export default async function SFRRIAwardsAndFellowships() {
         <main>
             <Paper variant="padded" elevation={3}>
                 <h2>SFRRI Awards &amp; Fellowships</h2>
-                <p>Both the international society and the regional societies offer a wide range of fellowships and awards to foster and develop the field of free radicals and related oxidants. Many of these awards are linked to specific scientific meetings and its constitutent bodies. Further details of many of these awards are therefore listed on the <Link href='regional-societies-committees'>Regional Societies</Link> web pages.</p>
+                <p>Both the international society and the regional societies offer a wide range of fellowships and awards to foster and develop the field of free radicals and related oxidants. Many of these awards are linked to specific scientific meetings and its constitutent bodies. Further details of many of these awards are therefore listed on the <Link href='sfrri-societies'>Regional Societies</Link> web pages.</p>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
                         <h4>SFRRI Trevor Slater Award</h4>
