@@ -2,6 +2,7 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
+import Image from 'next/image';
 
 export default async function LesterPacker() {
     "use server";
@@ -13,7 +14,7 @@ export default async function LesterPacker() {
                     <Grid item xs={12} md={4}>
                         <div className="row">
                             <div className="avatar">
-                                <img src={'/static/images/fellows-and-awardees/Lester-Packer.jpg'} alt='Lester Packer' />
+                                <Image src={'/static/images/fellows-and-awardees/Lester-Packer.jpg'} width={100} height={130} alt='Lester Packer' />
                             </div>
                         </div>
                     </Grid>

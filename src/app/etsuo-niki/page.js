@@ -2,6 +2,7 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
+import Image from '@next/image';
 
 export default async function EtsuoNiki() {
     "use server";
@@ -13,7 +14,7 @@ export default async function EtsuoNiki() {
                     <Grid item xs={12} md={4}>
                         <div className="row">
                             <div className="avatar">
-                                <img src={'/static/images/fellows-and-awardees/Etsuo-Niki.jpg'} alt='Etsuo Niki' />
+                                <Image src={'/static/images/fellows-and-awardees/Etsuo-Niki.jpg'} width={100} height={130} alt='Etsuo Niki' />
                             </div>
                         </div>
                     </Grid>

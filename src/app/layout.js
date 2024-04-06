@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
                                 <div id="blueBg" />
                                 <DrawerMenuAppBar sx={{ height: '280px', }} />
 
-                                <NewsConditional children={children} />
+                                <NewsConditional>{children}</NewsConditional>
 
                                 <Box component="footer">
                                     <Footer />

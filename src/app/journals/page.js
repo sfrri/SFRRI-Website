@@ -15,7 +15,7 @@ export default async function RedoxJournalsatElsevier() {
                 <Grid container spacing={6} sx={{ marginTop: 0, }}>
                     <Grid item xs={12} md={6}>
                         <Link href="https://www.journals.elsevier.com/free-radical-biology-and-medicine/" target="_blank" sx={{textAlign: 'center',}}>
-                            <img src={'/static/images/journals/Free-Radical-Biology-&-Medicine1.jpg'} height="150" className='journal logo' alt='SFRRI Logo' style={{display: 'block', margin: '0 auto',}} />
+                            <Image src={'/static/images/journals/Free-Radical-Biology-&-Medicine1.jpg'} width={147} height={150} className='journal logo' alt='Free Radical Biology &amp; Medicine' style={{display: 'block', margin: '0 auto',}} />
                             <p>Free Radical Biology &amp; Medicine</p>
                         </Link>
                         <ul>
@@ -32,7 +32,7 @@ export default async function RedoxJournalsatElsevier() {
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Link href="https://www.journals.elsevier.com/redox-biology/" target="_blank" sx={{textAlign: 'center',}}>
-                            <img src={'/static/images/journals/Redox-Biology1.jpg'} height="150" className='journal logo' alt='SFRRI Logo' style={{display: 'block', margin: '0 auto',}} />
+                            <Image src={'/static/images/journals/Redox-Biology1.jpg'} width={144} height={150} className='journal logo' alt='Redox Biology' style={{display: 'block', margin: '0 auto',}} />
 
                             <p>Redox Biology</p>
                         </Link>
@@ -50,7 +50,7 @@ export default async function RedoxJournalsatElsevier() {
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Link href="https://www.journals.elsevier.com/advances-in-redox-research" target="_blank" sx={{textAlign: 'center',}}>
-                            <img src={'/static/images/journals/Advances-in-Redox-Research.jpg'} height="150" className='journal logo' alt='SFRRI Logo' style={{display: 'block', margin: '0 auto',}} />
+                            <Image src={'/static/images/journals/Advances-in-Redox-Research.jpg'} width={112} height={150} className='journal logo' alt='Advances in Redox Research' style={{display: 'block', margin: '0 auto',}} />
                             <p>Advances in Redox Research </p>
                         </Link>
                         <ul>
@@ -68,7 +68,7 @@ export default async function RedoxJournalsatElsevier() {
 
                     <Grid item xs={12} md={6}>
                         <Link href="https://www.sciencedirect.com/journal/redox-biochemistry-and-chemistry" target="_blank" sx={{textAlign: 'center',}}>
-                            <img src={'/static/images/journals/Redox-Biochemistry-and-Chemistry.jpg'} height="150" className='journal logo' alt='SFRRI Logo' style={{display: 'block', margin: '0 auto',}} />
+                            <Image src={'/static/images/journals/Redox-Biochemistry-and-Chemistry.jpg'} width={113} height={150} className='journal logo' alt='Redox Biochemistry and Chemistry' style={{display: 'block', margin: '0 auto',}} />
                             <p>Redox Biochemistry and Chemistry</p>
                         </Link>
                         <ul>
@@ -89,13 +89,13 @@ export default async function RedoxJournalsatElsevier() {
                     <Grid item xs={12} md={6}>
                         <p>Official and affiliated journals of:</p>
                         <Link href="http://sfrbm.org/" target="_blank" sx={{ display: 'inline-block', padding: '0 12px', }}>
-                            <img src={'/static/images/societyLogos/SFRBM-logo.png'} height="70" className='journal logo' alt='SFBM Logo' />
+                            <Image src={'/static/images/societyLogos/SFRBM-logo.png'} width={78} height={70} className='journal logo' alt='SFBM Logo' />
                         </Link>
                         <Link href="https://www.sfrr-europe.org/" target="_blank" sx={{ display: 'inline-block', padding: '0 12px', }}>
-                            <img src={'/static/images/societyLogos/SFRR-Europe-logo.png'} height="70" className='journal logo' alt='SFRRE Logo' />
+                            <Image src={'/static/images/societyLogos/SFRR-Europe-logo.png'} width={78} height={70} className='journal logo' alt='SFRRE Logo' />
                         </Link>
                         <Link href="http://sfrr.org/" target="_blank" sx={{ display: 'inline-block', padding: '0 12px', }}>
-                            <img src={'/static/images/SFRRI-Logox2.png'} height="70" className='journal logo' alt='SFRRI Logo' />
+                            <Image src={'/static/images/SFRRI-Logox2.png'} width={70} height={70} className='journal logo' alt='SFRRI Logo' />
                         </Link>
                     </Grid>
                 </Grid>
