@@ -2,7 +2,7 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
-import Image from '@next/image';
+import Image from 'next/image';
 
 export default async function EtsuoNiki() {
     "use server";
