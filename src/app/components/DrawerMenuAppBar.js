@@ -194,8 +194,8 @@ function DrawerMenuAppBar(props) {
                                 backgroundSize: '70px',
                                 padding: '10px 40px 10px 90px',
                                 fontFamily: 'AvenirNextLTProBold',
-                                fontSize: { xs: '1.625rem', sm: '2rem', }, 
-                                letterSpacing: { xs: '-1.625px', sm: '-2px', },
+                                fontSize: { xs: '1.625rem', sm: '2rem', xl: '3rem', }, 
+                                letterSpacing: { xs: '-1.625px', sm: '-2px', lg: '-3px', },
                             }}
                         >
                             Society for Free Radical Research International
