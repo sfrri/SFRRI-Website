@@ -8,7 +8,6 @@ import Paper from "@mui/material/Paper";
 const NewsConditional = ({children}) => {
     const pathname = usePathname();
     
-    //console.log(pathname)
     return (
         <Container maxWidth="lg" sx={{ position: 'relative', marginTop: '10px', }}>
             {pathname === '/' ?
