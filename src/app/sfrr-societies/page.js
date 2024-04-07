@@ -1,56 +1,72 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import Image from 'next/image';
+import ImageLinkGridItem from '../components/ImageLinkGridItem';
 
-export default async function SFRRSocieties() {
-    "use server";
+const data = [
+    {
+        name: 'Society for Redox Biology and Medicine', 
+        url: 'http://sfrbm.org/about/leadership-and-staff/', 
+        imgSrc: '/societyLogos/SFRBM-logo.png',
+    },
+    {
+        name: 'Society for Free Radical Research Africa', 
+        url: 'http://vcilt.uom.ac.mu/sfrr/index.php/about-us-menu', 
+        imgSrc: '/societyLogos/SFRR-Africa-logo.png',
+    },
+    {
+        name: 'Society for Free Radical Research Asia', 
+        url: 'http://sfrrj.umin.jp/asia/en_Committee_members.htm', 
+        imgSrc: '/societyLogos/SFRR-Asia-logo.png',
+    },
+    {
+        name: 'Society for Redox Research Australasia', 
+        url: 'http://www.sfrr-australasia.org', 
+        imgSrc: '/societyLogos/SFRR-Australasia-logo.png',
+    },
+    {
+        name: 'Society for Free Radical Research Europe', 
+        url: 'https://www.sfrr-europe.org/index.php?cms_id=74', 
+        imgSrc: '/societyLogos/SFRR-Europe-logo.png',
+    },
+    {
+        name: 'Oxygen Club of California', 
+        url: 'http://www.oxyclubcalifornia.org/OCC/OCC_officers.php', 
+        imgSrc: '/societyLogos/OCC-logo.png',
+},
+]
+
+export default function SFRRSocieties() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
                 <h2>SFRR Regional Societies</h2>
                 <Grid container spacing={6} sx={{marginTop: 0,}}>
-                    <Grid item xs={12} md={4}>
-                        <Box component={Link} href="http://sfrbm.org/about/leadership-and-staff/" target="_blank" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',}}>
-                            <Image width={174} height={156} src={'/static/images/societyLogos/SFRBM-logo.png'} alt='Society for Redox Biology and Medicine logo' />
-                            <p>Society for Redox Biology and Medicine</p>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={4}>
-                        <Box component={Link} href="http://vcilt.uom.ac.mu/sfrr/index.php/about-us-menu" target="_blank" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',}}>
-                            <Image width={174} height={156} src={'/static/images/societyLogos/SFRR-Africa-logo.png'} alt='Society for Free Radical Research Africa logo' />
-                            <p>Society for Free Radical Research Africa</p>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={4}>
-                        <Box component={Link} href="http://sfrrj.umin.jp/asia/en_Committee_members.htm" target="_blank" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',}}>
-                            <Image width={174} height={156} src={'/static/images/societyLogos/SFRR-Asia-logo.png'} alt='Society for Free Radical Research Asia logo' />
-                            <p>Society for Free Radical Research Asia</p>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={4}>
-                        <Box component={Link} href="http://www.sfrr-australasia.org" target="_blank" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',}}>
-                            <Image width={174} height={156} src={'/static/images/societyLogos/SFRR-Australasia-logo.png'} alt='Society for Redox Research Australasia logo' />
-                            <p>Society for Redox Research Australasia</p>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={4}>
-                        <Box component={Link} href="https://www.sfrr-europe.org/index.php?cms_id=74" target="_blank" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',}}>
-                            <Image width={174} height={156} src={'/static/images/societyLogos/SFRR-Europe-logo.png'} alt='Society for Free Radical Research Europe logo' />
-                            <p>Society for Free Radical Research Europe</p>
-                        </Box>
-                    </Grid>
-                </Grid>
+                    {data.map(item => (
+                        item.name !== 'Oxygen Club of California' &&
+                        <ImageLinkGridItem 
+                            xs={12}
+                            md={4}
+                            href={item.url} 
+                            width={174} 
+                            height={156} 
+                            src={item.imgSrc} 
+                            name={item.name} 
+                            key={item.name} 
+                        />
+                    ))}
+            </Grid>
                 <h4>SFRRI Affiliated Society</h4>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} md={4}>
-                        <Box component={Link} href="http://www.oxyclubcalifornia.org/OCC/OCC_officers.php" target="_blank" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',}}>
-                            <Image width={174} height={156} src={'/static/images/societyLogos/OCC-logo.png'} alt='Oxygen Club of California logo' />
-                            <p>Oxygen Club of California</p>
-                        </Box>
-                    </Grid>
+                <Grid container spacing={6}>
+                    <ImageLinkGridItem 
+                        xs={12}
+                        md={4}
+                        href={data[5].url} 
+                        width={174} 
+                        height={156} 
+                        src={data[5].imgSrc} 
+                        name={data[5].name} 
+                    />
                 </Grid>
             </Paper>
         </main>
