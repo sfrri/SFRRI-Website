@@ -23,7 +23,12 @@ const ImageLinkGridItem = ({ xs, md, href, width, height, src, name, listItems }
                     position: 'relative' 
                 }}
             >
-                {loading && <Skeleton variant="rectangular" width={width} height={height} />}
+                {loading && <Skeleton 
+                                variant="rounded" 
+                                width={width} 
+                                height={height} 
+                            />
+                }
                 <Image
                     width={width}
                     height={height}
