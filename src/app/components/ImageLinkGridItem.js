@@ -37,8 +37,8 @@ const ImageLinkGridItem = ({ xs, md, href, width, height, src, name, listItems }
             </Box>
             {listItems &&
                 <ul>
-                    {listItems.map(item => (
-                        <li dangerouslySetInnerHTML={{ __html: item }} />
+                    {listItems.map((item, i) => (
+                        <li dangerouslySetInnerHTML={{ __html: item }} key={i} />
                     ))}
                 </ul>
             }

@@ -109,6 +109,7 @@ export default async function RedoxJournalsatElsevier() {
                                 href={item.url} 
                                 sx={{ display: 'inline-block', padding: '0 12px', }}
                                 target="_blank" 
+                                key={item.name}
                             >
                                 <Image 
                                     src={item.imgSrc} 
