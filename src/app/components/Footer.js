@@ -31,10 +31,34 @@ const colLinks = [
 const navColumns = [];
 for (let i = 0; i < colLinks.length; i++) {
     navColumns.push(
-        <Grid item xs={12} sm={6} md={2.8} key={i} sx={{borderLeft: {xs: 'none', sm: '1px solid rgba(255,255,255,0.5)',}, paddingTop: '0 !important', marginTop:'16px', }}>
+        <Grid 
+            item 
+            xs={12} 
+            sm={6} 
+            md={2.8} 
+            key={i} 
+            sx={{
+                borderLeft: {
+                    xs: 'none', 
+                    sm: '1px solid rgba(255,255,255,0.5)',
+                }, 
+                paddingTop: '0 !important', 
+                marginTop:'16px', 
+            }}
+        >
             <List>
                 {colLinks[i].map(item =>
-                    <ListItem key={item} sx={{listStyle: 'none', }}><Link variant='HomeNav' href={`/${kebabize(item)}`}>{item}</Link></ListItem>
+                    <ListItem 
+                        key={item} 
+                        sx={{listStyle: 'none', }}
+                    >
+                        <Link 
+                            variant='HomeNav' 
+                            href={`/${kebabize(item)}`}
+                        >
+                            {item}
+                        </Link>
+                    </ListItem>
                 )}
             </List>
         </Grid>
@@ -55,8 +79,23 @@ export default async function Footer() {
             }}
         >
             <Container maxWidth="lg">
-                <Grid container spacing={2} sx={{ position: 'relative' }}>
-                    <Grid item xs={12} sm={6} md={3.4} sx={{ paddingRight: '32px',/*display: 'flex', alignItems: 'center', justifyContent: 'space-evenly',*/ }}>
+                <Grid 
+                    container 
+                    spacing={2} 
+                    sx={{ position: 'relative' }}
+                >
+                    <Grid 
+                        item 
+                        xs={12} 
+                        sm={6} 
+                        md={3.4} 
+                        sx={{ 
+                            paddingRight: '32px',/*
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            justifyContent: 'space-evenly',*/ 
+                        }}
+                    >
                         <Link href="/">
                         <Image
                             src={`/static/images/SFRRI-footer-logo.png`}

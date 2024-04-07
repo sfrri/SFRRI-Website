@@ -29,7 +29,6 @@ export const ImageLink = ({ linkName, bgImgUrl }) => {
                         opacity: 0.5,
                         transition: 'opacity 300ms',
                     }
-                
                 }}
                 elevation={3}
             >
@@ -39,12 +38,13 @@ export const ImageLink = ({ linkName, bgImgUrl }) => {
                     image={bgImgUrl}
                     alt={`${linkName} link image`}
                 />
-                <Box sx={{ 
-                    position: 'absolute',
-                    bottom: 0,
-                    padding: '0 20px 12px',
-                }}
-                color="text.secondary"
+                <Box 
+                    sx={{ 
+                        position: 'absolute',
+                        bottom: 0,
+                        padding: '0 20px 12px',
+                    }}
+                    color="text.secondary"
                 >
                     <h2>{linkName.toString()}</h2>
                 </Box>
