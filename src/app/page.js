@@ -23,9 +23,9 @@ const imageLinkArr = [
 
 export default function HomePage() {
     return (
-        <main>
+        <main style={{position: 'relative'}}>
             <HomeNews sx={{ borderRadius: '3px',}}>
-                <Grid container spacing={5} sx={{ position: 'relative', borderRadius: '3px',}}>
+                <Grid container spacing={5} sx={{ position: 'relative', borderRadius: '3px', zIndex: 1,}}>
                     <Grid item xs={12}>
                         <h2 style={{fontSize: '3rem', letterSpacing: '-3px',}}>Latest News</h2>
                     </Grid>

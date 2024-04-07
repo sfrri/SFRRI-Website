@@ -15,6 +15,7 @@ export default function HomeNews({children}) {
                 color: '#fff',
                 position: 'relative',
                 borderRadius: '3px',
+                zIndex: 0,
                 '&::before': {
                     content: '""',
                     position: 'absolute',
