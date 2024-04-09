@@ -131,7 +131,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.875rem;
     letter-spacing: -2px;
 }
 
@@ -155,13 +155,14 @@ a {
 
 p a,
 ul a,
-a p {
+a p,
+span a {
     color: #4282dd;
     font-weight: 500 !important;
 }
 
 p {
-    margin-block-start: 1em;
+    /* margin-block-start: 1em; */
     margin-block-end: 1em;
     word-wrap: break-word;
 }
