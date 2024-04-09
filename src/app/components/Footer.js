@@ -68,7 +68,7 @@ for (let i = 0; i < colLinks.length; i++) {
 export default async function Footer() {
     return (
         <Box
-            //component="footer"
+            //component='footer'
             sx={{
                 py: 3,
                 px: 2,
@@ -78,7 +78,7 @@ export default async function Footer() {
                 marginTop: '10px',
             }}
         >
-            <Container maxWidth="lg">
+            <Container maxWidth='lg'>
                 <Grid 
                     container 
                     spacing={2} 
@@ -96,31 +96,30 @@ export default async function Footer() {
                             justifyContent: 'space-evenly',*/ 
                         }}
                     >
-                        <Link href="/">
-                        <Image
-                            src={`/static/images/SFRRI-footer-logo.png`}
-                            alt="SFRRI footer logo"
-                            layout="responsive"
-                            width={275}
-                            height={80}/**/
-                            loading="lazy"
-                            draggable="false"
-                            style={{
-                                width: 'auto',
-                                maxWidth: '275px',
-                                margin:'32px 0 0 0',
-                                //marginRight: '20px',
-                                //minWidth: '200px',
-                                //display: {xs: 'block', ml: 'none', lg: 'block',},
-                                //objectFit: 'contain',
-                                /*opacity: 0.5,
-                                transition: 'opacity 300ms',
-                                '&:hover': {
-                                    opacity: 1,
+                        <Link href='/'>
+                            <Image
+                                src={`/static/images/SFRRI-footer-logo.png`}
+                                alt='SFRRI footer logo'
+                                width={275}
+                                height={80}/**/
+                                loading='lazy'
+                                draggable='false'
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                    margin:'32px 0 0 0',
+                                    //marginRight: '20px',
+                                    //minWidth: '200px',
+                                    //display: {xs: 'block', ml: 'none', lg: 'block',},
+                                    //objectFit: 'contain',
+                                    /*opacity: 0.5,
                                     transition: 'opacity 300ms',
-                                }*/
-                            }}
-                        />
+                                    '&:hover': {
+                                        opacity: 1,
+                                        transition: 'opacity 300ms',
+                                    }*/
+                                }}
+                            />
                         </Link>
                     </Grid>
                     {navColumns}
