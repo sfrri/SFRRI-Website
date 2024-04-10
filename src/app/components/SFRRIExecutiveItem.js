@@ -10,12 +10,12 @@ import { kebabize } from '@/utils';
 
 const SFRRIExecutiveItem = ({ imgWidth, imgHeight, name, title, address, tel, email, link, bio, }) => {
     const [loading, setLoading] = useState(true);
-    console.log(`/static/images/SFRRIExecutive/${kebabize(name)}.jpg`)
+
     const maxImgWidth = imgWidth < 133.33 ? imgWidth : 133.33
     const maxImgHeight = imgHeight < 133.33 ? imgHeight : 133.33
     return (
         <Grid container spacing={0} sx={{marginTop: '2em',}}>
-            <Grid item xs={12} lg={2} sx={{marginTop: '2em',}}>
+            <Grid item xs={12} lg={2} sx={{marginTop: '2em',/* paddingLeft: {xs: '2em', lg: 0,}*/}}>
                 {loading && <Skeleton
                     variant="rounded"
                     width={maxImgWidth}
@@ -36,15 +36,15 @@ const SFRRIExecutiveItem = ({ imgWidth, imgHeight, name, title, address, tel, em
                     priority
                 />
             </Grid>
-            <Grid item xs={12} lg={10} sx={{padding: '0 1em',}}>
+            <Grid item xs={12} lg={10} sx={{padding:{lg: '0 1em'},}}>
                 <Grid container spacing={0}>
-                    <Grid item xs={12} sx={{padding: '0 1em',}}><h4>{title}</h4></Grid>
-                    <Grid item xs={12} sx={{padding: '0 1em',}}><p className='bold'>{name}</p></Grid>
+                    <Grid item xs={12} sx={{padding:{lg: '0 1em'},}}><h4>{title}</h4></Grid>
+                    <Grid item xs={12} sx={{padding:{lg: '0 1em'},}}><p className='bold'>{name}</p></Grid>
                     <BioAccordion bio={bio} />
-                    <Grid item xs={12} lg={6} sx={{padding: '0 1em',}}>
+                    <Grid item xs={12} lg={6} sx={{padding:{lg: '0 1em'},}}>
                         <p dangerouslySetInnerHTML={{ __html: address }} />
                     </Grid>
-                    <Grid item xs={12} lg={6} sx={{padding: '0 1em',}}>
+                    <Grid item xs={12} lg={6} sx={{padding:{lg: '0 1em'},}}>
                         <p>
                             Tel:&nbsp;{tel}<br />
                             Email:&nbsp;<Link href={email} target="_blank">{email}</Link><br />

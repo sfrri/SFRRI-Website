@@ -13,7 +13,7 @@ export default function AccordionUsage({bio}) {
           aria-controls="panel-content"
           id="panel-header"
           sx={{
-            paddingLeft: '18px',
+            padding:{xs: 0, lg: '0 1em'},
             color: '#4282dd !important',
             fontWeight: 500,
           }}
@@ -21,8 +21,6 @@ export default function AccordionUsage({bio}) {
           Read Bio
         </AccordionSummary>
         {bio &&<AccordionDetails dangerouslySetInnerHTML={{ __html: bio }} />}
-          {/* {bio && bio}
-        </AccordionDetails> */}
       </Accordion>
     </div>
   );
