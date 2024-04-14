@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Image from 'next/image';
 import Skeleton from '@mui/material/Skeleton';
+import DOMPurify from 'isomorphic-dompurify';
 
 const ImageLinkGridItem = ({ xs, md, href, width, height, src, name, listItems }) => {
     const [loading, setLoading] = useState(true);
@@ -43,7 +44,7 @@ const ImageLinkGridItem = ({ xs, md, href, width, height, src, name, listItems }
             {listItems &&
                 <ul>
                     {listItems.map((item, i) => (
-                        <li dangerouslySetInnerHTML={{ __html: item }} key={i} />
+                        <li dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item) }} key={i} />
                     ))}
                 </ul>
             }

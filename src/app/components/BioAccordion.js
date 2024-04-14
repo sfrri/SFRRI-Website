@@ -3,6 +3,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import DOMPurify from 'isomorphic-dompurify';
 
 export default function AccordionUsage({bio}) {
   return (
@@ -20,7 +21,7 @@ export default function AccordionUsage({bio}) {
         >
           Read Bio
         </AccordionSummary>
-        {bio &&<AccordionDetails dangerouslySetInnerHTML={{ __html: bio }} />}
+        {bio &&<AccordionDetails dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(bio) }} />}
       </Accordion>
     </div>
   );

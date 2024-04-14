@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Skeleton from '@mui/material/Skeleton';
 import BioAccordion from './BioAccordion';
 import { kebabize } from '@/utils';
+import DOMPurify from 'isomorphic-dompurify';
 
 const SFRRIExecutiveItem = ({ imgWidth, imgHeight, name, title, address, tel, email, link, bio, }) => {
     const [loading, setLoading] = useState(true);
@@ -42,7 +43,7 @@ const SFRRIExecutiveItem = ({ imgWidth, imgHeight, name, title, address, tel, em
                     <Grid item xs={12} sx={{padding:{lg: '0 1em'},}}><p className='bold'>{name}</p></Grid>
                     <BioAccordion bio={bio} />
                     <Grid item xs={12} lg={6} sx={{padding:{lg: '0 1em'},}}>
-                        <p dangerouslySetInnerHTML={{ __html: address }} />
+                        <p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(address) }} />
                     </Grid>
                     <Grid item xs={12} lg={6} sx={{padding:{lg: '0 1em'},}}>
                         <p>
