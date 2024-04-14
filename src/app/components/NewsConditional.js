@@ -19,7 +19,8 @@ const NewsConditional = ({children}) => {
                     </Grid>
                     <Grid item xs={12} md={3}>
                         <Paper variant="padded" elevation={3}>
-                            <News />
+                            <h2>News</h2>
+                            <News home={false} />
                         </Paper>
                     </Grid>
                 </Grid>

@@ -8,16 +8,17 @@ import Divider from '@mui/material/Divider';
 import { Box } from "@mui/material";
 import { styled } from '@mui/material/styles';
 
-const Item = styled(Box)(() => ({
-    position: 'relative',
-    padding: '2px 10px',
-    pageBreakInside: 'avoid',           /* Theoretically FF 20+ */
-    breakInside:' avoid-column',         /* Chrome, Safari, IE 11 */
-    // display: 'table',                      /* Actually FF 20+ */
+export const News = home => {
 
-}));
+    const Item = styled(Box)(() => ({
+        position: 'relative',
+        padding: home === true ? '2px 10px' : '2px 0',
+        pageBreakInside: 'avoid',                 /* Theoretically FF 20+ */
+        breakInside: 'avoid-column',              /* Chrome, Safari, IE 11 */
+        // display: 'table',                      /* Actually FF 20+ */
 
-export const News = () => {
+    }));
+
     return (
         <Stack
             direction="column"
@@ -35,9 +36,7 @@ export const News = () => {
                 </p>
             </Item>
             <Item>
-                <p>SFRRI 2023 Award Lectures</p>
-            </Item>
-            <Item>
+                <p className="bold">SFRRI 2023 Award Lectures</p>
                 <ul>
                     {SFRRI2023AwardLectures.map(item => (
                         <AwardLectureItem
