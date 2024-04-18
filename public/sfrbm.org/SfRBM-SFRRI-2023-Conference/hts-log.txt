@@ -1,0 +1,18 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 23 Nov 2023 22:21:07 at https://sfrbm.org/meetings/sfrbm-sfrri-2023/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://sfrbm.org/meetings/sfrbm-sfrri-2023/ -O1 "C:\Users\stpv9\Documents\DC\work\SFRRI\SfRBM - SFRRI 2023 Conference WEBSITE part\SfRBM - SFRRI 2023 Conference" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+22:21:34	Warning: 	Found for https://sfrbm.org/meetings/sfrbm-sfrri-2023/exhibitor-prospectus/
+22:21:34	Warning: 	File has moved from https://sfrbm.org/meetings/sfrbm-sfrri-2023/exhibitor-prospectus/ to /site/assets/files/3284/sfrbm_2024_ep.pdf
+22:21:34	Error: 	"Page Not Found" (404) at link https://sfrbm.org/meetings/sfrbm-sfrri-2023/conference-format/ (from https://sfrbm.org/meetings/sfrbm-sfrri-2023/conference-preview/)
+22:21:34	Warning: 	Moved Permanently for https://sfrbm.org/meetings/sfrbm-sfrri-2023/featured-symposia-2/
+22:21:34	Warning: 	File has moved from https://sfrbm.org/meetings/sfrbm-sfrri-2023/featured-symposia-2/ to /meetings/sfrbm-sfrri-2023/openingdoorsevent/
+22:21:35	Warning: 	Found for https://sfrbm.org/meetings/sfrbm-sfrri-2023/register/
+22:21:35	Warning: 	File has moved from https://sfrbm.org/meetings/sfrbm-sfrri-2023/register/ to /meetings/sfrbm-sfrri-2023/register/start
+
+HTTrack Website Copier/3.49-2 mirror complete in 28 seconds : 67 links scanned, 62 files written (5396291 bytes overall) [4981864 bytes received at 177923 bytes/sec], 628707 bytes transferred using HTTP compression in 2 files, ratio 27%, 5.2 requests per connection
+(1 errors, 6 warnings, 0 messages)
