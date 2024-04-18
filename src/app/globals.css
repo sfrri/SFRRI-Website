@@ -133,6 +133,7 @@ h1 {
 h2 {
     font-size: 1.875rem;
     letter-spacing: -2px;
+    margin-bottom: 20px;
 }
 
 h3 {
@@ -167,10 +168,14 @@ p {
     word-wrap: break-word;
 }
 
+.pNoMarginBottom p {
+    margin-block-end: 0;
+}
+
 ol,
 ul {
     margin-block-end: 1em;
-    padding-inline-start: 40px;
+    padding-inline-start: 20px;
 }
 
 .bold {
