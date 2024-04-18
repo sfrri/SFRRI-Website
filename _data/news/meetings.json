@@ -1,0 +1,68 @@
+{
+    "meetings": [
+      {
+        "add to related meetings": false,
+        "Meeting Title": "22nd Society for Free Radical Research International Biennial Meeting",
+        "date": "June 3-6, 2025",
+        "location": "Galway, Ireland",
+        "further information link text": "22nd SFRRI Biennial Conference, Galway, Ireland",
+        "further information link hypertext": "",
+        "upload_path": [
+          "/admin/files/uploads/22nd-sfrri-biennial-meeting-galway-3-6-june-2025.pdf"
+        ]
+      },
+      {
+        "add to related meetings": false,
+        "Meeting Title": "Society for Free Radical Research - Europe Meeting 'From Molecules to Tissues: Redox Biology in Action'",
+        "date": "June 5-7, 2024",
+        "location": "Istanbul, Turkey",
+        "further information link text": "http://redoxistanbul2024.com",
+        "further information link hypertext": "http://redoxistanbul2024.com"
+      },
+      {
+        "add to related meetings": false,
+        "Meeting Title": "31st Annual Conference of the Society for Redox Biology & Medicine",
+        "date": "November 20-23, 2024",
+        "location": "Savannah Convention Center, Savannah, Georgia, USA",
+        "further information link text": "https://sfrbm.org/",
+        "further information link hypertext": "https://sfrbm.org/"
+      },
+      {
+        "add to related meetings": true,
+        "Meeting Title": "16th International Conference on Reactive Oxygen and Nitrogen Species in Plants",
+        "date": "May 29-31, 2024",
+        "location": "Antibes Juan-les-Pins, France",
+        "further information link text": "https://www.alphavisa.com/pog/2024/",
+        "further information link hypertext": "https://www.alphavisa.com/pog/2024/"
+      },
+      {
+        "add to related meetings": true,
+        "Meeting Title": "Lipid Oxidation: New Biochemical Insights and Clinical Applications",
+        "date": "October 10-12, 2024",
+        "location": "Genoa, Italy",
+        "further information link text": "download flyer",
+        "upload_path": [
+          "/admin/files/uploads/hne-club-meeting.pdf"
+        ]
+      },
+      {
+        "add to related meetings": true,
+        "Meeting Title": "11th Biennial Meeting of SFRR Asia and Chinese National Conference of Redox Biology & Medicine 2024",
+        "date": "October 21-23, 2024",
+        "location": "[Kuntai Hotel](http://www.kuntaihotel.com/) (Beijing Wangjing), Beijing, China",
+        "further information link text": "http://www.sfrr-asia2024.com.cn/",
+        "further information link hypertext": "http://www.sfrr-asia2024.com.cn/"
+      },
+      {
+        "add to related meetings": true,
+        "Meeting Title": "32nd Meeting of The Society for Redox Research Australasia and 11th Joint Meeting with The Society for Free Radical Research Japan",
+        "date": "December 9-11, 2024",
+        "location": "Finkel Lecture Theatre, John Curtin School of Medical Research, 131 Garran Rd, Acton ACT 2601",
+        "upload_path": [
+          "/admin/files/uploads/sfrra-j-flyer.pdf"
+        ],
+        "further information link text": "download flyer"
+      }
+    ]
+  }
+  

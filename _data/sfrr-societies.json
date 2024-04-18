@@ -1,0 +1,52 @@
+{
+    "sfrr_society": [
+        {
+            "affiliated_society": false,
+            "name": "Society for Redox Biology and Medicine",
+            "link": "http://sfrbm.org/about/leadership-and-staff/",
+            "upload_path": [
+                "/admin/files/uploads/sfrbm-logo.png"
+            ]
+        },
+        {
+            "affiliated_society": false,
+            "name": "Society for Free Radical Research Africa",
+            "link": "http://vcilt.uom.ac.mu/sfrr/index.php/about-us-menu",
+            "upload_path": [
+                "/admin/files/uploads/sfrr-africa-logo.png"
+            ]
+        },
+        {
+            "affiliated_society": false,
+            "name": "Society for Free Radical Research Asia",
+            "link": "http://sfrrj.umin.jp/asia/en_Committee_members.htm",
+            "upload_path": [
+                "/admin/files/uploads/sfrr-asia-logo.png"
+            ]
+        },
+        {
+            "affiliated_society": false,
+            "name": "Society for Redox Research Australasia",
+            "link": "http://www.sfrr-australasia.org/",
+            "upload_path": [
+                "/admin/files/uploads/sfrr-australasia-logo.png"
+            ]
+        },
+        {
+            "affiliated_society": false,
+            "name": "Society for Free Radical Research Europe",
+            "link": "https://www.sfrr-europe.org/index.php?cms_id=74",
+            "upload_path": [
+                "/admin/files/uploads/sfrr-europe-logo.png"
+            ]
+        },
+        {
+            "affiliated_society": true,
+            "name": "Oxygen Club of California",
+            "link": "http://www.oxyclubcalifornia.org/OCC/OCC_officers.php",
+            "upload_path": [
+                "/admin/files/uploads/occ-logo.png"
+            ]
+        }
+    ]
+}
