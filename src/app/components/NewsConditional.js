@@ -14,13 +14,13 @@ const NewsConditional = ({children}) => {
                 <>{children}</>
                 :
                 <Grid container spacing={2}>
-                    <Grid item xs={12} md={9}>
+                    <Grid item xs={12} md={8.5} lg={9}>
                         {children}
                     </Grid>
-                    <Grid item xs={12} md={3}>
+                    <Grid item xs={12} md={3.5} lg={3}>
                         <Paper variant="padded" elevation={3}>
                             <h2>News</h2>
-                            <News home={false} />
+                            <News />
                         </Paper>
                     </Grid>
                 </Grid>
