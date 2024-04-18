@@ -1,0 +1,136 @@
+/* <![CDATA[ */
+
+@import url('images.css');
+@import url('lists.css');
+@import url('tables.css');
+
+/* prevent layout jumping when viewport vertical scroll bar appears. */
+html { overflow-y:scroll; }
+
+/*-------------------------------------[ TEXT ]*/
+body
+{
+	font-family: verdana;
+	font-size: 64%; /* when a browser uses its default font-size of 16px, 1em = 10px */
+	color: #333;
+}
+
+strong, .bold
+{
+	font-weight: bold;
+}
+
+.foot_note
+{
+	font-size: 1em;
+}
+
+h1, h2
+{
+	letter-spacing: -1px;
+}
+
+h1, h2, h3, h4
+{
+	margin: 0 0 0.9em;
+	padding: 0;
+	line-height: 1.2em;
+}
+
+h3, h4
+{
+	margin-top: 0.5em;
+}
+
+p
+{
+	margin: 0 0 1.2em;
+	padding: 0;
+	line-height: 1.3em;
+}
+
+code
+{
+	font-family: courier;
+	font-size: 1.1em;
+	color: #446;
+	white-space: pre-wrap;
+}
+
+.indent { margin-left: 2em; }
+
+/*-------------------------------------[ HYPERLINKS ]*/
+a { outline: none; }
+
+/*-------------------------------------[ LAYOUT ]*/
+.hide { display: none !important; }
+
+.work-in-progress
+{
+	background-color: #aaa;
+	background-image: url('../../resources/image/work-in-progress-strip.html');
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+
+.clear:after
+{
+	content: '.';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clear { zoom: 1; } /* for IE7 hasLayout */
+
+.vertically_aligned
+{
+	display: table-cell;
+	position: relative;
+	vertical-align: middle;
+	left: 0;
+	height: inherit;
+	
+	/* IE only hacks */
+	*display: block;
+	*position: absolute;
+	*top: 50%;
+}
+
+hr
+{
+	height: 1px;
+	background-color: #ddd;
+	border: none;
+}
+
+/*-------------------------------------[ BOX SHADOW DEFAULT ]*/
+.shadow
+{
+	-moz-box-shadow: 0px 6px 12px #666;
+	-webkit-box-shadow: 0px 6px 12px #666;
+	box-shadow: 0px 6px 12px #666;
+}
+
+/*-------------------------------------[ ROUNDED CORNERS ]*/
+.rounded
+{
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+}
+
+.rounded .corner
+{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+}
+
+.corner.top_left { top: 0; left: 0; }
+.corner.top_right { top: 0; right: 0; }
+.corner.bottom_right { bottom: 0; right: 0; }
+.corner.bottom_left { bottom: 0; left: 0; }
+
+/* ]]> */

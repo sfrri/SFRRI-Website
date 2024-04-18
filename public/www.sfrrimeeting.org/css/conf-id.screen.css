@@ -1,0 +1,48 @@
+/* <![CDATA[ */
+
+/**
+  *	Use this style sheet to set the website background image;
+  *	top bar background image;
+  *	primary colour: for text colour and top bar default background colour;
+  *	secondary colour for call to action box background colour;
+  *	and drop-down menu background colour;
+  *	and visited link colour.
+  */
+  
+/*-------------------------------------[ BACKGROUND IMAGES ]*/
+body
+{
+background-color:#333333;
+}
+
+.top_bar
+{
+background-image:url(../resources/image/topbarbg.jpg);
+}
+
+/*-------------------------------------[ PRIMARY and SECONDARY COLOURS ]*/
+
+/* primary start */
+.primary_colour { color: #0d3558; }
+.primary_back { }
+.primary_back .navigation a:hover { background-color: #c7db49; color:#000000}
+.primary_back th { background-color: #267cb2; }
+
+.primary_colour.navigation.news a { color: #19638e; }
+a:link, a:visited{ color: #19638e; }
+a:hover{ color: #8ba100; }
+.secondary_back a:visited { color: #fff; }
+
+/* primary end */
+
+/* secondary start */
+.secondary_colour { color: #19638e; }
+.secondary_back, .navigation a.highlight { background-color:#19748f}
+.secondary_back.news a:hover { color: #FFF; background-color: #19638e; }
+
+.primary_back ul.dropdown { background-color: #20204a; }
+
+.call_to_action.primary_colour a{color:#FFFFFF;}
+/* secondary end */
+
+/* ]]> */

@@ -1,0 +1,64 @@
+/* <![CDATA[ */
+/*-------------------------------------[ TABLE DEFAULTS ]*/
+table
+{
+	table-layout: fixed;
+	margin: 0 0 10px;
+	padding: 0;
+	border-collapse: collapse;
+}
+
+table tr
+{
+	background-color: #fff;
+}
+
+table th, table td
+{
+	border: solid 1px #666;
+	padding: 3px 5px 3px;
+	background-image: none;
+}
+
+table th
+{
+	font-weight: bold;
+	background-color: #ddd;
+}
+
+table tr.even
+{
+	background-color: #eee;
+}
+table.noborder td
+{
+	border: none;
+}
+
+table#table_head th.sortable
+{
+	cursor: pointer;
+}
+
+table#table_head th.sortable:active
+{
+	background-color: #ccc;
+	background-image: none;
+}
+
+table#table_head th .sort
+{
+	float: right;
+	width: 8px;
+	height: 8px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-image: url('../images/sort-indicator-up.html');
+}
+
+table#table_head th .sort.desc
+{
+	background-image: url('../images/sort-indicator-down.html');
+}
+
+/* ]]> */

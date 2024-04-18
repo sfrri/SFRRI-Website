@@ -1,0 +1,74 @@
+/* <![CDATA[ */
+/*-------------------------------------[ IMAGE DEFAULTS ]*/
+
+img
+{
+	vertical-align: middle;
+}
+
+div.image
+{
+	margin: 0 0 1.2em;
+	padding: 0;
+}
+
+div.image.centre
+{
+	text-align: center;
+}
+
+div.image.left
+{
+	text-align: left;
+}
+
+div.image.right
+{
+	text-align: right;
+}
+
+div.image.inline
+{
+	display: inline; /* required for IE6. */
+}
+
+div.image.left.inline
+{
+	float: left;
+	margin: 0 3em 1.2em 0;
+}
+
+div.image.right.inline
+{
+	float: right;
+	margin: 0 0 1.2em 2em;
+}
+
+/*-------------------------------------[ IMAGE CAPTIONS ]*/
+div.image p.caption
+{
+	margin: 0;
+	padding: 0 0 0 2px;
+	font-size: 0.9em;
+	line-height: 18px;
+	text-align: left;
+}
+
+div.image.left p.caption, div.image.left.inline p.caption { text-align: left; }
+div.image.centre p.caption { text-align: center; }
+div.image.right p.caption, div.image.right.inline p.caption { text-align: right; margin-right: 4px; }
+
+div.image.left.inline.standard { margin: 0 10px 0 0; }
+div.image.right.inline.standard { margin: 0 0 0 10px; }
+
+/*-------------------------------------[ IMAGE HYPERLINKS ]*/
+a:link img, a:visited img { border: none; outline: none; background-color: transparent; }
+a:hover img, a:active img { border: none; outline: none; background-color: transparent; }
+
+/*-------------------------------------[ IMAGE BORDER ]*/
+img.with_border, a img.with_border { border: solid 2px #5d84a1; }
+
+/*-------------------------------------[ IMAGE CORNERS ]*/
+/* use .rounded from base CSS */
+
+/* ]]> */

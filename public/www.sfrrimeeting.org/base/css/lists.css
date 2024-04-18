@@ -1,0 +1,52 @@
+/* <![CDATA[ */
+/*-------------------------------------[ LISTINGS DEFAULTS ]*/
+
+#list_block { position: relative; }
+
+ul
+{
+	margin: 0 0 1.4em 1.6em;
+	padding: 0;
+}
+
+ol
+{
+	list-style-position: outside;
+	margin: 0 0 1.4em 2.4em;
+	padding: 0;
+}
+
+ul li, ol li
+{
+	margin: 0 0 0.6em;
+	padding: 0;
+	line-height: 1em;
+}
+
+ul ul, ol ol
+{
+	padding-top: 1em;
+	font-size: 1em;
+}
+
+ol.alpha
+{
+	list-style-type: upper-alpha;
+}
+
+ol.alpha.lower
+{
+	list-style-type: lower-alpha;
+}
+
+ol.roman
+{
+	list-style-type: upper-roman;
+}
+
+ol.roman.lower
+{
+	list-style-type: lower-roman;
+}
+
+/* ]]> */
