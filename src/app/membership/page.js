@@ -1,12 +1,16 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
+import * as data from '../../../_data/membership.json'
+import Markdown from 'react-markdown'
+import rehypeExternalLinks from 'rehype-external-links'
 
 export default async function Membership() {
     "use server";
     return (
         <main>
-            <Paper variant="padded" elevation={3}>
-                <h2>Membership</h2>
+             <Paper variant="padded" elevation={3}>
+             <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{data.body}</Markdown>
+             {/* <h2>Membership</h2>
                 <p>All members of the regional branches of the Society for Free Radical Research are automatically members of the Society for Free Radical Research International and are eligible for reduced registration rates at both the International Congresses of the Society and regional meetings.</p>
                 <p>Members of the society also have access to a number of other benefits.</p>
                 <h4>Membership Categories</h4>
@@ -20,7 +24,7 @@ export default async function Membership() {
                 <p>At the time of retirement from full-time employment, a member may become an emeritus member. Emeritus members have the right to vote and hold office.</p>
 
                 <h5>E. Corporate Members</h5>
-                <p>shall be corporations or other organisations, including commercial enterprises, interested in the activities and objectives of the Society. They shall not have the right to vote or hold office.</p>
+                <p>shall be corporations or other organisations, including commercial enterprises, interested in the activities and objectives of the Society. They shall not have the right to vote or hold office.</p> */}
             </Paper>
         </main>
     );

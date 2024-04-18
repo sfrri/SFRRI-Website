@@ -1,12 +1,16 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
+import * as data from '../../../_data/conferences/past-sfrri-conferences.json'
+import Markdown from 'react-markdown'
+import rehypeExternalLinks from 'rehype-external-links'
 
 export default async function PastSFRRIConferences() {
     "use server";
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>Past SFRRI Conferences</h2>
+                <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{data.body}</Markdown>
+                {/* <h2>Past SFRRI Conferences</h2>
                 <p><a href="downloads/SFRRI_Delegates_attending_Biennial_Conferences.pdf">Delegates/Countries at SFRRI Biennial Meetings</a></p>
                 <hr />
                 <p className='bold'>1982	1st	Uxbridge, Great Britain</p>
@@ -68,7 +72,7 @@ export default async function PastSFRRIConferences() {
                 <p className='bold'><a href='http://sfrr.org/sfrbm.org/SfRBM-SFRRI-2023-Conference/' target='_blank'>2023 - 21<sup>st</sup> Biennial SFRRI Meeting Joint with 30<sup>th</sup> Society for Redox Biology &amp; Medicine - Punta del Este, Uruguay</a><br />
                     <a href='https://www.flickr.com/photos/199630133@N04/albums/72177720313073054' target='_blank'>Photos</a>
                 </p>
-                <hr />
+                <hr /> */}
             </Paper>
         </main>
     );

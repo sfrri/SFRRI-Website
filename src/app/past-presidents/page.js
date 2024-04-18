@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
+import * as data from '../../../_data/society/past-presidents.json'
+import Markdown from 'react-markdown'
+import rehypeExternalLinks from 'rehype-external-links'
 
 export default async function PastPresidential() {
-    "use server";
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>Past Presidents</h2> 
+                <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{data.body}</Markdown>
+                {/* <h2>Past Presidents</h2> 
                 <p>Trevor Slater</p>
                 <p>John Perkins</p>
                 <p>Tom Dormandy</p>
@@ -25,7 +28,7 @@ export default async function PastPresidential() {
                 <p>Michael Davies</p>
                 <p>Rafael Radi</p>
                 <p>Shinya Toyokuni</p>
-                <p>Jose Viña</p>
+                <p>Jose Viña</p> */}
             </Paper>
         </main>
     );

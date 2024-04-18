@@ -34,7 +34,7 @@ const ImageLinkGridItem = ({ xs, md, href, width, height, src, name, listItems }
                     width={width}
                     height={height}
                     onLoad={(e) => setLoading(false)}
-                    src={`/static/images${src}`}
+                    src={src}
                     alt={`${name} logo`}
                     style={{ display: loading ? 'none' : 'block' }}
                     priority

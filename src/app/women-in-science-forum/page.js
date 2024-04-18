@@ -1,11 +1,15 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
+import * as data from '../../../_data/society/women-in-science-forum.json'
+import Markdown from 'react-markdown'
+import rehypeExternalLinks from 'rehype-external-links'
 
 export default function WomeninScienceForum() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>Women in Science Forum</h2>
+                <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{data.body}</Markdown>
+                {/* <h2>Women in Science Forum</h2>
                 <p>SFRRI WIS was established as a SFRRI sub-committee in 2018 with strong support from the
                     SFRRI Executive Committee. At the SFRRI Biennial Meeting (hosted by SFRR-Europe) in Lisbon,
                     Portugal in 2018, SFRRI WIS and SFRR-Europe WIS and Society for Redox Biology and Medicine
@@ -39,7 +43,7 @@ export default function WomeninScienceForum() {
                     thereby increase participation of female scientists in the SFRRI WIS Forum. Please contact Prof.
                     Lin Mantell for further information and to share WIS event in your regional SFRR Societies.</p>
                 <p>Chair: Professor Lin Mantell (Email: <a href="mailto:mantelll@stjohns.edu" target="_blank">mantelll@stjohns.edu</a>)</p>
-                <p><a href="downloads/Women-In Science-Forum-SFRRI.pdf" target="_blank">Download PDF</a></p>
+                <p><a href="downloads/Women-In Science-Forum-SFRRI.pdf" target="_blank">Download PDF</a></p> */}
             </Paper>
         </main>
     );

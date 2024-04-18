@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
+import * as data from '../../../_data/society/governance-&-byelaws.json'
+import Markdown from 'react-markdown'
+import rehypeExternalLinks from 'rehype-external-links'
 
 export default async function GovernanceAndByelaws() {
-    "use server";
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>SFRRI Governance & Byelaws</h2>
+            <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{data.body}</Markdown>
+                {/* <h2>SFRRI Governance & Byelaws</h2>
                 <p>The Society for Free Radical Research founded in the United Kingdom in 1982 is an International Society with the following rules (as amended by resolution of the members dated September 11, 1998).</p>
                 <h4>1. Name</h4>
                 <p>The name of the institution (hereafter called the &quot;International Society&quot;) is The Society for Free Radical Research International.</p>
@@ -78,7 +81,7 @@ export default async function GovernanceAndByelaws() {
                 <p>(d)    to any company in which any International Committee member has no more than 1% holding.</p>
                 <h4>16.   Winding Up</h4>
                 <p>The International Society may only be dissolved by resolution at a General Meeting approved by seventy-five per cent of the members present and voting; postal votes shall be allowed.  In the event of winding up the assets of the International Society after payment of debts and liabilities shall be distributed in accordance with the objects of the International Society to such charitable purposes as the International Committee shall decide.</p>
-                <p>May 7, 2004 </p>
+                <p>May 7, 2004 </p> */}
             </Paper>
         </main>
     );
