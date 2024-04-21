@@ -7,9 +7,15 @@ import Link from '@mui/material/Link';
 import Image from 'next/image';
 import Skeleton from '@mui/material/Skeleton';
 import DOMPurify from 'isomorphic-dompurify';
+import Markdown from 'react-markdown'
+import rehypeExternalLinks from 'rehype-external-links'
+import rehypeRaw from 'rehype-raw'
 
-const ImageLinkGridItem = ({ xs, md, href, width, height, src, name, listItems }) => {
+const ImageLinkGridItem = ({ xs, md, href,/* width, height,*/ src, name, body }) => {
     const [loading, setLoading] = useState(true);
+    const maxImgWidth = /*imgWidth < 133.33 ? imgWidth :*/ 133.33
+    const maxImgHeight = /*imgHeight < 133.33 ? imgHeight :*/ 133.33
+
     return (
         <Grid item xs={xs} md={md}>
             <Box
@@ -26,27 +32,29 @@ const ImageLinkGridItem = ({ xs, md, href, width, height, src, name, listItems }
             >
                 {loading && <Skeleton 
                                 variant="rounded" 
-                                width={width} 
-                                height={height} 
+                                width={maxImgWidth} 
+                                height={maxImgHeight} 
                             />
                 }
                 <Image
-                    width={width}
-                    height={height}
+                    priority
+                    width={maxImgWidth}
+                    height={maxImgHeight}
                     onLoad={(e) => setLoading(false)}
                     src={src}
-                    alt={`${name} logo`}
-                    style={{ display: loading ? 'none' : 'block' }}
-                    priority
+                    alt={`${name}`}
+                    style={{
+                        width: 'auto',
+                        maxWidth: maxImgWidth,
+                        height: 'auto',
+                        maxHeight: maxImgHeight,
+                        display: loading ? 'none' : 'block',
+                      }}
                 />
                 <p>{name}</p>
             </Box>
-            {listItems &&
-                <ul>
-                    {listItems.map((item, i) => (
-                        <li dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item) }} key={i} />
-                    ))}
-                </ul>
+            {body &&
+                <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{body}</Markdown>
             }
         </Grid>
     )

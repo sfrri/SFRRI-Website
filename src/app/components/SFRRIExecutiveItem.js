@@ -11,11 +11,11 @@ import DOMPurify from 'isomorphic-dompurify';
 import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
 
-const SFRRIExecutiveItem = ({ imgWidth, imgHeight, title, name, bio, address, contact_details, tel, email, link, }) => {
+const SFRRIExecutiveItem = ({ /*imgWidth, imgHeight, */title, name, bio, address, contact_details, tel, email, link, }) => {
     const [loading, setLoading] = useState(true);
 
-    const maxImgWidth = imgWidth < 133.33 ? imgWidth : 133.33
-    const maxImgHeight = imgHeight < 133.33 ? imgHeight : 133.33
+    const maxImgWidth = /*imgWidth < 133.33 ? imgWidth :*/ 133.33
+    const maxImgHeight = /*imgHeight < 133.33 ? imgHeight :*/ 133.33
 
     const imgSrc = `/static/images/SFRRIExecutive/${kebabize(name)}.jpg`
 

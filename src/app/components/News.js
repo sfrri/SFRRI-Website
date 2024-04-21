@@ -14,6 +14,7 @@ import { styled } from '@mui/material/styles';
 import Markdown from 'react-markdown'
 import { usePathname } from "next/navigation";
 import rehypeExternalLinks from 'rehype-external-links'
+import rehypeRaw from 'rehype-raw'
 
 export const News = () => {
     const pathname = usePathname();
@@ -37,7 +38,9 @@ export const News = () => {
             }}
         >
             <Item>
-            <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{beforeMeetingsData.body}</Markdown>
+                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
+                    {beforeMeetingsData.body}
+                </Markdown>
                 {/* <p><Link href='/presidential-address'>President&apos;s Welcome Message 2024</Link></p>
                 <p>
                     <a href="downloads/SFRRI_Letter_to_Regional_SFRR_Executives_and_Member_12-09-23.pdf" target="_blank">President&apos;s Letter | Extension of SFRRI Officers Term for 1-year</a>
@@ -57,17 +60,17 @@ export const News = () => {
                 </ul>*/}
             </Item>
             {meetings.map(item => (
-                <Item key={item["Meeting Title"]}>
+                <Item key={item.meeting_title}>
                     <NewsItem
                         date={item.date}
-                        title={item["Meeting Title"]}
-                        location={item["location"]}
-                        link={item["further information link hypertext"] ? item["further information link hypertext"] : item["upload_path"][0]}
-                        linkText={item["further information link text"]}
+                        title={item.meeting_title}
+                        location={item.location}
+                        link={item.further_information_link_hypertext ? item.further_information_link_hypertext : item.upload_path[0]}
+                        linkText={item.further_information_link_text}
                     />
                 </Item>
             ))}
-             {/* {newsItems.map(item => (
+            {/* {newsItems.map(item => (
                 <Item key={item.title}>
                     <NewsItem
                         date={item.date}
@@ -79,7 +82,9 @@ export const News = () => {
                 </Item>
             ))}  */}
             <Item>
-            <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{afterMeetingsData.body}</Markdown>
+                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
+                    {afterMeetingsData.body}
+                </Markdown>
                 {/* <p>
                     <span className="bold">SFRRI Outreach Meeting Sponsorship Form</span><br />
                     <a href="downloads/SFRRI_Outreach_Sponsorship_Application_Form_2019.doc" target="_blank">Please click here to download</a>
@@ -90,7 +95,9 @@ export const News = () => {
             </Item>
             {in_memoriam.map((item, i) => (
                 <Item sx={{ fontVariant: 'small-caps', textTransform: 'capitalize', }} key={i}>
-                    <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{item["Name"]}</Markdown>
+                    <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
+                        {item.name}
+                    </Markdown>
                 </Item>
             ))}
             {/* {inMemoriamItems.map(item => (

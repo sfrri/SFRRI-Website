@@ -2,6 +2,8 @@ import React from "react";
 import Link from 'next/link'
 import DOMPurify from 'isomorphic-dompurify';
 import Markdown from 'react-markdown'
+import rehypeExternalLinks from 'rehype-external-links'
+import rehypeRaw from 'rehype-raw'
 
 export const AwardLectureItem = ({link, person, award,}) => {
     return (
@@ -34,12 +36,16 @@ export const NewsItem = ({date, title, location, link, linkText,}) => {
                 />
                 <br /> */}
                 <span className="italic">Location:&nbsp;</span>
-                    <Markdown components={{p: React.Fragment,}}>{location}</Markdown>
+                    <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]} components={{p: React.Fragment,}}>{location}</Markdown>
                 <br />
                 <span className="italic">Further information:&nbsp;</span>
-                <Link href={link} target="_blank">
-                    {linkText}
-                </Link>
+                <Link 
+                    href={link} 
+                    target="_blank"
+                    dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(linkText) }}
+                />
+                    {/* {linkText}
+                </Link> */}
             </p>
         </>
     )
