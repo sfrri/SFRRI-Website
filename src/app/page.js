@@ -27,7 +27,7 @@ export default function HomePage() {
     return (
         <>
             <Head>
-                <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+                <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async />
             </Head>
             <main style={{ position: 'relative' }}>
                 <HomeNews sx={{ borderRadius: '3px', }}>
