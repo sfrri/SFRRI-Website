@@ -9,99 +9,22 @@ display_url: https://sfrr.org
 logo_url: http://localhost:3000/static/media/SFRRI-New-logo-no-mapx2.1cf49e61.png
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "content/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    extension: json
-    format: json
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
-
-#   - name: "related-meetings" # Used in routes, e.g., /admin/collections/blog
-#     label: "Related Meetings" # Used in the UI
-#     folder: "content/page" # The path to the folder where the documents are stored
-#     create: true # Allow users to create new documents in this collection
-#     extension: json
-#     format: json
-#     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-#     # - {label: "Body", name: "body", widget: "text"}
-#     # - label: Meeting
-#     #     name: meeting
-#     #     widget: object
-#     #     fields: # The fields for each document, usually in front matter
-# #         #- {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-# #         #- {label: "Title", name: "title", widget: "string"}
-# #         #- {label: "Publish Date", name: "date", widget: "datetime"}
-# #         #- {label: "Featured Image", name: "thumbnail", widget: "image"}
-# #         #- {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-#         # - {label: "Dates", name: "dates", widget: "text"}
-#         # - {label: "Meeting title", name: "meeting title", widget: "text"}
-#         # - {label: "Location", name: "location", widget: "text"}
-#         # - {label: "Further Information", name: "information", widget: "text"}
-#     fields:
-#       - {label: Title, name: title, widget: string, default: "Related Meetings"}
-#       - label: Meetings
-#         name: Meetings
-#         allow_add: true
-#         widget: list
-#         fields:
-#           - {label: "Dates", name: "dates", widget: "text"}
-#           - {label: "Meeting title", name: "meeting title", widget: "text"}
-#           - {label: "Location", name: "location", widget: "text"}
-#           - {label: "Further Information", name: "information", widget: "text"}
-
-
-#   - label: "Testimonials"
-#     name: "testimonials"
-#     folder: "content/page" # The path to the folder where the documents are stored
-#     create: true
-#     widget: "list"
-#     # summary: '{{fields.quote}} - {{fields.author.name}}'
-#     fields:
-#       - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
-#       - label: Author
-#         name: author
-#         widget: object
-#         fields:
-#           - {label: Name, name: name, widget: string, default: "Emmet"}
-#           - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
-
-
-#   - name: 'trackers'
-#     label: 'Trackers'
-#     label_singular: 'Tracker'
-#     extension: json
-#     format: json
-#     create: false
-#     editor:
-#       preview: false
-#     files:      
-#       - label: "Solar Tracker"
-#         name: "solar-tracker"
-#         file: "_data/national-goals/solar-performance-tracker.json"
-#         fields:
-#           - label: 'States'
-#             name: 'tracker'
-#             widget: 'list'
-#             allow_add: true
-#             collapsed: false
-#             fields:
-#               - { name: 'state' }
-#               - { name: 'national_contribution' }
-#               - { name: 'state_target' }
-#               - { name: 'state_achieved' }
-#               - { name: 'state_percentage' }
-
+  # - name: "blog" # Used in routes, e.g., /admin/collections/blog
+  #   label: "Blog" # Used in the UI
+  #   folder: "content/blog" # The path to the folder where the documents are stored
+  #   create: true # Allow users to create new documents in this collection
+  #   extension: json
+  #   format: json
+  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  #   fields: # The fields for each document, usually in front matter
+  #     - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+  #     - {label: "Title", name: "title", widget: "string"}
+  #     - {label: "Publish Date", name: "date", widget: "datetime"}
+  #     - {label: "Featured Image", name: "thumbnail", widget: "image"}
+  #     - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+  #     - {label: "Body", name: "body", widget: "markdown"}
   - name: 'news'
     label: 'News'
-    # label_singular: 'Meeting'
     extension: json
     format: json
     create: false
@@ -109,7 +32,7 @@ collections:
       preview: true
     files:      
       - label: "News - Before Meetings"
-        name: "before meetings"
+        name: "before-meetings"
         file: "_data/news/before-meetings.json"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
@@ -117,38 +40,38 @@ collections:
             name: "upload_path"
             widget: "file"
             required: false
-            # default: "/admin/files/uploads"
             media_library:
               config:
+                # max_file_size: 512000
                 multiple: true
       - label: "Meetings"
+        # label_singular: 'Meeting'
         name: "meetings"
         file: "_data/news/meetings.json"
         fields:
           - label: 'Meetings'
+            label_singular: 'Meeting'
             name: 'meetings'
             widget: 'list'
             allow_add: true
             collapsed: true
             fields:
-              - { name: 'Meeting Title' }
-              - { name: 'date' }
-              - { name: 'location', widget: "markdown" }
-              - { name: 'further information link text', required: false }
-              - { name: 'further information link hypertext', required: false }
-              # - { name: 'state_percentage' }
-              # - {label: "Body", name: "body", widget: "markdown"}
+              - { name: 'meeting_title', label: 'Meeting title' }
+              - { name: 'date', label: 'Date' }
+              - { name: 'location', label: 'Location', widget: "markdown" }
+              - { name: 'further_information_link_text', label: 'Further information link text' , required: false }
+              - { name: 'further_information_link_hypertext', label: 'Further information link hypertext', required: false }
               - label: "Upload File"
                 name: "upload_path"
                 widget: "file"
                 required: false
-                # default: "/admin/files/uploads"
                 media_library:
                   config:
+                    # max_file_size: 512000
                     multiple: true
-              - {label: "Add to Related Meetings", name: "add to related meetings", widget: "boolean", default: false}
+              - {label: "Add to Related Meetings", name: "add_to_related_meetings", widget: "boolean", default: false}
       - label: "News - After Meetings"
-        name: "after meetings"
+        name: "after-meetings"
         file: "_data/news/after-meetings.json"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
@@ -156,9 +79,9 @@ collections:
             name: "upload_path"
             widget: "file"
             required: false
-            # default: "/admin/files/uploads"
             media_library:
               config:
+                # max_file_size: 512000
                 multiple: true
       - label: "News - In Memoriam"
         name: "in_memoriam"
@@ -170,7 +93,7 @@ collections:
             allow_add: true
             collapsed: true
             fields:
-              - { name: 'Name', widget: "markdown" }
+              - { name: 'name', label: 'Name', widget: "markdown" }
               - label: "Upload File"
                 name: "upload_path"
                 widget: "file"
@@ -178,131 +101,20 @@ collections:
                 # default: "/admin/files/uploads"
                 media_library:
                   config:
+                    max_file_size: 512000
                     multiple: true
 
-  # - name: 'before-meetings'
-  #   label: 'News - Before Meetings'
-  #   # label_singular: 'Meeting'
-  #   extension: json
-  #   format: json
-  #   create: false
-  #   editor:
-  #     preview: true
-  #   files:      
-  #     - label: "News - Before Meetings"
-  #       name: "before meetings"
-  #       file: "_data/news/before-meetings.json"
-  #       fields:
-  #         - {label: "Body", name: "body", widget: "markdown"}
-  #         - label: "Upload File"
-  #           name: "upload_path"
-  #           widget: "file"
-  #           required: false
-  #           # default: "/admin/files/uploads"
-  #           media_library:
-  #             config:
-  #               multiple: true
-          
-
-  # - name: 'meetings'
-  #   label: 'News - Meetings'
-  #   label_singular: 'Meeting'
-  #   extension: json
-  #   format: json
-  #   create: false
-  #   editor:
-  #     preview: true
-  #   files:      
-  #     - label: "Meetings"
-  #       name: "meetings"
-  #       file: "_data/news/meetings.json"
-  #       fields:
-  #         - label: 'Meetings'
-  #           name: 'meetings'
-  #           widget: 'list'
-  #           allow_add: true
-  #           collapsed: true
-  #           fields:
-  #             - { name: 'Meeting Title' }
-  #             - { name: 'date' }
-  #             - { name: 'location', widget: "markdown" }
-  #             - { name: 'further information link text', required: false }
-  #             - { name: 'further information link hypertext', required: false }
-  #             # - { name: 'state_percentage' }
-  #             # - {label: "Body", name: "body", widget: "markdown"}
-  #             - label: "Upload File"
-  #               name: "upload_path"
-  #               widget: "file"
-  #               required: false
-  #               # default: "/admin/files/uploads"
-  #               media_library:
-  #                 config:
-  #                   multiple: true
-  #             - {label: "Add to Related Meetings", name: "add to related meetings", widget: "boolean", default: false}
-
-  # - name: 'after-meetings'
-  #   label: 'News - After Meetings'
-  #   # label_singular: 'Meeting'
-  #   extension: json
-  #   format: json
-  #   create: false
-  #   editor:
-  #     preview: true
-  #   files:      
-  #     - label: "News - After Meetings"
-  #       name: "after meetings"
-  #       file: "_data/news/after-meetings.json"
-  #       fields:
-  #         - {label: "Body", name: "body", widget: "markdown"}
-  #         - label: "Upload File"
-  #           name: "upload_path"
-  #           widget: "file"
-  #           required: false
-  #           # default: "/admin/files/uploads"
-  #           media_library:
-  #             config:
-  #               multiple: true
-
-  # - name: 'in-memoriam'
-  #   label: 'News - In Memoriam'
-  #   label_singular: 'In Memoriam entry'
-  #   extension: json
-  #   format: json
-  #   create: false
-  #   editor:
-  #     preview: true
-  #   files:      
-  #     - label: "News - In Memoriam"
-  #       name: "in memoriam"
-  #       file: "_data/news/in-memoriam.json"
-  #       fields:
-  #         - label: 'News - In Memoriam'
-  #           name: 'in memoriam'
-  #           widget: 'list'
-  #           allow_add: true
-  #           collapsed: true
-  #           fields:
-  #             - { name: 'Name', widget: "markdown" }
-  #             - label: "Upload File"
-  #               name: "upload_path"
-  #               widget: "file"
-  #               required: false
-  #               # default: "/admin/files/uploads"
-  #               media_library:
-  #                 config:
-  #                   multiple: true
-
-  - name: 'presidential-address'
-    label: 'Presidential Address'
+  - name: 'society'
+    label: 'Society'
     # label_singular: 'Meeting'
     extension: json
     format: json
     create: false
     editor:
       preview: true
-    files:      
+    files:    
       - label: "Presidential Address"
-        name: "presidential address"
+        name: "presidential-address"
         file: "_data/society/presidential-address.json"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
@@ -313,44 +125,34 @@ collections:
             # default: "/admin/files/uploads"
             media_library:
               config:
+                # max_file_size: 512000
                 multiple: true
-                
-
-  - name: 'sfrri-executive'
-    label: 'SFRRI Executive'
-    # label_singular: 'Meeting'
-    extension: json
-    format: json
-    create: false
-    editor:
-      preview: true
-    files:      
       - label: "SFRRI Executive"
-        name: "sfrri executive"
+        name: "sfrri-executive"
         file: "_data/society/sfrri-executive.json"
         fields:
-          - {label: "Body", name: "body", widget: "markdown"}
-          - label: "Upload File"
-            name: "upload_path"
-            widget: "file"
-            required: false
-            # default: "/admin/files/uploads"
-            media_library:
-              config:
-                multiple: true
-                
-
-  - name: 'past-presidents'
-    label: 'Past Presidents'
-    # label_singular: 'Meeting'
-    extension: json
-    format: json
-    create: false
-    editor:
-      preview: true
-    files:      
+          - label: 'SFRRI Executive Member'
+            name: 'sfrri_executive_member'
+            widget: 'list'
+            allow_add: true
+            collapsed: true
+            fields:
+              - label: "Upload File"
+                name: "upload_path"
+                widget: "file"
+                required: false
+                # default: "/admin/files/uploads"
+                media_library:
+                  config:
+                    max_file_size: 512000
+                    multiple: true
+              - {label: "Title", name: "title"}
+              - {label: "Name", name: "name"}
+              - {label: "Bio", name: "bio", widget: "markdown"}
+              - {label: "Address", name: "address", widget: "markdown"}
+              - {label: "Contact details", name: "contact_details", widget: "markdown"}
       - label: "Past Presidents"
-        name: "past presidents"
+        name: "past-presidents"
         file: "_data/society/past-presidents.json"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
@@ -361,18 +163,8 @@ collections:
             # default: "/admin/files/uploads"
             media_library:
               config:
-                multiple: true
-                
-
-  - name: 'history'
-    label: 'History'
-    # label_singular: 'Meeting'
-    extension: json
-    format: json
-    create: false
-    editor:
-      preview: true
-    files:      
+                # max_file_size: 512000
+                multiple: true    
       - label: "History"
         name: "history"
         file: "_data/society/history.json"
@@ -385,20 +177,10 @@ collections:
             # default: "/admin/files/uploads"
             media_library:
               config:
+                # max_file_size: 512000
                 multiple: true
-                
-
-  - name: 'governance-&-byelaws'
-    label: 'Governance & Byelaws'
-    # label_singular: 'Meeting'
-    extension: json
-    format: json
-    create: false
-    editor:
-      preview: true
-    files:      
       - label: "Governance & Byelaws"
-        name: "governance & byelaws"
+        name: "governance-&-byelaws"
         file: "_data/society/governance-&-byelaws.json"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
@@ -409,23 +191,14 @@ collections:
             # default: "/admin/files/uploads"
             media_library:
               config:
-                multiple: true
-                
-
-  - name: 'sfrri-awards-&-fellowships'
-    label: 'SFRRI Awards & Fellowships'
-    # label_singular: 'Meeting'
-    extension: json
-    format: json
-    create: false
-    editor:
-      preview: true
-    files:      
+                # max_file_size: 512000
+                multiple: true    
       - label: "SFRRI Awards & Fellowships"
-        name: "sfrri awards & fellowships"
+        name: "sfrri-awards-&-fellowships"
         file: "_data/society/sfrri-awards-&-fellowships.json"
         fields:
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Body column 1", name: "body_col1", widget: "markdown"}
+          - {label: "Body column 2", name: "body_col2", widget: "markdown"}
           - label: "Upload File"
             name: "upload_path"
             widget: "file"
@@ -433,20 +206,10 @@ collections:
             # default: "/admin/files/uploads"
             media_library:
               config:
+                # max_file_size: 512000
                 multiple: true
-                
-
-  - name: 'women-in-science-forum'
-    label: 'Women In Science Forum'
-    # label_singular: 'Meeting'
-    extension: json
-    format: json
-    create: false
-    editor:
-      preview: true
-    files:      
       - label: "Women In Science Forum"
-        name: "women in science forum"
+        name: "women-in-science-forum"
         file: "_data/society/women-in-science-forum.json"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
@@ -457,18 +220,8 @@ collections:
             # default: "/admin/files/uploads"
             media_library:
               config:
+                # max_file_size: 512000
                 multiple: true
-                
-
-  - name: 'obituaries'
-    label: 'Obituaries'
-    # label_singular: 'Meeting'
-    extension: json
-    format: json
-    create: false
-    editor:
-      preview: true
-    files:      
       - label: "Obituaries"
         name: "obituaries"
         file: "_data/society/obituaries.json"
@@ -481,6 +234,7 @@ collections:
             # default: "/admin/files/uploads"
             media_library:
               config:
+                # max_file_size: 512000
                 multiple: true
                 
 
@@ -494,8 +248,40 @@ collections:
       preview: true
     files:      
       - label: "SFRR Societies"
-        name: "sfrr societies"
+        name: "sfrr-societies"
         file: "_data/sfrr-societies.json"
+        fields:
+          - label: 'SFRR Society'
+            name: 'sfrr_society'
+            widget: 'list'
+            allow_add: true
+            collapsed: true
+            fields:
+              - {label: "Name", name: "name"}
+              - {label: "Link", name: "link"}
+              - label: "Upload File"
+                name: "upload_path"
+                widget: "file"
+                required: true
+                # default: "/admin/files/uploads"
+                media_library:
+                  config:
+                    max_file_size: 512000
+                    multiple: true
+              - {label: "Affiliated Society", name: "affiliated_society", widget: "boolean", default: false}
+
+  - name: 'membership'
+    label: 'Membership'
+    # label_singular: 'Meeting'
+    extension: json
+    format: json
+    create: false
+    editor:
+      preview: true
+    files:      
+      - label: "Membership"
+        name: "membership"
+        file: "_data/membership.json"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
           - label: "Upload File"
@@ -505,6 +291,222 @@ collections:
             # default: "/admin/files/uploads"
             media_library:
               config:
+                # max_file_size: 512000
+                multiple: true     
+
+  - name: 'conferences'
+    label: 'Conferences'
+    # label_singular: 'Meeting'
+    extension: json
+    format: json
+    create: false
+    editor:
+      preview: true
+    files:      
+      - label: "Future SFRRI Conferences"
+        name: "future-sfrri-conferences"
+        file: "_data/conferences/future-sfrri-conferences.json"
+        fields:
+          - label: 'Future SFRRI Conferences'
+            name: 'future_sfrri_conferences'
+            widget: 'list'
+            allow_add: true
+            collapsed: true
+            fields:
+              - { name: 'meeting-title', label: 'Meeting title' }
+              - { name: 'date', label: 'Date' }
+              - { name: 'location', label: 'Location', widget: "markdown" }
+              - { name: 'further_information_link_text', label: 'Further information link text', required: false }
+              - { name: 'further_information_link_hypertext', label: 'Further information link hypertext', required: false }
+              # - { name: 'state_percentage' }
+              # - {label: "Body", name: "body", widget: "markdown"}
+              - label: "Upload File"
+                name: "upload_path"
+                widget: "file"
+                required: false
+                # default: "/admin/files/uploads"
+                media_library:
+                  config:
+                    # max_file_size: 512000
+                    multiple: true
+      - label: "SFRRI Related Conferences"
+        name: "sfrri-related-conferences"
+        file: "_data/conferences/sfrri-related-conferences.json"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Upload File"
+            name: "upload_path"
+            widget: "file"
+            required: false
+            # default: "/admin/files/uploads"
+            media_library:
+              config:
+                # max_file_size: 512000
+                multiple: true     
+        # fields:
+        #   - label: 'SFRRI Related Conferences'
+        #     name: 'future_sfrri_conferences'
+            # widget: 'list'
+            # allow_add: true
+            # collapsed: true
+            # fields:
+            #   - { name: 'meeting-title', label: 'Meeting title' }
+            #   - { name: 'date', label: 'Date' }
+            #   - { name: 'location', label: 'Location', widget: "markdown" }
+            #   - { name: 'further_information_link_text', label: 'Further information link text', required: false }
+            #   - { name: 'further_information_link_hypertext', label: 'Further information link hypertext', required: false }
+            #   # - {label: "Body", name: "body", widget: "markdown"}
+            #   - label: "Upload File"
+            #     name: "upload_path"
+            #     widget: "file"
+            #     required: false
+            #     # default: "/admin/files/uploads"
+            #     media_library:
+            #       config:
+            #         # max_file_size: 512000
+            #         multiple: true
+      - label: "Past SFRRI Conferences"
+        name: "past-sfrri-conferences"
+        file: "_data/conferences/past-sfrri-conferences.json"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Upload File"
+            name: "upload_path"
+            widget: "file"
+            required: false
+            # default: "/admin/files/uploads"
+            media_library:
+              config:
+                # max_file_size: 512000
+                multiple: true       
+      - label: "Rules for Conference Organisation"
+        name: "rules-for-conference-organisation"
+        file: "_data/conferences/rules-for-conference-organisation.json"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Upload File"
+            name: "upload_path"
+            widget: "file"
+            required: false
+            # default: "/admin/files/uploads"
+            media_library:
+              config:
+                # max_file_size: 512000
                 multiple: true
-                
+
+  - name: 'forthcoming-related-meetings'
+    label: 'Forthcoming Related Meetings'
+    # label_singular: 'Meeting'
+    extension: json
+    format: json
+    create: false
+    editor:
+      preview: true
+    files:      
+      - label: "Forthcoming Related Meetings"
+        name: "forthcoming-related-meetings"
+        file: "_data/related-meetings.json"
+        fields:
+          - label: 'Forthcoming Related Meetings'
+            name: 'future_sfrri_conferences'
+            widget: 'list'
+            allow_add: true
+            collapsed: true
+            fields:
+              - { name: 'meeting-title', label: 'Meeting title' }
+              - { name: 'date', label: 'Date' }
+              - { name: 'location', label: 'Location', widget: "markdown" }
+              - { name: 'further_information_link_text', label: 'Further information link text', required: false }
+              - { name: 'further_information_link_hypertext', label: 'Further information link hypertext', required: false }
+              # - { name: 'state_percentage' }
+              # - {label: "Body", name: "body", widget: "markdown"}
+              - label: "Upload File"
+                name: "upload_path"
+                widget: "file"
+                required: false
+                # default: "/admin/files/uploads"
+                media_library:
+                  config:
+                    # max_file_size: 512000
+                    multiple: true
+
+  - name: 'sfrri-outreach'
+    label: 'SFRRI Outreach'
+    # label_singular: 'Meeting'
+    extension: json
+    format: json
+    create: false
+    editor:
+      preview: true
+    files:      
+      - label: "SFRRI Outreach"
+        name: "sfrri_outreach"
+        file: "_data/sfrri-outreach.json"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Upload File"
+            name: "upload_path"
+            widget: "file"
+            required: false
+            # default: "/admin/files/uploads"
+            media_library:
+              config:
+                # max_file_size: 512000
+                multiple: true
+
+  - name: 'journals'
+    label: 'Journals'
+    # label_singular: 'Meeting'
+    extension: json
+    format: json
+    create: false
+    editor:
+      preview: true
+    files:      
+      - label: "Journals"
+        name: "journals"
+        file: "_data/journals.json"
+        fields:
+          - label: 'Journal'
+            name: 'journal'
+            widget: 'list'
+            allow_add: true
+            collapsed: true
+            fields:
+              - {label: "Name", name: "name"}
+              - {label: "Link", name: "link"}
+              - label: "Upload File"
+                name: "upload_path"
+                widget: "file"
+                required: true
+                # default: "/admin/files/uploads"
+                media_library:
+                  config:
+                    max_file_size: 512000
+                    multiple: false
+              - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: 'education'
+    label: 'Education'
+    # label_singular: 'Meeting'
+    extension: json
+    format: json
+    create: false
+    editor:
+      preview: true
+    files:      
+      - label: "Education"
+        name: "education"
+        file: "_data/education.json"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Upload File"
+            name: "upload_path"
+            widget: "file"
+            required: false
+            # default: "/admin/files/uploads"
+            media_library:
+              config:
+                # max_file_size: 512000
+                multiple: true    
 
