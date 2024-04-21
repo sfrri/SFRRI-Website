@@ -1,6 +1,5 @@
 import { useTheme } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-//export const kebabize = str => str.toString().replace(/[A-Z]+(?![a-z])|[A-Z]/g, ($, ofs) => (ofs ? "-" : "") + $.toLowerCase())
 
 export const kebabize = string => string.toString()
     .replace(/([a-z])([A-Z])/g, "$1-$2")
@@ -9,10 +8,10 @@ export const kebabize = string => string.toString()
 
 const breakpointOverrides = {
     xs: 0,
-    sm: 408,
+    sm: 434,
     md: 493,
-    lg: 623,
-    xl: 803
+    lg: 803,
+    xl: 1200,
 };
 
 const getCustomTheme = (theme) =>

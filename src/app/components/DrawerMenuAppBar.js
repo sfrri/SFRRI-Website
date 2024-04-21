@@ -113,8 +113,15 @@ function DrawerMenuAppBar(props) {
                                     {item.subMenu.map(subMenuItem => {
                                         return <React.Fragment key={subMenuItem.name}>
                                             <Divider sx={{ background: '#333', }} />
-                                            <ListItemButton component={Link} href={`/${kebabize(subMenuItem.name)}`} sx={{ pl: 4 }}>
-                                                <ListItemText onClick={handleDrawerToggle} primary={subMenuItem.name} />
+                                            <ListItemButton 
+                                                component={Link} 
+                                                href={`/${kebabize(subMenuItem.name)}`} 
+                                                sx={{ pl: 4 }}
+                                            >
+                                                <ListItemText 
+                                                    onClick={handleDrawerToggle} 
+                                                    primary={subMenuItem.name} 
+                                                />
                                             </ListItemButton>
                                         </React.Fragment>
                                     })}
@@ -123,9 +130,13 @@ function DrawerMenuAppBar(props) {
                             <Divider sx={{ background: '#444', }} />
                         </React.Fragment>
                         :
-                        <>
-                            <ListItem key={item.name} disablePadding>
-                                <ListItemButton component={Link} href={`/${item.name === 'Home' ? '' : kebabize(item.name)}`} sx={{ textAlign: 'left' }}>
+                        <React.Fragment key={item.name}>
+                            <ListItem disablePadding>
+                                <ListItemButton 
+                                    component={Link} 
+                                    href={`/${item.name === 'Home' ? '' : kebabize(item.name)}`} 
+                                    sx={{ textAlign: 'left' }}
+                                >
                                     <ListItemText
                                         onClick={handleDrawerToggle}
                                         primary={item.name}
@@ -134,7 +145,7 @@ function DrawerMenuAppBar(props) {
                                 </ListItemButton>
                             </ListItem>
                             <Divider sx={{ background: '#444', }} />
-                        </>
+                        </React.Fragment>
                 ))}
             </List>
         </Box>
@@ -185,30 +196,45 @@ function DrawerMenuAppBar(props) {
                             variant="h1"
                             component="div"
                             sx={{
-                                height: { xs: '107px', sm: '144px',/* md: '144px',*/ md: '107px', xl: '70px' },
+                                width: {sm: '400px', lg: '1068px', },
+                                height: { xs: '144px', sm: '107px',/* md: '144px', md: '70px',*/ xl: '70px' },
                                 marginBottom: '10px',
                                 flexGrow: 1,
                                 display: { xs: 'block', sm: 'block', md: 'block', lg: 'block' },
                                 background: 'url(/static/images/SFRRI-Logox2.png) no-repeat',
-                                backgroundPosition: { xs: '0 -2px', lg: '0 2px', },
+                                backgroundPosition: {  xs: '0 2px',/*lg: '0 -14px', */xl: '0 2px', },
                                 backgroundSize: '70px',
-                                padding: '10px 40px 10px 90px',
+                                padding: {xs: '26px 40px 10px 90px', xl: '10px 40px 10px 90px',},
                                 fontFamily: 'AvenirNextLTProBold',
-                                fontSize: { xs: '1.625rem', sm: '2rem', xl: '3rem', }, 
-                                letterSpacing: { xs: '-1.625px', sm: '-2px', lg: '-3px', },
+                                fontSize: { xs: '1.5rem', sm: '1.625rem', lg: '2rem', xl: '3rem', }, 
+                                letterSpacing: { xs: '-1.625px', lg: '-2px', xl: '-3px', },
                             }}
                         >
                             Society for Free Radical Research International
                         </Typography>
                     </CustomBreakpoints>
-                    <Box component={Container} sx={{ minWidth: '1200px', display: { xs: 'none', lg: 'flex' },/*flexDirection: 'row',*/ }}>
+                    <Box 
+                        component={Container} 
+                        sx={{ 
+                            minWidth: '1200px', 
+                            display: { xs: 'none', lg: 'flex' }, 
+                        }}
+                    >
                         {navItems.map(item => (
 
                             item.subMenu != undefined ?
 
-                                <BasicMenu name={item.name} subMenuItems={item.subMenu} key={item.name} />
+                                <BasicMenu 
+                                    name={item.name} 
+                                    subMenuItems={item.subMenu} 
+                                    key={item.name} 
+                                />
                                 :
-                                <NavButton url={item.name === 'Home' ? '' : kebabize(item.name)} name={item.name} key={item.name} />
+                                <NavButton 
+                                    url={item.name === 'Home' ? '' : kebabize(item.name)} 
+                                    name={item.name} 
+                                    key={item.name} 
+                                />
                         ))}
                     </Box>
                 </Toolbar>
