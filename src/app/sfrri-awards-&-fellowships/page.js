@@ -2,6 +2,10 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Link from 'next/link';
 import Grid from '@mui/material/Grid';
+import * as data from '../../../_data/society/sfrri-awards-&-fellowships.json'
+import Markdown from 'react-markdown'
+import rehypeExternalLinks from 'rehype-external-links'
+import rehypeRaw from 'rehype-raw'
 
 export default async function SFRRIAwardsAndFellowships() {
     "use server";
@@ -12,7 +16,8 @@ export default async function SFRRIAwardsAndFellowships() {
                 <p>Both the international society and the regional societies offer a wide range of fellowships and awards to foster and develop the field of free radicals and related oxidants. Many of these awards are linked to specific scientific meetings and its constitutent bodies. Further details of many of these awards are therefore listed on the <Link href='sfrri-societies'>Regional Societies</Link> web pages.</p>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
-                        <h4>SFRRI Trevor Slater Award</h4>
+                        <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body_col1}</Markdown>
+                        {/* <h4>SFRRI Trevor Slater Award</h4>
 
                         <p>1994 - <a href="http://onlinelibrary.wiley.com/doi/10.1002/iub.161/epdf" target="_blank">Mario Dianzani</a></p>
 
@@ -42,11 +47,12 @@ export default async function SFRRIAwardsAndFellowships() {
 
                         <p>2021 - <a href="https://www.liverpool.ac.uk/life-course-and-medical-sciences/staff/malcolm-jackson/" target="_blank">Malcolm J Jackson</a></p>
 
-                        <p>2023 - <a href="https://lpi.oregonstate.edu/faculty-staff/maret-traber" target="_blank">Maret Traber</a></p>
+                        <p>2023 - <a href="https://lpi.oregonstate.edu/faculty-staff/maret-traber" target="_blank">Maret Traber</a></p> */}
 
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <h4>SFRRI Lester Packer Award</h4>
+                        <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body_col2}</Markdown>
+                        {/* <h4>SFRRI Lester Packer Award</h4>
 
                         <p>2021 - <a href="http://www.nm-gcoe.med.tohoku.ac.jp/english/investigators/yamamoto/index.html" target="_blank">Masayuki Yamamoto</a></p>
 
@@ -66,7 +72,7 @@ export default async function SFRRIAwardsAndFellowships() {
 
                         <p>2021 - <a href="https://gero.usc.edu/faculty/forman/" target="_blank">Henry J. Forman</a></p>
 
-                        <p>2023 - <a href="http://gero.usc.edu/faculty/davies" target="_blank">Kelvin J. Davies</a></p>
+                        <p>2023 - <a href="http://gero.usc.edu/faculty/davies" target="_blank">Kelvin J. Davies</a></p> */}
 
                     </Grid>
                 </Grid>

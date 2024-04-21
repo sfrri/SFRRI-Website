@@ -3,12 +3,14 @@ import Paper from '@mui/material/Paper';
 import * as data from '../../../_data/society/women-in-science-forum.json'
 import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
+import rehypeRaw from 'rehype-raw'
 
 export default function WomeninScienceForum() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{data.body}</Markdown>
+                <h2>Women in Science Forum</h2>
+                <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body}</Markdown>
                 {/* <h2>Women in Science Forum</h2>
                 <p>SFRRI WIS was established as a SFRRI sub-committee in 2018 with strong support from the
                     SFRRI Executive Committee. At the SFRRI Biennial Meeting (hosted by SFRR-Europe) in Lisbon,

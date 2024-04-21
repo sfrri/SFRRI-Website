@@ -3,13 +3,15 @@ import Paper from '@mui/material/Paper';
 import * as data from '../../../_data/conferences/past-sfrri-conferences.json'
 import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
+import rehypeRaw from 'rehype-raw'
 
 export default async function PastSFRRIConferences() {
     "use server";
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{data.body}</Markdown>
+                <h2>Past SFRRI Conferences</h2>
+                <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body}</Markdown>
                 {/* <h2>Past SFRRI Conferences</h2>
                 <p><a href="downloads/SFRRI_Delegates_attending_Biennial_Conferences.pdf">Delegates/Countries at SFRRI Biennial Meetings</a></p>
                 <hr />

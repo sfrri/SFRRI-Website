@@ -3,12 +3,14 @@ import Paper from '@mui/material/Paper';
 import * as data from '../../../_data/society/governance-&-byelaws.json'
 import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
+import rehypeRaw from 'rehype-raw'
 
 export default async function GovernanceAndByelaws() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-            <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{data.body}</Markdown>
+                <h2>SFRRI Governance & Byelaws</h2>
+                <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body}</Markdown>
                 {/* <h2>SFRRI Governance & Byelaws</h2>
                 <p>The Society for Free Radical Research founded in the United Kingdom in 1982 is an International Society with the following rules (as amended by resolution of the members dated September 11, 1998).</p>
                 <h4>1. Name</h4>

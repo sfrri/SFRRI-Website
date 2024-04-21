@@ -2,12 +2,15 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import * as data from '../../../_data/society/history.json'
 import Markdown from 'react-markdown'
+import rehypeExternalLinks from 'rehype-external-links'
+import rehypeRaw from 'rehype-raw'
 
 export default async function History() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }]]}>{data.body}</Markdown>
+                <h2>History</h2>
+                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>{data.body}</Markdown>
                 {/* <h2>History</h2>
                 <h4>A brief history of the Society</h4>
 

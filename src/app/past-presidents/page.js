@@ -8,6 +8,7 @@ export default async function PastPresidential() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
+                <h2 style={{ marginBottom: '1em', }}>Past Presidents</h2>
                 <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{data.body}</Markdown>
                 {/* <h2>Past Presidents</h2> 
                 <p>Trevor Slater</p>

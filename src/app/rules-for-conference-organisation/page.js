@@ -1,5 +1,9 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
+import * as data from '../../../_data/conferences/rules-for-conference-organisation.json'
+import Markdown from 'react-markdown'
+import rehypeExternalLinks from 'rehype-external-links'
+import rehypeRaw from 'rehype-raw'
 
 export default async function RulesforConferenceOrganisation() {
     "use server";
@@ -7,6 +11,8 @@ export default async function RulesforConferenceOrganisation() {
         <main>
             <Paper variant="padded" elevation={3}>
                 <h2>Rules for Conference Organisation</h2>
+                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>{data.body}</Markdown>
+                {/* <h2>Rules for Conference Organisation</h2>
                 <h4>GUIDELINES FOR THE ORGANISERS OF INTERNATIONAL CONGRESSES </h4>
                 <h4>Special Features of SFRRI Congresses</h4>
 
@@ -83,7 +89,7 @@ export default async function RulesforConferenceOrganisation() {
                     <li>attractiveness of the venue</li>
                 </ul>
 
-                <p>The Executive Committee of SFRRI will normally consider all applications at one of its meetings 2-3 years before the Congress year and select a short list.</p>
+                <p>The Executive Committee of SFRRI will normally consider all applications at one of its meetings 2-3 years before the Congress year and select a short list.</p> */}
             </Paper>
         </main>
     );

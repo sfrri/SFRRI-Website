@@ -3,14 +3,16 @@ import Paper from '@mui/material/Paper';
 import * as data from '../../../_data/membership.json'
 import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
+import rehypeRaw from 'rehype-raw'
 
 export default async function Membership() {
     "use server";
     return (
         <main>
-             <Paper variant="padded" elevation={3}>
-             <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{data.body}</Markdown>
-             {/* <h2>Membership</h2>
+            <Paper variant="padded" elevation={3}>
+                <h2>Membership</h2>
+                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>{data.body}</Markdown>
+                {/* <h2>Membership</h2>
                 <p>All members of the regional branches of the Society for Free Radical Research are automatically members of the Society for Free Radical Research International and are eligible for reduced registration rates at both the International Congresses of the Society and regional meetings.</p>
                 <p>Members of the society also have access to a number of other benefits.</p>
                 <h4>Membership Categories</h4>
