@@ -1,7 +1,6 @@
 {
-    "body": "**SFRRI Outreach Meeting Sponsorship Form**\n\n[Please click here to download](http://localhost:3002/admin/files/uploads/sfrri_outreach_sponsorship_application_form_2019.doc)",
-    "upload_path": [
-      "/admin/files/uploads/sfrri_outreach_sponsorship_application_form_2019.doc"
-    ]
-  }
-  
+  "body": "**SFRRI Outreach Meeting Sponsorship Form**\n\n[Please click here to download](/admin/files/uploads/sfrri_outreach_sponsorship_application_form_2019.doc)",
+  "upload_path": [
+    "/admin/files/uploads/sfrri_outreach_sponsorship_application_form_2019.doc"
+  ]
+}
