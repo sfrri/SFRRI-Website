@@ -24,7 +24,6 @@ export default function SFRRSocieties() {
                             key={item.name}
                         />
                     ))}
-                   {data.sfrr_society.map(item => (console.log(item.upload_path[0])))}
                 </Grid>
                 <h4>SFRRI Affiliated Society</h4>
                 <Grid container spacing={6}>

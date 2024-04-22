@@ -40,7 +40,6 @@ export default async function RedoxJournalsatElsevier() {
                 <Grid container spacing={6} sx={{ marginTop: 0, }}>
                     {data.journal.map(item => (
                         <>
-                        {console.log(item.upload_path)}
                             <ImageLinkGridItem
                                 xs={12}
                                 md={6}
