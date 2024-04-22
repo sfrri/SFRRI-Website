@@ -46,7 +46,7 @@ export const ImageLink = ({ linkName, bgImgUrl }) => {
                     }}
                     color="text.secondary"
                 >
-                    <h2>{linkName.toString()}</h2>
+                    <h2 style={{marginBottom: 0,}}>{linkName.toString()}</h2>
                 </Box>
             </Card>
         </Link>
