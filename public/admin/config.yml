@@ -510,3 +510,27 @@ collections:
                 # max_file_size: 512000
                 multiple: true    
 
+  - name: 'contact'
+    label: 'Contact'
+    # label_singular: 'Meeting'
+    extension: json
+    format: json
+    create: false
+    editor:
+      preview: true
+    files:      
+      - label: "Contact"
+        name: "contact"
+        file: "_data/contact.json"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Upload File"
+            name: "upload_path"
+            widget: "file"
+            required: false
+            # default: "/admin/files/uploads"
+            media_library:
+              config:
+                # max_file_size: 512000
+                multiple: true 
+
