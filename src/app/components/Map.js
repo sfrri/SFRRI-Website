@@ -19,7 +19,11 @@ const Map = () => {
 
         map.current = new L.Map(mapContainer.current, {
             center: L.latLng(center.lat, center.lng),
-            zoom: zoom
+            zoom: zoom,
+            maxBounds: [[-75,-160],   [90,182]],
+            maxZoom: 1,
+            minZoom: 1,
+            maxBoundsViscosity: 1.0
         });
 
         const SFRRIIcon = L.Icon.extend({
@@ -63,6 +67,8 @@ const Map = () => {
         }).addTo(map.current);
 
     }, [center.lng, center.lat, zoom]);
+
+    // map.scrollZoom.disable();
 
     return (
         <div className="map-wrap">
