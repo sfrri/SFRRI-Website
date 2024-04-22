@@ -108,6 +108,7 @@ export default async function Footer() {
                                     width: '100%',
                                     height: 'auto',
                                     margin:'32px 0 0 0',
+                                    maxWidth: '275px',
                                     //marginRight: '20px',
                                     //minWidth: '200px',
                                     //display: {xs: 'block', ml: 'none', lg: 'block',},
