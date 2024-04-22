@@ -1,14 +1,17 @@
 {
   "future_sfrri_conferences": [
     {
-      "Meeting Title": "22nd Society for Free Radical Research International Biennial Meeting (hosted by SFRR Europe)",
-      "date": "June 3-6, 2025",
-      "location": "Galway, Ireland",
-      "further information link text": "22nd SFRRI Biennial Conference, Galway, Ireland",
+      "further_information_link_hypertext": "/admin/files/uploads/22nd-sfrri-biennial-meeting-galway-3-6-june-2025.pdf",
       "further information link hypertext": "/admin/files/uploads/22nd-sfrri-biennial-meeting-galway-3-6-june-2025.pdf",
+      "further information link text": "22nd SFRRI Biennial Conference, Galway, Ireland",
       "upload_path": [
         "/admin/files/uploads/22nd-sfrri-biennial-meeting-galway-3-6-june-2025.pdf"
-      ]
+      ],
+      "further_information_link_text": "22nd SFRRI Biennial Conference, Galway, Ireland",
+      "meeting-title": "22nd Society for Free Radical Research International Biennial Meeting (hosted by SFRR Europe)",
+      "date": "June 3-6, 2025",
+      "Meeting Title": "22nd Society for Free Radical Research International Biennial Meeting (hosted by SFRR Europe)",
+      "location": "Galway, Ireland"
     }
   ]
 }
