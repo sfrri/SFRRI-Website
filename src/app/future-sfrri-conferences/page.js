@@ -24,10 +24,10 @@ export default function FutureSFRRIConferences() {
                 <Item key={item["Meeting Title"]}>
                     <NewsItem
                         date={item.date}
-                        title={item["Meeting Title"]}
-                        location={item["location"]}
-                        link={item["further information link hypertext"] ? item["further information link hypertext"] : item["upload_path"][0]}
-                        linkText={item["further information link text"]}
+                        title={item.meeting_title}
+                        location={item.location}
+                        link={item.further_information_link_hypertext ? item.further_information_link_hypertext : item.upload_path[0]}
+                        linkText={item.further_information_link_text}
                     />
                 </Item>
             ))}
