@@ -13,7 +13,7 @@ import HomeNews from './components/HomeNews.js'
 import Grid from '@mui/material/Grid';
 import { ImageLink } from './components/ImageLink';
 import { News } from './components/News';
-import Head from 'next/head';
+import Script from 'next/script';
 import Map from './components/Map';
 
 const imageLinkArr = [
@@ -26,9 +26,7 @@ const imageLinkArr = [
 export default function HomePage() {
     return (
         <>
-            <Head>
-                <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async />
-            </Head>
+            <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" strategy="beforeInteractive" />
             <main style={{ position: 'relative' }}>
                 <HomeNews sx={{ borderRadius: '3px', }}>
                     {/* <Grid 
