@@ -14,7 +14,8 @@ import Grid from '@mui/material/Grid';
 import { ImageLink } from './components/ImageLink';
 import { News } from './components/News';
 import Script from 'next/script';
-import Map from './components/Map';
+// import Map from './components/Map';
+import dynamic from 'next/dynamic';
 
 const imageLinkArr = [
     { linkName: 'Related Meetings', bgImgUrl: '/static/images/Blood_clot_in_scanning_electron_microscopy.jpg', },
@@ -22,6 +23,11 @@ const imageLinkArr = [
     { linkName: 'History', bgImgUrl: '/static/images/TrevorSlater.jpg', },
     { linkName: 'Careers & Training', bgImgUrl: '/static/images/OxRadStress.jpg' },
 ]
+
+const ClientSideOnlyMap = dynamic(
+    () => import('./components/Map'),
+    { ssr: false }
+)
 
 export default function HomePage() {
     return (
@@ -71,7 +77,7 @@ export default function HomePage() {
                             <p>The object of the International Society is to advance education in free radical processes with particular reference to those of industrial and medical importance, such education being for the benefit of the public.</p>
                         </Grid>
                         <Grid item xs={12} lg={6}>
-                            <Map />
+                            <ClientSideOnlyMap />
                         </Grid>
                         <Grid item xs={12}>
                             <h3>Objectives</h3>
