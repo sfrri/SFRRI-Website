@@ -1,0 +1,26 @@
+.map-wrap {
+    width: 95%;
+    /* height: 100vh; */
+    height: 360px;
+    position: relative;
+    margin-bottom: -32px;
+    margin-left: 20px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    .map-wrap {
+        display: none;
+    }
+  }
+  
+  .map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+.leaflet-control-zoom.leaflet-bar.leaflet-control,
+.leaflet-control-container + a, 
+.leaflet-bottom.leaflet-right {
+    display: none;
+}

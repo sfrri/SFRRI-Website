@@ -12,9 +12,9 @@ import Paper from '@mui/material/Paper';
 import HomeNews from './components/HomeNews.js'
 import Grid from '@mui/material/Grid';
 import { ImageLink } from './components/ImageLink';
-import GMap from './components/GMap';
 import { News } from './components/News';
 import Head from 'next/head';
+import Map from './components/Map';
 
 const imageLinkArr = [
     { linkName: 'Related Meetings', bgImgUrl: '/static/images/Blood_clot_in_scanning_electron_microscopy.jpg', },
@@ -67,13 +67,13 @@ export default function HomePage() {
                 </Grid>
                 <Paper variant="padded" sx={{ borderRadius: '3px', }}>
                     <Grid container spacing={1} sx={{ position: 'relative', marginBottom: '10px' }}>
-                        <Grid item xs={12} sm={6}>
+                        <Grid item xs={12} lg={6}>
                             <h3>About</h3>
                             <p>The Society for Free Radical Research founded in the United Kingdom in 1982 is an International Society with the following rules (as amended by resolution of the members dated September 11, 1998). The International Society is a charitable voluntary, non-profit making institution.</p>
                             <p>The object of the International Society is to advance education in free radical processes with particular reference to those of industrial and medical importance, such education being for the benefit of the public.</p>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <GMap />
+                        <Grid item xs={12} lg={6}>
+                            <Map />
                         </Grid>
                         <Grid item xs={12}>
                             <h3>Objectives</h3>
