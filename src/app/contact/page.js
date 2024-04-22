@@ -12,7 +12,7 @@ export default async function Contact() {
         <main>
             <Paper variant="padded" elevation={3}>
                 <h2>Contact</h2>
-                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]} className='pNoMarginBottom'>{data.body}</Markdown>
+                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]} /*className='pNoMarginBottom'*/>{data.body}</Markdown>
                 {/* <h4>Professor Giovanni E. Mann</h4>
                 <p>Secretary-General SFRRI<br />
                     c/o Cardiovascular Division<br />
