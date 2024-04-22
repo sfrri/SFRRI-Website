@@ -313,7 +313,7 @@ collections:
             allow_add: true
             collapsed: true
             fields:
-              - { name: 'meeting-title', label: 'Meeting title' }
+              - { name: 'meeting_title', label: 'Meeting title' }
               - { name: 'date', label: 'Date' }
               - { name: 'location', label: 'Location', widget: "markdown" }
               - { name: 'further_information_link_text', label: 'Further information link text', required: false }
@@ -350,7 +350,7 @@ collections:
             # allow_add: true
             # collapsed: true
             # fields:
-            #   - { name: 'meeting-title', label: 'Meeting title' }
+            #   - { name: 'meeting_title', label: 'Meeting title' }
             #   - { name: 'date', label: 'Date' }
             #   - { name: 'location', label: 'Location', widget: "markdown" }
             #   - { name: 'further_information_link_text', label: 'Further information link text', required: false }
@@ -413,7 +413,7 @@ collections:
             allow_add: true
             collapsed: true
             fields:
-              - { name: 'meeting-title', label: 'Meeting title' }
+              - { name: 'meeting_title', label: 'Meeting title' }
               - { name: 'date', label: 'Date' }
               - { name: 'location', label: 'Location', widget: "markdown" }
               - { name: 'further_information_link_text', label: 'Further information link text', required: false }
