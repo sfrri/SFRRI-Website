@@ -34,7 +34,7 @@ export default function HomeNews({children}) {
                 },
             }}
         >
-            {children}
+            <>{children}</>
         </Paper>
     );
 }

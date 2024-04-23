@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 export default function PaperPadded({children}) {
     <Paper elevation={3}>
         <Box p={4}>
-            {children}
+            <>{children}</>
         </Box>
     </Paper>
 }
