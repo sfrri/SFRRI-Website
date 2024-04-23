@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Paper, Box } from '@mui/material/';
+import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
 
 export default function PaperPadded({children}) {
     <Paper elevation={3}>

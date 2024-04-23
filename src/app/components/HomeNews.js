@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import { Paper } from '@mui/material/';
+import Paper from '@mui/material/Paper';
 
 export default function HomeNews({children}) {
     return (
