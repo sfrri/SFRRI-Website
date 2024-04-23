@@ -534,3 +534,27 @@ collections:
                 # max_file_size: 512000
                 multiple: true 
 
+  - name: 'careers & training'
+    label: 'Careers & Training'
+    # label_singular: 'Meeting'
+    extension: json
+    format: json
+    create: false
+    editor:
+      preview: true
+    files:      
+      - label: "Careers & Training"
+        name: "careers_&_training"
+        file: "_data/careers-&-training.json"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Upload File"
+            name: "upload_path"
+            widget: "file"
+            required: false
+            # default: "/admin/files/uploads"
+            media_library:
+              config:
+                # max_file_size: 512000
+                multiple: true 
+
