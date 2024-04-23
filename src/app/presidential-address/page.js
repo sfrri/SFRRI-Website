@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
-import * as data from '../../../_data/society/presidential-address.json'
+import data from '../../../_data/society/presidential-address.json'
 import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
 

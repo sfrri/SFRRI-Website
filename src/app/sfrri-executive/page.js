@@ -2,7 +2,7 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import SFRRIExecutiveItem from '../components/SFRRIExecutiveItem';
-import * as data from '../../../_data/society/sfrri-executive.json'
+import data from '../../../_data/society/sfrri-executive.json'
 
 export default function SFRRIExecutive() {
     return (

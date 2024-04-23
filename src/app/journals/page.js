@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Image from 'next/image';
 import ImageLinkGridItem from '../components/ImageLinkGridItem';
-import * as data from '../../../_data/journals.json'
+import data from '../../../_data/journals.json'
 
 const logoData = [
     {

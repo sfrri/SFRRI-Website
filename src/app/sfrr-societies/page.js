@@ -3,7 +3,7 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import ImageLinkGridItem from '../components/ImageLinkGridItem';
-import * as data from '../../../_data/sfrr-societies.json'
+import data from '../../../_data/sfrr-societies.json'
 
 export default function SFRRSocieties() {
     return (

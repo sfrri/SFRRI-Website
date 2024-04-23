@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
-import * as data from '../../../_data/conferences/future-sfrri-conferences.json'
+import data from '../../../_data/conferences/future-sfrri-conferences.json'
 import { Box } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import { NewsItem } from '../components/NewsComponents'

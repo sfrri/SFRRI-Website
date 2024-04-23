@@ -2,7 +2,7 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Link from 'next/link';
 import Grid from '@mui/material/Grid';
-import * as data from '../../../_data/society/sfrri-awards-&-fellowships.json'
+import data from '../../../_data/society/sfrri-awards-&-fellowships.json'
 import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypeRaw from 'rehype-raw'

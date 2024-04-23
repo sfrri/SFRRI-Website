@@ -2,7 +2,7 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import { relatedMeetingsItems } from '../contentData/RelatedMeetingsData';
 import { NewsItem } from '../components/NewsComponents';
-import * as data from '../../../_data/news/meetings.json'
+import data from '../../../_data/news/meetings.json'
 // import Markdown from 'react-markdown'
 // import rehypeExternalLinks from 'rehype-external-links'
 
