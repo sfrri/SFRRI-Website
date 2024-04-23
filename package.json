@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.15.12",
     "@mui/material": "^5.15.12",
     "@mui/material-nextjs": "^5.15.11",
+    "@next/bundle-analyzer": "^14.2.2",
     "@react-google-maps/api": "^2.19.3",
     "isomorphic-dompurify": "^2.7.0",
     "leaflet": "^1.9.4",
