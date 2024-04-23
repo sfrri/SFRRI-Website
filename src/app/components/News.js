@@ -3,10 +3,10 @@ import React from "react";
 import Link from 'next/link'
 import { AwardLectureItem, NewsItem, InMemoriamItem } from './NewsComponents'
 import { SFRRI2023AwardLectures, newsItems, inMemoriamItems } from '../contentData/NewsData'
-import * as beforeMeetingsData from '../../../_data/news/before-meetings.json'
-import { meetings } from '../../../_data/news/meetings.json'
-import * as afterMeetingsData from '../../../_data/news/after-meetings.json'
-import { in_memoriam } from '../../../_data/news/in-memoriam.json'
+import beforeMeetingsData from '../../../_data/news/before-meetings.json'
+import meetingsData from '../../../_data/news/meetings.json'
+import afterMeetingsData from '../../../_data/news/after-meetings.json'
+import inMemoriamData from '../../../_data/news/in-memoriam.json'
 import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider';
 import { Box } from "@mui/material";
@@ -59,7 +59,7 @@ export const News = () => {
                     ))}
                 </ul>*/}
             </Item>
-            {meetings.map(item => (
+            {meetingsData.meetings.map(item => (
                 <Item key={item.meeting_title}>
                     <NewsItem
                         date={item.date}
@@ -93,7 +93,7 @@ export const News = () => {
             <Item>
                 <p className="bold">In Memoriam</p>
             </Item>
-            {in_memoriam.map((item, i) => (
+            {inMemoriamData.in_memoriam.map((item, i) => (
                 <Item sx={{ fontVariant: 'small-caps', textTransform: 'capitalize', }} key={i}>
                     <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
                         {item.name}
