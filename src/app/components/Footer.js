@@ -65,7 +65,7 @@ for (let i = 0; i < colLinks.length; i++) {
     );
 }
 
-export default async function Footer() {
+export default function Footer() {
     return (
         <Box
             //component='footer'
