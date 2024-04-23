@@ -77,6 +77,8 @@ export const ImageLink = ({ linkName, bgImgUrl }) => {
                     <Image
                         src={`${bgImgUrl}?width=290&height=202&format=auto`}
                         alt={`${linkName} link image`}
+                        width={290}
+                        height={202}
                         style={{
                             width: '100%',
                             height: '100%',
