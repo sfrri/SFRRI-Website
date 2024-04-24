@@ -65,7 +65,7 @@ export const News = () => {
                         date={item.date}
                         title={item.meeting_title}
                         location={item.location}
-                        link={item.further_information_link_hypertext ? item.further_information_link_hypertext : item.upload_path[0]}
+                        link={item.further_information_link_hypertext ? item.further_information_link_hypertext : item.upload_path[0] ? item.upload_path[0] : ''}
                         linkText={item.further_information_link_text}
                     />
                 </Item>
@@ -92,14 +92,17 @@ export const News = () => {
             </Item>
             <Item>
                 <p className="bold">In Memoriam</p>
+                {/* </Item> */}
+                {inMemoriamData.in_memoriam.map((item, i) => (
+                    // <Item sx={{ fontVariant: 'small-caps', textTransform: 'capitalize', }} key={i}>
+                    <span style={{ fontVariant: 'small-caps', textTransform: 'capitalize', position: 'relative', }} key={i}>
+                        <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
+                            {item.name}
+                        </Markdown>
+                    </span>
+                    // </Item>
+                ))}
             </Item>
-            {inMemoriamData.in_memoriam.map((item, i) => (
-                <Item sx={{ fontVariant: 'small-caps', textTransform: 'capitalize', }} key={i}>
-                    <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
-                        {item.name}
-                    </Markdown>
-                </Item>
-            ))}
             {/* {inMemoriamItems.map(item => (
                 <Item key={item.person}>
                     <InMemoriamItem
