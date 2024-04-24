@@ -65,7 +65,7 @@ export const News = () => {
                         date={item.date}
                         title={item.meeting_title}
                         location={item.location}
-                        link={item.further_information_link_hypertext ? item.further_information_link_hypertext : item.upload_path[0]}
+                        link={item.further_information_link_hypertext ? item.further_information_link_hypertext : item.upload_path[0] ? item.upload_path[0] : ''}
                         linkText={item.further_information_link_text}
                     />
                 </Item>
