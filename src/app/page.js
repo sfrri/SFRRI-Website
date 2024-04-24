@@ -7,6 +7,8 @@ import Grid from '@mui/material/Grid';
 import { News } from './components/News';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
+import Skeleton from '@mui/material/Skeleton';
 
 const imageLinkArr = [
     { linkName: 'Related Meetings', bgImgUrl: '/static/images/Blood_clot_in_scanning_electron_microscopy.jpg', },
@@ -29,12 +31,14 @@ export default function HomePage() {
     return (
         <>
             <main style={{ position: 'relative' }}>
-                <HomeNews sx={{ borderRadius: '3px', }}>
-                    <Grid item xs={12} sx={{ width: '100%', }}>
-                        <h2 style={{ fontSize: '3rem', letterSpacing: '-3px', zIndex: 1, position: 'relative', }}>Latest News</h2>
-                    </Grid>
-                    <News />
-                </HomeNews>
+                <Suspense fallback={<Skeleton />}>
+                    <HomeNews sx={{ borderRadius: '3px', }}>
+                        <Grid item xs={12} sx={{ width: '100%', }}>
+                            <h2 style={{ fontSize: '3rem', letterSpacing: '-3px', zIndex: 1, position: 'relative', }}>Latest News</h2>
+                        </Grid>
+                        <News />
+                    </HomeNews>
+                </Suspense>
                 <Grid container spacing={1.25} sx={{ position: 'relative', marginBottom: '10px' }}>
                     {imageLinkArr.map(linkItem => {
                         return <Grid item xs={12} sm={6} md={6} lg={3} key={linkItem.linkName}>
