@@ -53,22 +53,6 @@ export default async function RedoxJournalsatElsevier() {
                             />
                         </>
                     ))}
-
-                    {/* {data.map(item => (
-                        <>{console.log(item.imgSrc)}
-                        <ImageLinkGridItem 
-                            xs={12}
-                            md={6}
-                            href={item.url} 
-                            width={item.width}
-                            height={item.height} 
-                            src={item.imgSrc} 
-                            name={item.name} 
-                            listItems={item.listItems}
-                            key={item.name} 
-                        />
-                        </>
-                    ))} */}
                     <Grid item xs={12} md={6}>
                         <p>Official and affiliated journals of:</p>
                         {logoData.map(item => (

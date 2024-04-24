@@ -41,33 +41,6 @@ export default function SFRRSocieties() {
                         />
                     ))}
                 </Grid>
-                {/* <Grid container spacing={6} sx={{ marginTop: 0, }}>
-                    {data.map(item => (
-                        item.name !== 'Oxygen Club of California' &&
-                        <ImageLinkGridItem
-                            xs={12}
-                            md={4}
-                            href={item.url}
-                            width={174}
-                            height={156}
-                            src={item.imgSrc}
-                            name={item.name}
-                            key={item.name}
-                        />
-                    ))}
-                </Grid>
-                <h4>SFRRI Affiliated Society</h4>
-                <Grid container spacing={6}>
-                    <ImageLinkGridItem
-                        xs={12}
-                        md={4}
-                        href={data[5].url}
-                        width={174}
-                        height={156}
-                        src={data[5].imgSrc}
-                        name={data[5].name}
-                    />
-                </Grid> */}
             </Paper>
         </main>
     );
