@@ -10,7 +10,7 @@ export default async function SFRRIRelatedConferences() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>SFRRI Related Conferences</h2>
+                <h2>Past SFRRI Related Conferences</h2>
                 <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body}</Markdown>
                 {/* <p>
                     <span className="italic">June 17-19, 2022</span><br />

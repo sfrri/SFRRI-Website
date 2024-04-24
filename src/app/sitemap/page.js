@@ -28,7 +28,7 @@ export default async function Sitemap() {
                         <ul>
                             <li><Link href="future-sfrri-conferences">Future SFRRI Conferences</Link></li>
                             <li><Link href="past-sfrri-conferences">Past SFRRI Conferences</Link></li>
-                            <li><Link href="sfrri-related-conferences">SFRRI Related Conferences</Link></li>
+                            <li><Link href="past-sfrri-related-conferences">Past SFRRI Related Conferences</Link></li>
                             <li><Link href="rules-for-conference-organisation">Rules for Conference Organisation</Link></li>
                         </ul>
                     </li>

@@ -47,7 +47,7 @@ const navItems = [
         subMenu: [
             { name: 'Future SFRRI Conferences' },
             { name: 'Past SFRRI Conferences' },
-            { name: 'SFRRI Related Conferences' },
+            { name: 'Past SFRRI Related Conferences' },
             { name: 'Rules for Conference Organisation' },
         ]
     },

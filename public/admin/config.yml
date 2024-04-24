@@ -329,7 +329,7 @@ collections:
                   config:
                     # max_file_size: 512000
                     multiple: true
-      - label: "SFRRI Related Conferences"
+      - label: "Past SFRRI Related Conferences"
         name: "sfrri-related-conferences"
         file: "_data/conferences/sfrri-related-conferences.json"
         fields:
