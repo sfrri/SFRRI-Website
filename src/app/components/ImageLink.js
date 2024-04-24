@@ -1,14 +1,11 @@
 'use client';
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import { kebabize } from '../../utils';
 import Paper from '@mui/material/Paper';
 import Image from 'next/image';
 
-export const ImageLink = ({ linkName, bgImgUrl }) => {
+const ImageLink = ({ linkName, bgImgUrl }) => {
     return (
         <Link href={`/${kebabize(linkName)}`}>
             <Paper
@@ -62,3 +59,5 @@ export const ImageLink = ({ linkName, bgImgUrl }) => {
         </Link>
     )
 }
+
+export default ImageLink

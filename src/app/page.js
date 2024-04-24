@@ -3,7 +3,7 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import HomeNews from './components/HomeNews.js'
 import Grid from '@mui/material/Grid';
-import { ImageLink } from './components/ImageLink';
+// import ImageLink from './components/ImageLink';
 import { News } from './components/News';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
@@ -17,6 +17,11 @@ const imageLinkArr = [
 
 const ClientSideOnlyMap = dynamic(
     () => import('./components/Map'),
+    { ssr: false }
+)
+
+const ImageLink = dynamic(
+    () => import('./components/ImageLink'),
     { ssr: false }
 )
 
