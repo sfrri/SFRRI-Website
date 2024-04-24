@@ -92,14 +92,17 @@ export const News = () => {
             </Item>
             <Item>
                 <p className="bold">In Memoriam</p>
+                {/* </Item> */}
+                {inMemoriamData.in_memoriam.map((item, i) => (
+                    // <Item sx={{ fontVariant: 'small-caps', textTransform: 'capitalize', }} key={i}>
+                    <span style={{ fontVariant: 'small-caps', textTransform: 'capitalize', position: 'relative', }}>
+                        <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
+                            {item.name}
+                        </Markdown>
+                    </span>
+                    // </Item>
+                ))}
             </Item>
-            {inMemoriamData.in_memoriam.map((item, i) => (
-                <Item sx={{ fontVariant: 'small-caps', textTransform: 'capitalize', }} key={i}>
-                    <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
-                        {item.name}
-                    </Markdown>
-                </Item>
-            ))}
             {/* {inMemoriamItems.map(item => (
                 <Item key={item.person}>
                     <InMemoriamItem
