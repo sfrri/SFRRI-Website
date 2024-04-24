@@ -68,7 +68,8 @@
       "meeting_title": "Happiness with Daniel Fraser",
       "date": "1 April 2050",
       "location": "64 King's Road",
-      "further_information_link_text": "well worked"
+      "further_information_link_text": "well worked",
+      "further_information_link_hypertext": "https://test.com"
     }
   ]
 }
