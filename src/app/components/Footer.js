@@ -73,7 +73,6 @@ export default function Footer() {
                 py: 3,
                 px: 2,
                 mt: 'auto',
-                //backgroundColor: backgroundColor(theme)
                 background: 'radial-gradient(ellipse at top,#4282dd 0,#1d5097 90%)',
                 marginTop: '10px',
             }}
@@ -90,10 +89,7 @@ export default function Footer() {
                         sm={6} 
                         md={3.4} 
                         sx={{ 
-                            paddingRight: '32px',/*
-                            display: 'flex', 
-                            alignItems: 'center', 
-                            justifyContent: 'space-evenly',*/ 
+                            paddingRight: '32px',
                         }}
                     >
                         <Link href='/'>
@@ -109,16 +105,6 @@ export default function Footer() {
                                     height: 'auto',
                                     margin:'32px 0 0 0',
                                     maxWidth: '275px',
-                                    //marginRight: '20px',
-                                    //minWidth: '200px',
-                                    //display: {xs: 'block', ml: 'none', lg: 'block',},
-                                    //objectFit: 'contain',
-                                    /*opacity: 0.5,
-                                    transition: 'opacity 300ms',
-                                    '&:hover': {
-                                        opacity: 1,
-                                        transition: 'opacity 300ms',
-                                    }*/
                                 }}
                             />
                         </Link>

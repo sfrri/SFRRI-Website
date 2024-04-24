@@ -34,11 +34,6 @@ export const NewsItem = ({ date, title, location, link, linkText, }) => {
                     />
                     <br />
                 </>}
-                {/* <span className="italic">Location:&nbsp;</span>
-                <span 
-                    dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(location) }} 
-                />
-                <br /> */}
                 {location && <>
                     <span className="italic">Location:&nbsp;</span>
                     <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]} components={{ p: React.Fragment, }}>{location}</Markdown>
@@ -52,8 +47,6 @@ export const NewsItem = ({ date, title, location, link, linkText, }) => {
                         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(linkText) }}
                     />
                 </>}
-                {/* {linkText}
-                </Link> */}
             </p>
         </>
     )

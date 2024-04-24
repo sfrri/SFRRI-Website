@@ -1,10 +1,7 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
-import { relatedMeetingsItems } from '../contentData/RelatedMeetingsData';
 import { NewsItem } from '../components/NewsComponents';
 import data from '../../../_data/news/meetings.json'
-// import Markdown from 'react-markdown'
-// import rehypeExternalLinks from 'rehype-external-links'
 
 export default async function ForthcomingRelatedMeetings() {
     "use server";
@@ -23,16 +20,6 @@ export default async function ForthcomingRelatedMeetings() {
                         key={item.meeting_title}
                     />
                 ))}
-                {/* {relatedMeetingsItems.map(item => (
-                    <NewsItem
-                        date={item.date}
-                        title={item.title}
-                        location={item.location}
-                        link={item.link}
-                        linkText={item.linkText}
-                        key={item.title}
-                    />
-                ))} */}
             </Paper>
         </main>
     );

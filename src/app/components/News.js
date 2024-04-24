@@ -1,8 +1,6 @@
 'use client';
 import React from "react";
-import Link from 'next/link'
-import { AwardLectureItem, NewsItem, InMemoriamItem } from './NewsComponents'
-import { SFRRI2023AwardLectures, newsItems, inMemoriamItems } from '../contentData/NewsData'
+import { NewsItem } from './NewsComponents'
 import beforeMeetingsData from '../../../_data/news/before-meetings.json'
 import meetingsData from '../../../_data/news/meetings.json'
 import afterMeetingsData from '../../../_data/news/after-meetings.json'
@@ -41,23 +39,6 @@ export const News = () => {
                 <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
                     {beforeMeetingsData.body}
                 </Markdown>
-                {/* <p><Link href='/presidential-address'>President&apos;s Welcome Message 2024</Link></p>
-                <p>
-                    <a href="downloads/SFRRI_Letter_to_Regional_SFRR_Executives_and_Member_12-09-23.pdf" target="_blank">President&apos;s Letter | Extension of SFRRI Officers Term for 1-year</a>
-                </p> 
-            </Item>
-            <Item>
-                <p className="bold">SFRRI 2023 Award Lectures</p>
-                <ul>
-                    {SFRRI2023AwardLectures.map(item => (
-                        <AwardLectureItem
-                            link={item.link}
-                            person={item.person}
-                            award={item.award}
-                            key={item.award}
-                        />
-                    ))}
-                </ul>*/}
             </Item>
             {meetingsData.meetings.map(item => (
                 <Item key={item.meeting_title}>
@@ -70,47 +51,21 @@ export const News = () => {
                     />
                 </Item>
             ))}
-            {/* {newsItems.map(item => (
-                <Item key={item.title}>
-                    <NewsItem
-                        date={item.date}
-                        title={item.title}
-                        location={item.location}
-                        link={item.link}
-                        linkText={item.linkText}
-                    />
-                </Item>
-            ))}  */}
             <Item>
                 <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
                     {afterMeetingsData.body}
                 </Markdown>
-                {/* <p>
-                    <span className="bold">SFRRI Outreach Meeting Sponsorship Form</span><br />
-                    <a href="downloads/SFRRI_Outreach_Sponsorship_Application_Form_2019.doc" target="_blank">Please click here to download</a>
-                </p> */}
             </Item>
             <Item>
                 <p className="bold">In Memoriam</p>
-                {/* </Item> */}
                 {inMemoriamData.in_memoriam.map((item, i) => (
-                    // <Item sx={{ fontVariant: 'small-caps', textTransform: 'capitalize', }} key={i}>
                     <span style={{ fontVariant: 'small-caps', textTransform: 'capitalize', position: 'relative', }} key={i}>
                         <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
                             {item.name}
                         </Markdown>
                     </span>
-                    // </Item>
                 ))}
             </Item>
-            {/* {inMemoriamItems.map(item => (
-                <Item key={item.person}>
-                    <InMemoriamItem
-                        link={item.link}
-                        person={item.person}
-                    />
-                </Item>
-            ))} */}
         </Stack>
     )
 }
