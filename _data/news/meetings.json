@@ -4,7 +4,7 @@
       "add_to_related_meetings": false,
       "meeting_title": "22nd Society for Free Radical Research International Biennial Meeting",
       "date": "June 3-6, 2025",
-      "location": "Galway, Ireland",
+      "location": "University of Galway, Ireland",
       "further_information_link_text": "22nd SFRRI Biennial Conference, Galway, Ireland",
       "further_information_link_hypertext": "",
       "upload_path": [
@@ -37,7 +37,7 @@
     },
     {
       "add_to_related_meetings": true,
-      "meeting_title": "Lipid Oxidation: New Biochemical Insights and Clinical Applications",
+      "meeting_title": "HNE Club Meeting: Lipid Oxidation: New Biochemical Insights and Clinical Applications",
       "date": "October 10-12, 2024",
       "location": "Genoa, Italy",
       "further_information_link_text": "download flyer",
@@ -62,6 +62,13 @@
         "/admin/files/uploads/sfrra-j-flyer.pdf"
       ],
       "further_information_link_text": "download flyer"
+    },
+    {
+      "add_to_related_meetings": true,
+      "meeting_title": "Happiness with Daniel Fraser",
+      "date": "1 April 2050",
+      "location": "64 King's Road",
+      "further_information_link_text": "well worked"
     }
   ]
 }
