@@ -95,7 +95,7 @@ export const News = () => {
                 {/* </Item> */}
                 {inMemoriamData.in_memoriam.map((item, i) => (
                     // <Item sx={{ fontVariant: 'small-caps', textTransform: 'capitalize', }} key={i}>
-                    <span style={{ fontVariant: 'small-caps', textTransform: 'capitalize', position: 'relative', }}>
+                    <span style={{ fontVariant: 'small-caps', textTransform: 'capitalize', position: 'relative', }} key={i}>
                         <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
                             {item.name}
                         </Markdown>
