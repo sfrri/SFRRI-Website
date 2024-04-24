@@ -23,7 +23,6 @@ const ClientSideOnlyMap = dynamic(
 export default function HomePage() {
     return (
         <>
-            <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" strategy="beforeInteractive" />
             <main style={{ position: 'relative' }}>
                 <HomeNews sx={{ borderRadius: '3px', }}>
                     <Grid item xs={12} sx={{ width: '100%', }}>
@@ -62,6 +61,7 @@ export default function HomePage() {
                     </Grid>
                 </Paper>
             </main>
+            <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" strategy="afterInteractive" />
         </>
     );
 }
