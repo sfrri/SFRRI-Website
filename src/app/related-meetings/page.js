@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
-import { NewsItem } from '../components/NewsComponents';
+import NewsItem from '../components/NewsComponents';
 import data from '../../../_data/news/meetings.json'
 
 export default async function ForthcomingRelatedMeetings() {

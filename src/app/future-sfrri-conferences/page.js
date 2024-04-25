@@ -4,7 +4,7 @@ import Paper from '@mui/material/Paper';
 import data from '../../../_data/conferences/future-sfrri-conferences.json'
 import { Box } from "@mui/material";
 import { styled } from '@mui/material/styles';
-import { NewsItem } from '../components/NewsComponents'
+import NewsItem from '../components/NewsComponents'
 
 const Item = styled(Box)(() => ({
     position: 'relative',
