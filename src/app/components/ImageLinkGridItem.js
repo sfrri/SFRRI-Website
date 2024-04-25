@@ -23,12 +23,12 @@ const ImageLinkGridItem = ({ xs, md, href,/* width, height,*/ src, name, body })
                 component={Link}
                 href={href}
                 target="_blank"
-                sx={{ 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    alignItems: 'center', 
-                    textAlign: 'center', 
-                    position: 'relative' 
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                    position: 'relative'
                 }}
             >
                 {/* {loading && <Skeleton 
@@ -37,30 +37,45 @@ const ImageLinkGridItem = ({ xs, md, href,/* width, height,*/ src, name, body })
                                 height={maxImgHeight} 
                             />
                 } */}
-                {loading && <CircularProgress sx={{position: 'absolute',}} />}
-                <Image
-                    priority
-                    width={maxImgWidth}
-                    height={maxImgHeight}
-                    onLoad={(e) => setLoading(false)}
-                    src={src}
-                    alt={`${name}`}
-                    style={{
-                        width: 'auto',
-                        maxWidth: maxImgWidth,
-                        height: 'auto',
-                        maxHeight: maxImgHeight,
-                        // display: loading ? 'none' : 'block',
-                        opacity: loading ? 0 : 1,
-                        transitionProperty: 'opacity',
-                        transitionDuration: '500ms',
-                        transitionTimingFunction: 'cubic-bezier(0.7, 0, 0.6, 1)',
-                      }}
-                />
+                <div style={{
+                    width: maxImgWidth,
+                    height: maxImgHeight,
+                }}>
+                    {loading &&
+
+                        <CircularProgress
+                            sx={{
+                                position: 'absolute',
+                                top: '30%',
+                                left: '50%',
+                                translate: '-50% -50%',
+                            }}
+                        />
+                    }
+                    <Image
+                        priority
+                        width={maxImgWidth}
+                        height={maxImgHeight}
+                        onLoad={(e) => setLoading(false)}
+                        src={src}
+                        alt={`${name}`}
+                        style={{
+                            width: 'auto',
+                            maxWidth: maxImgWidth,
+                            height: 'auto',
+                            maxHeight: maxImgHeight,
+                            // display: loading ? 'none' : 'block',
+                            opacity: loading ? 0 : 1,
+                            transitionProperty: 'opacity',
+                            transitionDuration: '500ms',
+                            transitionTimingFunction: 'cubic-bezier(0.7, 0, 0.6, 1)',
+                        }}
+                    />
+                </div>
                 <p>{name}</p>
             </Box>
             {body &&
-                <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{body}</Markdown>
+                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>{body}</Markdown>
             }
         </Grid> : <div />
     )
