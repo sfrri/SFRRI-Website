@@ -16,10 +16,10 @@ export default async function SFRRIAwardsAndFellowships() {
                 <p>Both the international society and the regional societies offer a wide range of fellowships and awards to foster and develop the field of free radicals and related oxidants. Many of these awards are linked to specific scientific meetings and its constitutent bodies. Further details of many of these awards are therefore listed on the <Link href='sfrr-societies'>Regional Societies</Link> web pages.</p>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
-                        <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body_col1}</Markdown>
+                        {data.body_col1 && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body_col1}</Markdown>}
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body_col2}</Markdown>
+                        {data.body_col2 && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body_col2}</Markdown>}
                     </Grid>
                 </Grid>
             </Paper>

@@ -38,7 +38,7 @@ export default async function RedoxJournalsatElsevier() {
                 <h2>Redox Journals at Elsevier</h2>
                 <p>Submit your latest research to our community of redox journals supported by the Society for Free Radical Research International (SFRR-International), Society for Redox Biology & Medicine (SfRBM) and Society for Free Radical Research Europe (SFRR-Europe).</p>
                 <Grid container spacing={6} sx={{ marginTop: 0, }}>
-                    {data.journal.map(item => (
+                    {data.journal && data.journal.map(item => (
                         <>
                             <ImageLinkGridItem
                                 xs={12}

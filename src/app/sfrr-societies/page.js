@@ -11,7 +11,7 @@ export default function SFRRSocieties() {
             <Paper variant="padded" elevation={3}>
                 <h2>SFRR Regional Societies</h2>
                 <Grid container spacing={6} sx={{ marginTop: 0, }}>
-                    {data.sfrr_society.map(item => (
+                    {data.sfrr_society && data.sfrr_society.map(item => (
                         !item.affiliated_society &&
                         <ImageLinkGridItem
                             xs={12}
@@ -27,7 +27,7 @@ export default function SFRRSocieties() {
                 </Grid>
                 <h4>SFRRI Affiliated Society</h4>
                 <Grid container spacing={6}>
-                    {data.sfrr_society.map(item => (
+                    {data.sfrr_society && data.sfrr_society.map(item => (
                         item.name === 'Oxygen Club of California' &&
                         <ImageLinkGridItem
                             xs={12}

@@ -20,13 +20,13 @@ export default function PresidentialAddress() {
                     width={maxImgWidth}
                     height={maxImgHeight}
                 />}
-                <Image
+                {data.upload_path && <Image
                     priority
                     width={maxImgWidth}
                     height={maxImgHeight}
                     onLoad={() => setLoading(false)}
                     src={data.upload_path[0]}
-                    alt={data.name}
+                    alt={data.name && data.name}
                     style={{
                         width: '100%',
                         maxWidth: maxImgWidth,
@@ -35,8 +35,8 @@ export default function PresidentialAddress() {
                         float: 'right',
                         margin: '11px 18px',
                     }}
-                />
-                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }]]}>{data.body}</Markdown>
+                />}
+                {data.body && <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }]]}>{data.body}</Markdown>}
             </Paper>
         </main>
     );

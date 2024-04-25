@@ -11,7 +11,7 @@ export default async function PastSFRRIConferences() {
         <main>
             <Paper variant="padded" elevation={3}>
                 <h2>Past SFRRI Conferences</h2>
-                <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body}</Markdown>
+                {data.body && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body}</Markdown>}
             </Paper>
         </main>
     );

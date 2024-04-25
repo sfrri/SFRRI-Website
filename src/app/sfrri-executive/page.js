@@ -9,7 +9,7 @@ export default function SFRRIExecutive() {
         <main>
             <Paper variant="padded" elevation={3}>
                 <h2 style={{ marginBottom: '1em', }}>SFRRI Executive</h2>
-                {data.sfrri_executive_member.map(item => (
+                {data.sfrri_executive_member && data.sfrri_executive_member.map(item => (
                     <SFRRIExecutiveItem
                         imgSrc={item.upload_path}
                         title={item.title}

@@ -20,7 +20,7 @@ export default function FutureSFRRIConferences() {
         <main>
             <Paper variant="padded" elevation={3}>
                 <h2>Future SFRRI Conferences</h2>
-                {data.future_sfrri_conferences.map(item => (
+                {data.future_sfrri_conferences && data.future_sfrri_conferences.map(item => (
                     <Item key={item["Meeting Title"]}>
                         <NewsItem
                             date={item.date}

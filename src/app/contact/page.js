@@ -12,7 +12,7 @@ export default async function Contact() {
         <main>
             <Paper variant="padded" elevation={3}>
                 <h2>Contact</h2>
-                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]} /*className='pNoMarginBottom'*/>{data.body}</Markdown>
+                {data.body && <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]} /*className='pNoMarginBottom'*/>{data.body}</Markdown>}
                 <p>Website designed and developed by <Link href='https://danielfraser.me' target="_blank">Daniel Fraser</Link></p>
             </Paper>
         </main>

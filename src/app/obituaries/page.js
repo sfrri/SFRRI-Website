@@ -10,7 +10,7 @@ export default async function Obituaries() {
         <main>
             <Paper variant="padded" elevation={3}>
                 <h2>Obituaries</h2>
-                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>{data.body}</Markdown>
+                {data.body && <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>{data.body}</Markdown>}
             </Paper>
         </main>
     );

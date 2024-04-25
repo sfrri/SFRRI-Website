@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Skeleton from '@mui/material/Skeleton';
 import BioAccordion from './BioAccordion';
 import { kebabize } from '@/utils';
-import DOMPurify from 'isomorphic-dompurify';
+// import DOMPurify from 'isomorphic-dompurify';
 import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
 
@@ -27,7 +27,7 @@ const SFRRIExecutiveItem = ({ /*imgWidth, imgHeight, */title, name, bio, address
                     width={maxImgWidth}
                     height={maxImgHeight}
                 />}
-                <Image
+               {name && <Image
                     priority
                     width={maxImgWidth}
                     height={maxImgHeight}
@@ -40,24 +40,24 @@ const SFRRIExecutiveItem = ({ /*imgWidth, imgHeight, */title, name, bio, address
                         height: 'auto',
                         display: loading ? 'none' : 'block',
                       }}
-                />
+                />}
             </Grid>
             <Grid item xs={12} lg={10} sx={{padding:{lg: '0 1em'},}}>
                 <Grid container spacing={0}>
-                    <Grid item xs={12} sx={{padding:{lg: '0 1em'},}}><h4>{title}</h4></Grid>
-                    <Grid item xs={12} sx={{padding:{lg: '0 1em'},}}><p className='bold'>{name}</p></Grid>
+                    {title && <Grid item xs={12} sx={{padding:{lg: '0 1em'},}}><h4>{title}</h4></Grid>}
+                    {name && <Grid item xs={12} sx={{padding:{lg: '0 1em'},}}><p className='bold'>{name}</p></Grid>}
                     <BioAccordion bio={bio} />
-                    <Grid item xs={12} lg={6} className='pNoMarginBottom' sx={{padding:{lg: '0 1em'},}}>
+                    {address && <Grid item xs={12} lg={6} className='pNoMarginBottom' sx={{padding:{lg: '0 1em'},}}>
                         {/* <p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(address) }} /> */}
                         <Markdown >{address}</Markdown>
-                    </Grid>
+                    </Grid>}
                     <Grid item xs={12} lg={6} className='pNoMarginBottom' sx={{padding:{lg: '0 1em'},}}>
                         {/* <p>
                             Tel:&nbsp;{tel}<br />
                             Email:&nbsp;<Link href={email} target="_blank">{email}</Link><br />
                             URL:&nbsp;<Link href={link} target="_blank">{link}</Link>
                         </p> */}
-                        <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{contact_details}</Markdown>
+                        {contact_details && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{contact_details}</Markdown>}
                     </Grid>
                 </Grid>
             </Grid>

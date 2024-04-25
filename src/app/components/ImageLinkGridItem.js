@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Image from 'next/image';
 import Skeleton from '@mui/material/Skeleton';
-import DOMPurify from 'isomorphic-dompurify';
+// import DOMPurify from 'isomorphic-dompurify';
 import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypeRaw from 'rehype-raw'
@@ -17,7 +17,7 @@ const ImageLinkGridItem = ({ xs, md, href,/* width, height,*/ src, name, body })
     const maxImgHeight = /*imgHeight < 133.33 ? imgHeight :*/ 133.33
 
     return (
-        <Grid item xs={xs} md={md}>
+        href && src && name ? <Grid item xs={xs} md={md}>
             <Box
                 component={Link}
                 href={href}
@@ -56,7 +56,7 @@ const ImageLinkGridItem = ({ xs, md, href,/* width, height,*/ src, name, body })
             {body &&
                 <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{body}</Markdown>
             }
-        </Grid>
+        </Grid> : <div />
     )
 }
 

@@ -9,7 +9,7 @@ export default async function ForthcomingRelatedMeetings() {
         <main>
             <Paper variant="padded" elevation={3}>
                 <h2>Forthcoming Related Meetings</h2>
-                {data.meetings.map(item => (
+                {data.meetings && data.meetings.map(item => (
                     item.add_to_related_meetings === true &&
                     <NewsItem
                         date={item.date}

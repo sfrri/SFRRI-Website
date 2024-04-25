@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const ImageLink = ({ linkName, bgImgUrl }) => {
     return (
-        <Link href={`/${kebabize(linkName)}`} prefetch={false}>
+        linkName ? <Link href={`/${kebabize(linkName)}`} prefetch='false'>
             <Paper
                 sx={{
                     // width: '290px',
@@ -56,7 +56,7 @@ const ImageLink = ({ linkName, bgImgUrl }) => {
                     {linkName}
                 </h2>
             </Paper>
-        </Link>
+        </Link> : <div />
     )
 }
 

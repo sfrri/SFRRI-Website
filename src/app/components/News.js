@@ -36,11 +36,11 @@ export const News = () => {
             }}
         >
             <Item>
-                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
+                {beforeMeetingsData.body && <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
                     {beforeMeetingsData.body}
-                </Markdown>
+                </Markdown>}
             </Item>
-            {meetingsData.meetings.map(item => (
+            {meetingsData.meetings && meetingsData.meetings.map(item => (
                 <Item key={item.meeting_title}>
                     <NewsItem
                         date={item.date}
@@ -52,13 +52,13 @@ export const News = () => {
                 </Item>
             ))}
             <Item>
-                <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
+                {afterMeetingsData.body && <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
                     {afterMeetingsData.body}
-                </Markdown>
+                </Markdown>}
             </Item>
             <Item>
                 <p className="bold">In Memoriam</p>
-                {inMemoriamData.in_memoriam.map((item, i) => (
+                {inMemoriamData.in_memoriam && inMemoriamData.in_memoriam.map((item, i) => (
                     <span style={{ fontVariant: 'small-caps', textTransform: 'capitalize', position: 'relative', }} key={i}>
                         <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
                             {item.name}
