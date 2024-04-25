@@ -10,6 +10,7 @@ import Skeleton from '@mui/material/Skeleton';
 import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypeRaw from 'rehype-raw'
+import CircularProgress from '@mui/material/CircularProgress';
 
 const ImageLinkGridItem = ({ xs, md, href,/* width, height,*/ src, name, body }) => {
     const [loading, setLoading] = useState(true);
@@ -30,12 +31,13 @@ const ImageLinkGridItem = ({ xs, md, href,/* width, height,*/ src, name, body })
                     position: 'relative' 
                 }}
             >
-                {loading && <Skeleton 
+                {/* {loading && <Skeleton 
                                 variant="rounded" 
                                 width={maxImgWidth} 
                                 height={maxImgHeight} 
                             />
-                }
+                } */}
+                {loading && <CircularProgress sx={{position: 'absolute',}} />}
                 <Image
                     priority
                     width={maxImgWidth}
@@ -48,7 +50,11 @@ const ImageLinkGridItem = ({ xs, md, href,/* width, height,*/ src, name, body })
                         maxWidth: maxImgWidth,
                         height: 'auto',
                         maxHeight: maxImgHeight,
-                        display: loading ? 'none' : 'block',
+                        // display: loading ? 'none' : 'block',
+                        opacity: loading ? 0 : 1,
+                        transitionProperty: 'opacity',
+                        transitionDuration: '500ms',
+                        transitionTimingFunction: 'cubic-bezier(0.7, 0, 0.6, 1)',
                       }}
                 />
                 <p>{name}</p>

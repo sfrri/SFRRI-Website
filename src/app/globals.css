@@ -158,7 +158,8 @@ p a,
 ul a,
 a p,
 span a {
-    color: #4282dd;
+    /* color: #4282dd; */
+    color:#1976d2;
     font-weight: 500 !important;
 }
 
@@ -192,7 +193,9 @@ ul {
     position: absolute;
     top: 0;
     background-color: #447ac7;
+    background-color: #1976d2;
     background: radial-gradient(ellipse at top, #4282dd 0, #1d5097 90%);
+    background: radial-gradient(ellipse at top, #1976d2 0, #1d5097 90%);
     box-shadow: rgb(0 0 0 / 12%) 0px 1px 6px, rgb(0 0 0 / 12%) 0px 1px 4px;
     z-index: 0;
 }
