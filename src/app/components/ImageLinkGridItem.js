@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Image from 'next/image';
-import Skeleton from '@mui/material/Skeleton';
+// import Skeleton from '@mui/material/Skeleton';
 // import DOMPurify from 'isomorphic-dompurify';
 import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'

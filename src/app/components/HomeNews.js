@@ -56,7 +56,14 @@ export default function HomeNews({ children }) {
                     }}
                 />
             </picture>
-            <span style={{zIndex:1,position:'relative',padding: '30px',display:'block',}}>{children}</span>
+            <div style={{
+                zIndex: 1,
+                position: 'relative',
+                padding: '30px',
+                display: 'block',
+            }}>
+                {children}
+            </div>
         </Paper>
     );
 }

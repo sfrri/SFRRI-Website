@@ -28,11 +28,11 @@ const ImageLink = ({ linkName, bgImgUrl }) => {
             >
                 <picture style={{borderRadius: '3px', }}>
                     <source
-                        srcSet={`${bgImgUrl}?width=290&height=202&format=jpg`}
+                        srcSet={`${bgImgUrl}`}/*?width=290&height=202&format=jpg*/
                         type="image/jpg"
                     />
                     <Image
-                        src={`${bgImgUrl}?width=290&height=202&format=auto`}
+                        src={`${bgImgUrl}`}/*?width=290&height=202&format=auto*/
                         alt={`${linkName} link image`}
                         width={290}
                         height={202}
