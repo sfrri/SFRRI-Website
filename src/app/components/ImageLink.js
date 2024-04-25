@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 import * as React from 'react';
 import Link from '@mui/material/Link';
 import { kebabize } from '../../utils';
@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const ImageLink = ({ linkName, bgImgUrl }) => {
     return (
-        <Link href={`/${kebabize(linkName)}`}>
+        <Link href={`/${kebabize(linkName)}`} prefetch={false}>
             <Paper
                 sx={{
                     // width: '290px',
@@ -28,7 +28,7 @@ const ImageLink = ({ linkName, bgImgUrl }) => {
             >
                 <picture style={{borderRadius: '3px', }}>
                     <source
-                        srcset={`${bgImgUrl}?width=290&height=202&format=jpg`}
+                        srcSet={`${bgImgUrl}?width=290&height=202&format=jpg`}
                         type="image/jpg"
                     />
                     <Image
