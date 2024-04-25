@@ -19,7 +19,7 @@ import rehypeRaw from 'rehype-raw'
 const NewsItem = ({ date, title, location, link, linkText, body, }) => {
     return (
         <>
-            <p>
+            <div style={{marginBottom: '1em', wordWrap: 'break-word',}}>
                 {date && <>
                     <span
                         className="italic"
@@ -49,8 +49,8 @@ const NewsItem = ({ date, title, location, link, linkText, body, }) => {
                     />
                     <br />
                 </>}
-                {body && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]} components={{ p: React.Fragment, }}>{body}</Markdown>}
-            </p>
+                {body && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{body}</Markdown>}
+            </div>
         </>
     )
 }
