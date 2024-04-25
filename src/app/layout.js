@@ -1,11 +1,13 @@
 //import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import { ThemeProvider } from '@mui/material/styles';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import theme from './theme';
 import CssBaseline from '@mui/material/CssBaseline';
 import DrawerMenuAppBar from './components/DrawerMenuAppBar.js';
-import { Container, Box, Typography } from "@mui/material";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 import Footer from './components/Footer.js';
 import Head from 'next/head';
 import NewsConditional from "./components/NewsConditional";

@@ -1,13 +1,13 @@
 'use client';
 import React from "react";
-import { NewsItem } from './NewsComponents'
+import NewsItem from './NewsComponents'
 import beforeMeetingsData from '../../../_data/news/before-meetings.json'
 import meetingsData from '../../../_data/news/meetings.json'
 import afterMeetingsData from '../../../_data/news/after-meetings.json'
 import inMemoriamData from '../../../_data/news/in-memoriam.json'
 import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider';
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import { styled } from '@mui/material/styles';
 import Markdown from 'react-markdown'
 import { usePathname } from "next/navigation";

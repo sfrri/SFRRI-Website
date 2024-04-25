@@ -5,18 +5,18 @@ import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypeRaw from 'rehype-raw'
 
-export const AwardLectureItem = ({ link, person, award, }) => {
-    return (
-        <li>
-            <Link href={link} target="_blank">
-                {person}
-            </Link>
-            {` - ${award}`}
-        </li>
-    )
-}
+// export const AwardLectureItem = ({ link, person, award, }) => {
+//     return (
+//         <li>
+//             <Link href={link} target="_blank">
+//                 {person}
+//             </Link>
+//             {` - ${award}`}
+//         </li>
+//     )
+// }
 
-export const NewsItem = ({ date, title, location, link, linkText, }) => {
+const NewsItem = ({ date, title, location, link, linkText, }) => {
     return (
         <>
             <p>
@@ -45,6 +45,7 @@ export const NewsItem = ({ date, title, location, link, linkText, }) => {
                         href={link}
                         target="_blank"
                         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(linkText) }}
+                        prefetch={false}
                     />
                 </>}
             </p>
@@ -52,12 +53,14 @@ export const NewsItem = ({ date, title, location, link, linkText, }) => {
     )
 }
 
-export const InMemoriamItem = ({ link, person, }) => {
-    return (
-        <p style={{ fontVariant: 'small-caps', textTransform: 'capitalize', }}>
-            <Link href={link} target="_blank">
-                {person}
-            </Link>
-        </p>
-    )
-}
+export default NewsItem
+
+// export const InMemoriamItem = ({ link, person, }) => {
+//     return (
+//        person && <p style={{ fontVariant: 'small-caps', textTransform: 'capitalize', }}>
+//             <Link href={link} target="_blank">
+//                 {person}
+//             </Link>
+//         </p>
+//     )
+// }

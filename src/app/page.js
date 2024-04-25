@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import Paper from '@mui/material/Paper';
+// import Paper from '@mui/material/Paper';
 import HomeNews from './components/HomeNews.js'
 import Grid from '@mui/material/Grid';
 // import ImageLink from './components/ImageLink';
@@ -49,7 +49,7 @@ export default function HomePage() {
                 </Grid>
                 <AboutSection />
             </main>
-            <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" strategy="afterInteractive" />
+            <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" strategy="lazyOnload" />
         </>
     );
 }
