@@ -16,7 +16,7 @@ import rehypeRaw from 'rehype-raw'
 //     )
 // }
 
-const NewsItem = ({ date, title, location, link, linkText, }) => {
+const NewsItem = ({ date, title, location, link, linkText, body, }) => {
     return (
         <>
             <p>
@@ -48,6 +48,7 @@ const NewsItem = ({ date, title, location, link, linkText, }) => {
                         prefetch={false}
                     />
                 </>}
+                {body && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body}</Markdown>}
             </p>
         </>
     )
