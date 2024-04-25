@@ -2,7 +2,7 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import data from '../../../_data/conferences/future-sfrri-conferences.json'
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import { styled } from '@mui/material/styles';
 import NewsItem from '../components/NewsComponents'
 
@@ -28,6 +28,7 @@ export default function FutureSFRRIConferences() {
                             location={item.location}
                             link={item.further_information_link_hypertext ? item.further_information_link_hypertext : item.upload_path[0]}
                             linkText={item.further_information_link_text}
+                            body={item.body}
                         />
                     </Item>
                 ))}
