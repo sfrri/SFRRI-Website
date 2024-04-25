@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import data from '../../../_data/conferences/past-sfrri-related-conferences.json'
@@ -17,15 +18,14 @@ const Item = styled(Box)(() => ({
 
 }));
 
-export default async function SFRRIRelatedConferences() {
-    "use server";
+export default function SFRRIRelatedConferences() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
                 <h2>Past SFRRI Related Conferences</h2>
                 {/* {data.body && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body}</Markdown>} */}
                 {data.past_sfrri_related_conferences && data.past_sfrri_related_conferences.map(item => (
-                    <Item key={item["Meeting Title"]}>
+                    <Item key={item.meeting_title}>
                         <NewsItem
                             date={item.date}
                             title={item.meeting_title}
