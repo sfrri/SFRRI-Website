@@ -47,8 +47,9 @@ const NewsItem = ({ date, title, location, link, linkText, body, }) => {
                         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(linkText) }}
                         prefetch={false}
                     />
+                    <br />
                 </>}
-                {body && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{data.body}</Markdown>}
+                {body && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]} components={{ p: React.Fragment, }}>{body}</Markdown>}
             </p>
         </>
     )
