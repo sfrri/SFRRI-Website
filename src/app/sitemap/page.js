@@ -13,7 +13,7 @@ export default async function Sitemap() {
                 <ul>
                     {navItems.map(item => (
                         item.subMenu != undefined ?
-                            <li>{item.name}
+                            <li key={item.name}>{item.name}
                                 <ul>
                                     {item.subMenu.map(subItem => {
                                         return <li><Link href={kebabize(subItem.name)} key={subItem.name}>{subItem.name}</Link></li>
@@ -21,7 +21,7 @@ export default async function Sitemap() {
                                 </ul>
                             </li>
                             :
-                            <li><Link href={item.name === 'Home' ? '' : kebabize(item.name)} key={item.name}>{item.name}</Link></li>
+                            <li key={item.name}><Link href={item.name === 'Home' ? '' : kebabize(item.name)}>{item.name}</Link></li>
                     ))}
                 </ul>
                 <ul>
