@@ -16,7 +16,7 @@ export default async function Sitemap() {
                             <li key={item.name}>{item.name}
                                 <ul>
                                     {item.subMenu.map(subItem => {
-                                        return <li><Link href={kebabize(subItem.name)} key={subItem.name}>{subItem.name}</Link></li>
+                                        return <li key={subItem.name}><Link href={kebabize(subItem.name)}>{subItem.name}</Link></li>
                                     })}
                                 </ul>
                             </li>
