@@ -35,7 +35,12 @@ export default async function Sitemap() {
                     <li><Link href="related-meetings">Related Meetings</Link></li>
                     <li><Link href="sfrri-outreach">SFRRI Outreach</Link></li>
                     <li><Link href="journals">Journals</Link></li>
-                    <li><Link href="education">Education</Link></li>
+                    <li>Education
+                        <ul>
+                            <li><Link href="education">Education</Link></li>
+                            <li><Link href="careers-&-training">Careers & Training</Link></li>
+                        </ul>
+                    </li>
                 </ul>
                 <ul>
                     <li><Link href="sitemap">Sitemap</Link></li>

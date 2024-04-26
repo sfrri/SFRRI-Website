@@ -43,6 +43,7 @@ export default function HomeNews({ children }) {
                     type="image/jpg"
                 />
                 <Image
+                    priority
                     src={`${bgImgUrl}`}//?width=1280&height=720&format=auto
                     alt='Hinge_top_vials_on_a_vial_rack'
                     width={1280}
