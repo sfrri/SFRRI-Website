@@ -28,7 +28,6 @@ const ImageLinkGridItem = ({ xs, md, href,/* width, height,*/ src, name, body })
                     flexDirection: 'column',
                     alignItems: 'center',
                     textAlign: 'center',
-                    position: 'relative'
                 }}
             >
                 {/* {loading && <Skeleton 
@@ -40,6 +39,7 @@ const ImageLinkGridItem = ({ xs, md, href,/* width, height,*/ src, name, body })
                 <div style={{
                     width: maxImgWidth,
                     height: maxImgHeight,
+                    position: 'relative'
                 }}>
                     {loading &&
 
