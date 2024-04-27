@@ -4,7 +4,7 @@ import Paper from '@mui/material/Paper';
 import Image from 'next/image';
 
 export default function HomeNews({ children }) {
-    const bgImgUrl = '/static/images/Hinge_top_vials_on_a_vial_rack.jpg'
+    const bgImgUrl = '/static/images/Hinge_top_vials_on_a_vial_rack.webp'
     return (
         <Paper
             // variant="padded"
@@ -43,6 +43,7 @@ export default function HomeNews({ children }) {
                     type="image/jpg"
                 />
                 <Image
+                    priority
                     src={`${bgImgUrl}`}//?width=1280&height=720&format=auto
                     alt='Hinge_top_vials_on_a_vial_rack'
                     width={1280}
