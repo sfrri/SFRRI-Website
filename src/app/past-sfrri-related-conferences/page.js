@@ -16,6 +16,7 @@ export default function SFRRIRelatedConferences() {
                         link={item.further_information_link_hypertext ? item.further_information_link_hypertext : item.upload_path[0]}
                         linkText={item.further_information_link_text}
                         body={item.body}
+                        key={item.meeting_title}
                     />
                 ))}
             </Paper>
