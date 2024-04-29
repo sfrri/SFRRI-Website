@@ -9,7 +9,7 @@ import MenuList from '@mui/material/MenuList';
 import Link from '@mui/material/Link';
 import { kebabize } from '@/utils';
 
-export default function MenuListComposition({ name, subMenuItems }) {
+export default function MenuListComposition({ name, subMenuItems, id }) {
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
 
@@ -47,7 +47,7 @@ export default function MenuListComposition({ name, subMenuItems }) {
         <>
             <Button
                 ref={anchorRef}
-                id="composition-button"
+                id={id}
                 aria-controls={open ? 'composition-menu' : undefined}
                 aria-expanded={open ? 'true' : undefined}
                 aria-haspopup="true"

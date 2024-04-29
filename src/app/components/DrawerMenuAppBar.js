@@ -76,7 +76,6 @@ function DrawerMenuAppBar(props) {
                                 <ListItemText primary={item.name} />
                                 {open === i ? <ExpandLess /> : <ExpandMore />}
                             </ListItemButton>
-
                             <Collapse in={open === i} timeout="auto" unmountOnExit>
                                 <List component="div" disablePadding>
                                     {item.subMenu.map(subMenuItem => {
@@ -196,6 +195,7 @@ function DrawerMenuAppBar(props) {
                                 <BasicMenu
                                     name={item.name}
                                     subMenuItems={item.subMenu}
+                                    id={item.name}
                                     key={item.name}
                                 />
                                 :
