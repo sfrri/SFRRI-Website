@@ -45,6 +45,7 @@ const SFRRIExecutiveItem = ({ /*imgWidth, imgHeight, */title, name, bio, address
                         />
                     }
                     {name && <Image
+                        priority
                         width={maxImgWidth}
                         height={maxImgHeight}
                         onLoad={() => setLoading(false)}
