@@ -6,7 +6,7 @@ media_folder: "/public/admin/files/uploads" # Media files will be stored in the 
 public_folder: "/admin/files/uploads"
 display_url: https://sfrr.org
 # logo_url: https://sfrr.org/static/images/SFRRI-footer-logo.png
-logo_url: http://localhost:3000/static/images/SFRRI-New-logo-no-mapx2.png
+logo_url: /static/images/SFRRI-New-logo-no-mapx2.png
 
 collections:
   # - name: "blog" # Used in routes, e.g., /admin/collections/blog
