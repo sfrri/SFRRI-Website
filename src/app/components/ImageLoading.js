@@ -12,7 +12,7 @@ const ImageLoading = ({ imgSrc, name, prAdd }) => {
     return (
         <div style={{
             width: maxImgWidth,
-            height: maxImgHeight,
+            height: '180px',
             position: 'relative',
             float: prAdd ? 'right' : 'auto', 
             margin: prAdd ? '11px 18px' : 0,
