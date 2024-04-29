@@ -1,4 +1,3 @@
-'use client';
 import React from "react";
 import NewsItem from './NewsComponents'
 import beforeMeetingsData from '../../../_data/news/before-meetings.json'
@@ -7,23 +6,12 @@ import afterMeetingsData from '../../../_data/news/after-meetings.json'
 import inMemoriamData from '../../../_data/news/in-memoriam.json'
 import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider';
-import Box from "@mui/material/Box";
-import { styled } from '@mui/material/styles';
 import Markdown from 'react-markdown'
-import { usePathname } from "next/navigation";
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypeRaw from 'rehype-raw'
+import NewsBox from './NewsBox'
 
 export const News = () => {
-    const pathname = usePathname();
-    const Item = styled(Box)(() => ({
-        position: 'relative',
-        padding: pathname === '/' ? '2px 10px' : '2px 0',
-        pageBreakInside: 'avoid',                 /* Theoretically FF 20+ */
-        breakInside: 'avoid-column',              /* Chrome, Safari, IE 11 */
-        // display: 'table',                      /* Actually FF 20+ */
-
-    }));
 
     return (
         <Stack
@@ -35,13 +23,13 @@ export const News = () => {
                 display: 'block',
             }}
         >
-            <Item>
+            <NewsBox>
                 {beforeMeetingsData.body && <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
                     {beforeMeetingsData.body}
                 </Markdown>}
-            </Item>
+            </NewsBox>
             {meetingsData.meetings && meetingsData.meetings.map(item => (
-                <Item key={item.meeting_title}>
+                <NewsBox key={item.meeting_title}>
                     <NewsItem
                         date={item.date}
                         title={item.meeting_title}
@@ -50,14 +38,14 @@ export const News = () => {
                         linkText={item.further_information_link_text}
                         body={item.body}
                     />
-                </Item>
+                </NewsBox>
             ))}
-            <Item>
+            <NewsBox>
                 {afterMeetingsData.body && <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
                     {afterMeetingsData.body}
                 </Markdown>}
-            </Item>
-            <Item>
+            </NewsBox>
+            <NewsBox>
                 <p className="bold">In Memoriam</p>
                 {inMemoriamData.in_memoriam && inMemoriamData.in_memoriam.map((item, i) => (
                     <span style={{ fontVariant: 'small-caps', textTransform: 'capitalize', position: 'relative', }} key={i}>
@@ -66,7 +54,7 @@ export const News = () => {
                         </Markdown>
                     </span>
                 ))}
-            </Item>
+            </NewsBox>
         </Stack>
     )
 }

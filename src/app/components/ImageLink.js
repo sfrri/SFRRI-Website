@@ -1,4 +1,3 @@
-// 'use client';
 import * as React from 'react';
 import Link from '@mui/material/Link';
 import { kebabize } from '../../utils';

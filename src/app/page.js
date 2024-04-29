@@ -1,13 +1,10 @@
-'use client';
 import * as React from 'react';
-// import Paper from '@mui/material/Paper';
 import HomeNews from './components/HomeNews.js'
 import Grid from '@mui/material/Grid';
-// import ImageLink from './components/ImageLink';
 import { News } from './components/News';
+import AboutSection from './components/AboutSection';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
-// import AboutSection from './components/AboutSection.js';
 
 const imageLinkArr = [
     { linkName: 'Related Meetings', bgImgUrl: '/static/images/Blood_clot_in_scanning_electron_microscopy.jpg', },
@@ -18,11 +15,6 @@ const imageLinkArr = [
 
 const ImageLink = dynamic(
     () => import('./components/ImageLink'),
-    { ssr: false }
-)
-
-const AboutSection = dynamic(
-    () => import('./components/AboutSection'),
     { ssr: false }
 )
 

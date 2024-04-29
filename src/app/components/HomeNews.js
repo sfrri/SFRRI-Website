@@ -1,4 +1,3 @@
-'use client';
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Image from 'next/image';
