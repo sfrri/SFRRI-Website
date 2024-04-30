@@ -1,13 +1,7 @@
-'use client';
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import dynamic from 'next/dynamic';
-
-const ClientSideOnlyMap = dynamic(
-    () => import('./Map'),
-    { ssr: false }
-)
+import ClientSideOnlyMap from './ClientSideOnlyMap'
 
 const AboutSection = () => {
     return (
