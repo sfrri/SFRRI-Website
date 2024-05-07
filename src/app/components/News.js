@@ -16,7 +16,7 @@ export const News = () => {
     return (
         <Stack
             direction="column"
-            divider={<Divider orientation="horizontal" flexItem />}
+            divider={<Divider orientation="horizontal" flexItem sx={{ marginTop: '0 !important', }} />}
             spacing={2}
             sx={{
                 columns: '2 490px',
