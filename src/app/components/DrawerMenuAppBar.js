@@ -44,6 +44,7 @@ function DrawerMenuAppBar(props) {
         <Box sx={{
             textAlign: 'center',
             background: '#222',
+            paddingBottom: '100px',
         }}>
             <Typography variant="h6" sx={{
                 height: '172px',
