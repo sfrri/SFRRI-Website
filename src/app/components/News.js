@@ -48,7 +48,14 @@ export const News = () => {
             <NewsBox>
                 <p className="bold">In Memoriam</p>
                 {inMemoriamData.in_memoriam && inMemoriamData.in_memoriam.map((item, i) => (
-                    <span style={{ fontVariant: 'small-caps', textTransform: 'capitalize', position: 'relative', }} key={i}>
+                    <span 
+                        style={{ 
+                            fontVariant: 'small-caps', 
+                            textTransform: 'capitalize', 
+                            position: 'relative', 
+                        }} 
+                        key={i}
+                    >
                         <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
                             {item.name}
                         </Markdown>
