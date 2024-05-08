@@ -6,7 +6,7 @@ import rehypeExternalLinks from 'rehype-external-links'
 import rehypeRaw from 'rehype-raw'
 import Typography from '@mui/material/Typography';
 
-export default async function Obituaries() {
+export default async function CareersAndTraining() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
