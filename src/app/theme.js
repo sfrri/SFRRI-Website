@@ -26,6 +26,8 @@ const theme = createTheme({
       fontFamily: avenir.style.fontFamily,
       fontSize: '1.875rem',
       letterSpacing: '-2px',
+      marginBottom: '20px',
+      lineHeight: 1.5,
     },
     h3: {
       fontFamily: avenir.style.fontFamily,
