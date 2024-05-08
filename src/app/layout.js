@@ -11,13 +11,13 @@ import Typography from "@mui/material/Typography";
 import Footer from './components/Footer.js';
 // import Head from 'next/head';
 import NewsConditional from "./components/NewsConditional";
-import localFont from 'next/font/local'
+// import localFont from 'next/font/local'
  
 // Font files can be colocated inside of `app`
-const myFont = localFont({
-  src: '../../public/static/fonts/AvenirNext/AvenirNextCyr-Bold.woff2',
-  display: 'swap',
-})
+// const avenir = localFont({
+//   src: '../../public/static/fonts/AvenirNext/AvenirNextCyr-Bold.woff2',
+//   display: 'swap',
+// })
 
 function Copyright() {
     return (
@@ -58,9 +58,10 @@ export default function RootLayout({ children }) {
                     font to go here
                 </style>
             </Head>*/}
-            <html lang="en" className={myFont.className}>
+            <html lang="en">
                 <body
                 //className={inter.className}
+                // className={avenir.className}
                 >
                     <AppRouterCacheProvider options={{ key: 'css' }}>
                         <ThemeProvider theme={theme}>

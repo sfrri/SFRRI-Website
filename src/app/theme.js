@@ -1,6 +1,13 @@
 'use client';
 import { Roboto } from 'next/font/google';
 import { createTheme } from '@mui/material/styles';
+import localFont from 'next/font/local'
+ 
+// Font files can be colocated inside of `app`
+const avenir = localFont({
+  src: '../../public/static/fonts/AvenirNext/AvenirNextCyr-Bold.woff2',
+  display: 'swap',
+})
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -12,6 +19,20 @@ const theme = createTheme({
   typography: {
     fontFamily: roboto.style.fontFamily,
     fontSize: 16,
+    h1: {
+      fontFamily: avenir.style.fontFamily,
+    },
+    h2: {
+      fontFamily: avenir.style.fontFamily,
+      fontSize: '1.875rem',
+      letterSpacing: '-2px',
+    },
+    h3: {
+      fontFamily: avenir.style.fontFamily,
+    },
+    h4: {
+      fontFamily: avenir.style.fontFamily,
+    },
   },
   palette: {
     text: {

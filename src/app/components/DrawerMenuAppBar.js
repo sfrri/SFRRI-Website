@@ -174,7 +174,7 @@ function DrawerMenuAppBar(props) {
                                 backgroundPosition: { xs: '0 16px', sm: '0 10px',lg: '0 10px', /**/xl: '0 2px', },
                                 backgroundSize: '70px',
                                 padding: { xs: '26px 40px 10px 90px', xl: '10px 40px 10px 90px', },
-                                fontFamily: 'AvenirNextLTProBold',
+                                // fontFamily: 'AvenirNextLTProBold',
                                 fontSize: { xs: '1.5rem', sm: '1.625rem', lg: '2rem', xl: '3rem', },
                                 letterSpacing: { xs: '-1.625px', lg: '-2px', xl: '-3px', },
                             }}
