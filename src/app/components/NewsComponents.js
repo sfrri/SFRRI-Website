@@ -5,17 +5,6 @@ import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypeRaw from 'rehype-raw'
 
-// export const AwardLectureItem = ({ link, person, award, }) => {
-//     return (
-//         <li>
-//             <Link href={link} target="_blank">
-//                 {person}
-//             </Link>
-//             {` - ${award}`}
-//         </li>
-//     )
-// }
-
 const NewsItem = ({ date, title, location, link, linkText, body, }) => {
     return (
         <>
@@ -56,13 +45,3 @@ const NewsItem = ({ date, title, location, link, linkText, body, }) => {
 }
 
 export default NewsItem
-
-// export const InMemoriamItem = ({ link, person, }) => {
-//     return (
-//        person && <p style={{ fontVariant: 'small-caps', textTransform: 'capitalize', }}>
-//             <Link href={link} target="_blank">
-//                 {person}
-//             </Link>
-//         </p>
-//     )
-// }
