@@ -9,15 +9,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Footer from './components/Footer.js';
-// import Head from 'next/head';
 import NewsConditional from "./components/NewsConditional";
-// import localFont from 'next/font/local'
- 
-// Font files can be colocated inside of `app`
-// const avenir = localFont({
-//   src: '../../public/static/fonts/AvenirNext/AvenirNextCyr-Bold.woff2',
-//   display: 'swap',
-// })
 
 function Copyright() {
     return (
@@ -34,30 +26,11 @@ function Copyright() {
 export const metadata = {
     title: "Society for Free Radical Research International",
     description: "The object of the International Society is to advance education in free radical processes with particular reference to those of industrial and medical importance, such education being for the benefit of the public.",
-    // link: {
-    //     rel: "preload",
-    //     href: "/static/fonts/AvenirNext/AvenirNextCyr-Bold.woff2" ,
-    //     as: "font",
-    //     type: "font/woff2",
-    //     crossorigin: "anonymous",
-    // }
 };
 
 export default function RootLayout({ children }) {
     return (
         <>
-             {/*<Head>
-                <link 
-                    rel="preload" 
-                    href="/static/fonts/AvenirNext/AvenirNextCyr-Bold.woff2" 
-                    as="font" 
-                    type="font/woff2" 
-                    crossorigin="anonymous" 
-                /> */}
-                {/*<style jsx global>
-                    font to go here
-                </style>
-            </Head>*/}
             <html lang="en">
                 <body
                 //className={inter.className}
