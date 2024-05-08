@@ -24,6 +24,7 @@ const JournalSocieties = ({ url, name, imgSrc, width, height, }) => {
                 />
             }
             <Image
+                priority
                 src={imgSrc}
                 width={width}
                 height={height}

@@ -31,6 +31,7 @@ const ImageLink = ({ linkName, bgImgUrl }) => {
                         type="image/jpg"
                     />
                     <Image
+                        priority
                         src={`${bgImgUrl}`}/*?width=290&height=202&format=auto*/
                         alt={`${linkName} link image`}
                         width={290}
