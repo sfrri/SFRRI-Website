@@ -3,7 +3,6 @@ import { Roboto } from 'next/font/google';
 import { createTheme } from '@mui/material/styles';
 import localFont from 'next/font/local'
  
-// Font files can be colocated inside of `app`
 const avenir = localFont({
   src: '../../public/static/fonts/AvenirNext/AvenirNextCyr-Bold.woff2',
   display: 'swap',
@@ -67,6 +66,7 @@ const theme = createTheme({
                 padding: '30px',
                 borderRadius: '3px',
                 boxShadow: theme.shadows[ownerState.elevation],
+                minHeight: '410px',
             })
           },
       ]
