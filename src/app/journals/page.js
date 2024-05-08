@@ -1,10 +1,9 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
-import Image from 'next/image';
 import ImageLinkGridItem from '../components/ImageLinkGridItem';
 import data from '../../../_data/journals.json'
+import JournalSocieties from '../components/JournalSocieties'
 
 const logoData = [
     {
@@ -31,7 +30,6 @@ const logoData = [
 ]
 
 export default async function RedoxJournalsatElsevier() {
-    "use server";
     return (
         <main>
             <Paper variant="padded" elevation={3}>
@@ -56,19 +54,14 @@ export default async function RedoxJournalsatElsevier() {
                     <Grid item xs={12} md={6}>
                         <p>Official and affiliated journals of:</p>
                         {logoData.map(item => (
-                            <Link
-                                href={item.url}
-                                sx={{ display: 'inline-block', padding: '0 12px', }}
-                                target="_blank"
+                            <JournalSocieties
+                                url={item.url}
+                                name={item.name}
+                                imgSrc={item.imgSrc}
+                                width={item.width}
+                                height={item.height}
                                 key={item.name}
-                            >
-                                <Image
-                                    src={item.imgSrc}
-                                    width={item.width}
-                                    height={item.height}
-                                    alt={`${item.name} Logo`}
-                                />
-                            </Link>
+                            />
                         ))}
                     </Grid>
                 </Grid>
