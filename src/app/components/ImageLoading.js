@@ -20,7 +20,6 @@ const ImageLoading = ({ imgSrc, name, prAdd }) => {
                 float: prAdd ? { xs: 'left', sm: 'right' } : 'auto',
                 margin: prAdd ? { xs: '0 100px 11px 0', sm: '11px 18px' } : 0,
             }}>
-                {console.log( prAdd ? { xs: 'left', sm: 'right' } : 'auto',)}
                 {loading &&
 
                     <CircularProgress
