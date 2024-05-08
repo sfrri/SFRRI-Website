@@ -170,7 +170,7 @@ function DrawerMenuAppBar(props) {
                                 flexGrow: 1,
                                 display: { xs: 'block', sm: 'block', md: 'block', lg: 'block' },
                                 background: 'url(/static/images/SFRRI-Logox2.png) no-repeat',
-                                backgroundPosition: { xs: '', sm: '0 2px',/*lg: '0 -14px', */xl: '0 2px', },
+                                backgroundPosition: { xs: '0 16px', sm: '0 10px',lg: '0 10px', /**/xl: '0 2px', },
                                 backgroundSize: '70px',
                                 padding: { xs: '26px 40px 10px 90px', xl: '10px 40px 10px 90px', },
                                 fontFamily: 'AvenirNextLTProBold',
