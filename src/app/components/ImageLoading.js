@@ -17,8 +17,8 @@ const ImageLoading = ({ imgSrc, name, prAdd }) => {
                 width: maxImgWidth,
                 height: prAdd ? 'auto' : '180px',
                 position: 'relative',
-                float: { xs: 'left', sm: 'right' } ,
-                margin: prAdd ? '11px 18px' : 0,
+                float: prAdd ? { xs: 'left', sm: 'right' } : 'auto',
+                margin: prAdd ? { xs: '0 100px 11px 0', sm: '11px 18px' } : 0,
             }}>
                 {console.log( prAdd ? { xs: 'left', sm: 'right' } : 'auto',)}
                 {loading &&
