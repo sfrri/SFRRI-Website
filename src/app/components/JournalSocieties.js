@@ -9,7 +9,7 @@ const JournalSocieties = ({ url, name, imgSrc, width, height, }) => {
     return (
         <Link
             href={url}
-            sx={{ display: 'inline-block', padding: '0 12px', position: 'relative', }}
+            sx={{ display: 'inline-block', padding: '0 9px', position: 'relative', }}
             target="_blank"
             key={name}
         >
