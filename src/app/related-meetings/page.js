@@ -2,13 +2,14 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import NewsItem from '../components/NewsComponents';
 import data from '../../../_data/news/meetings.json'
+import Typography from '@mui/material/Typography';
 
 export default async function ForthcomingRelatedMeetings() {
     "use server";
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>Forthcoming Related Meetings</h2>
+                <Typography variant="h2">Forthcoming Related Meetings</Typography>
                 {data.meetings && data.meetings.map(item => (
                     item.add_to_related_meetings === true &&
                     <NewsItem

@@ -3,6 +3,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import ImageLinkGridItem from '../components/ImageLinkGridItem';
 import data from '../../../_data/sfrr-societies.json'
+import Typography from '@mui/material/Typography';
 
 export default function SFRRSocieties() {
     return (
@@ -24,7 +25,7 @@ export default function SFRRSocieties() {
                         />
                     ))}
                 </Grid>
-                <h4>SFRRI Affiliated Society</h4>
+                <Typography variant="h4">SFRRI Affiliated Society</Typography>
                 <Grid container spacing={6}>
                     {data.sfrr_society && data.sfrr_society.map(item => (
                         item.name === 'Oxygen Club of California' &&

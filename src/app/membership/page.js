@@ -4,13 +4,14 @@ import data from '../../../_data/membership.json'
 import Markdown from 'react-markdown'
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypeRaw from 'rehype-raw'
+import Typography from '@mui/material/Typography';
 
 export default async function Membership() {
     "use server";
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>Membership</h2>
+                <Typography variant="h2">Membership</Typography>
                 {data.body && <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>{data.body}</Markdown>}
             </Paper>
         </main>

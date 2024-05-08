@@ -1,12 +1,13 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 
 export default async function Disclaimer() {
     "use server";
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>Disclaimer</h2>
+                <Typography variant="h2">Disclaimer</Typography>
                 <p>The Society for Free Radical Research-International (SFRRI) will not be liable for any subsequent actions you take upon leaving this website, or liable for any information not on this website. SFRRI publishes links that resolve to external websites, which we cannot maintain and may be subject to changes without Society&apos;s knowledge.  As such, SFRRI is not responsible for the content on external websites.</p>
 
                 <p>Please note, whilst SFRRI has made all reasonable efforts to ensure that the information available on this website is accurate in all material respects, the information available on this website may, however rarely, be incomplete or out of date or incorrect, and hence it is essential that you verify all such information with SFRRI before taking any action in reliance upon it.</p>

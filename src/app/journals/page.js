@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import ImageLinkGridItem from '../components/ImageLinkGridItem';
 import data from '../../../_data/journals.json'
 import JournalSocieties from '../components/JournalSocieties'
+import Typography from '@mui/material/Typography';
 
 const logoData = [
     {
@@ -33,7 +34,7 @@ export default async function RedoxJournalsatElsevier() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>Redox Journals at Elsevier</h2>
+                <Typography variant="h2">Redox Journals at Elsevier</Typography>
                 <p>Submit your latest research to our community of redox journals supported by the Society for Free Radical Research International (SFRR-International), Society for Redox Biology & Medicine (SfRBM) and Society for Free Radical Research Europe (SFRR-Europe).</p>
                 <Grid container spacing={6} sx={{ marginTop: 0, }}>
                     {data.journal && data.journal.map(item => (

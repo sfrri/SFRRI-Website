@@ -31,9 +31,15 @@ const theme = createTheme({
     },
     h3: {
       fontFamily: avenir.style.fontFamily,
+      fontSize: '3rem',
+      letterSpacing: '-3px',
     },
     h4: {
       fontFamily: avenir.style.fontFamily,
+      fontSize: '1.375rem',
+      letterSpacing: '-1px',
+      marginBlockStart: '1.33em',
+      marginBlockEnd: '1.33em',
     },
   },
   palette: {

@@ -3,13 +3,14 @@ import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import navItems from '../components/NavItems';
 import { kebabize } from '@/utils';
+import Typography from '@mui/material/Typography';
 
 export default async function Sitemap() {
     "use server";
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>Sitemap</h2>
+                <Typography variant="h2">Sitemap</Typography>
                 <ul>
                     {navItems.map(item => (
                         item.subMenu != undefined ?

@@ -2,12 +2,13 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import data from '../../../_data/conferences/future-sfrri-conferences.json'
 import NewsItem from '../components/NewsComponents'
+import Typography from '@mui/material/Typography';
 
 export default function FutureSFRRIConferences() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>Future SFRRI Conferences</h2>
+                <Typography variant="h2">Future SFRRI Conferences</Typography>
                 {data.future_sfrri_conferences && data.future_sfrri_conferences.map(item => (
                     <NewsItem
                         date={item.date}
