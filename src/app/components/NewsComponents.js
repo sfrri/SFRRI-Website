@@ -1,14 +1,15 @@
 import React from "react";
 import Link from 'next/link'
 import DOMPurify from 'isomorphic-dompurify';
-import Markdown from 'react-markdown'
+import { TypographyH2Renderer, TypographyH4Renderer, MarkdownComponent } from '@/utils'
+import Markdown from "react-markdown";
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypeRaw from 'rehype-raw'
 
 const NewsItem = ({ date, title, location, link, linkText, body, }) => {
     return (
         <>
-            <div style={{marginBottom: '1em', wordWrap: 'break-word',}}>
+            <div style={{ marginBottom: '1em', wordWrap: 'break-word', }}>
                 {date && <>
                     <span
                         className="italic"
@@ -25,7 +26,15 @@ const NewsItem = ({ date, title, location, link, linkText, body, }) => {
                 </>}
                 {location && <>
                     <span className="italic">Location:&nbsp;</span>
-                    <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]} components={{ p: React.Fragment, }}>{location}</Markdown>
+                    <Markdown
+                        rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}
+                        components={{
+                            h2: ({ node, ...props }) => <TypographyH2Renderer {...props} />,
+                            h4: ({ node, ...props }) => <TypographyH4Renderer {...props} />,
+                            p: React.Fragment,
+                        }}
+                    >{location}
+                    </Markdown>
                     <br />
                 </>}
                 {link && <>
@@ -38,7 +47,7 @@ const NewsItem = ({ date, title, location, link, linkText, body, }) => {
                     />
                     <br />
                 </>}
-                {body && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{body}</Markdown>}
+                {body && <MarkdownComponent>{body}</MarkdownComponent>}
             </div>
         </>
     )

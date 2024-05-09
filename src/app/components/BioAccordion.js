@@ -3,9 +3,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-// import DOMPurify from 'isomorphic-dompurify';
-import Markdown from 'react-markdown'
-import rehypeExternalLinks from 'rehype-external-links'
+import { MarkdownComponent } from '@/utils';
 
 export default function AccordionUsage({bio}) {
   return (
@@ -23,9 +21,8 @@ export default function AccordionUsage({bio}) {
         >
           Read Bio
         </AccordionSummary>
-        {/* {bio && <AccordionDetails dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(bio) }} />} */}
         <AccordionDetails>
-            {bio && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}]]}>{bio}</Markdown>}
+            {bio && <MarkdownComponent>{bio}</MarkdownComponent>}
         </AccordionDetails>
       </Accordion>
     </div>

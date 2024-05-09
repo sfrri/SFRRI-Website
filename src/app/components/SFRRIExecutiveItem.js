@@ -2,8 +2,7 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import BioAccordion from './BioAccordion';
 import { kebabize } from '@/utils';
-import Markdown from 'react-markdown'
-import rehypeExternalLinks from 'rehype-external-links'
+import { MarkdownComponent } from '@/utils';
 import ImageLoading from './ImageLoading';
 import Typography from '@mui/material/Typography';
 
@@ -31,14 +30,14 @@ const SFRRIExecutiveItem = ({ title, name, bio, address, contact_details, }) => 
                     <BioAccordion bio={bio} />
                     {address &&
                         <Grid item xs={12} lg={6} className='pNoMarginBottom' sx={{ padding: { lg: '0 1em' }, }}>
-                            <Markdown>{address}</Markdown>
+                            <MarkdownComponent>{address}</MarkdownComponent>
                         </Grid>
                     }
                     <Grid item xs={12} lg={6} className='pNoMarginBottom' sx={{ padding: { lg: '0 1em' }, }}>
                         {contact_details &&
-                            <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }]]}>
+                            <MarkdownComponent>
                                 {contact_details}
-                            </Markdown>
+                            </MarkdownComponent>
                         }
                     </Grid>
                 </Grid>

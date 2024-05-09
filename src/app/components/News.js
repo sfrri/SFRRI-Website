@@ -6,9 +6,7 @@ import afterMeetingsData from '../../../_data/news/after-meetings.json'
 import inMemoriamData from '../../../_data/news/in-memoriam.json'
 import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider';
-import Markdown from 'react-markdown'
-import rehypeExternalLinks from 'rehype-external-links'
-import rehypeRaw from 'rehype-raw'
+import { MarkdownComponent } from '@/utils';
 import NewsBox from './NewsBox'
 
 export const News = () => {
@@ -24,9 +22,9 @@ export const News = () => {
             }}
         >
             <NewsBox>
-                {beforeMeetingsData.body && <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
+                {beforeMeetingsData.body && <MarkdownComponent>
                     {beforeMeetingsData.body}
-                </Markdown>}
+                </MarkdownComponent>}
             </NewsBox>
             {meetingsData.meetings && meetingsData.meetings.map(item => (
                 <NewsBox key={item.meeting_title}>
@@ -41,9 +39,9 @@ export const News = () => {
                 </NewsBox>
             ))}
             <NewsBox>
-                {afterMeetingsData.body && <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
+                {afterMeetingsData.body && <MarkdownComponent>
                     {afterMeetingsData.body}
-                </Markdown>}
+                </MarkdownComponent>}
             </NewsBox>
             <NewsBox>
                 <p className="bold">In Memoriam</p>
@@ -56,9 +54,9 @@ export const News = () => {
                         }} 
                         key={i}
                     >
-                        <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}>
+                        <MarkdownComponent>
                             {item.name}
-                        </Markdown>
+                        </MarkdownComponent>
                     </span>
                 ))}
             </NewsBox>
