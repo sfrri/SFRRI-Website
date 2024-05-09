@@ -11,11 +11,10 @@ export default async function SFRRISponsoredConferences() {
                 {data.outreach_years && data.outreach_years.map(item => {
                     return <React.Fragment key={item.year}><h4>{item.year}</h4>
                         {item.meetings.map(entry => {
-                            return <p>
+                            return <p key={entry.link_text}>
                                 <a
                                     href={entry.link_hypertext ? entry.link_hypertext : entry.upload_path[0]}
                                     target="_blank"
-                                    key={entry.link_text}
                                 >
                                     {entry.link_text}
                                 </a>
