@@ -38,5 +38,37 @@
         }
       ]
     }
+  ],
+  "outreach_years": [
+    {
+      "year": "2016",
+      "meetings": [
+        {
+          "link_text": "Report for SFRRI sponsorship of SfRBM-SFRRI Joint Meeting, San Francisco 16-19 November 2016",
+          "upload_path": "/admin/files/uploads/sfrbm-sfrri_report_16-19_nov_2016_for_sfrri_webpages.pdf"
+        },
+        {
+          "link_text": "Joint 23rd SfRBM and 18th SFRRI Meeting, San Francisco, California, USA, 16-19 November 2016",
+          "link_hypertext": "https://sfrr.org/sfrbm.org/meetings/annual-meeting/index.html"
+        },
+        {
+          "link_text": "SFRR India Annual Meeting: ‘International Conference on Free Radicals, Antioxidants and Functional Food’, Kalyani, West Bengal, 7-9 January 2016",
+          "upload_path": "/admin/files/uploads/sfrr_india_2016_meeting_report_information.pdf"
+        }
+      ]
+    },
+    {
+      "year": "2015",
+      "meetings": [
+        {
+          "link_text": "Festschrift for Prof Christine Winterbourn, University of Otago, Christchurch, New Zealand, 8-10 December 2015",
+          "upload_path": "/admin/files/uploads/report_christine_winterbourn_festschrift_7th_joint_meeting_sfrr-australasia_and_sfrr-japan.pdf"
+        },
+        {
+          "link_text": "Peroxiredoxin Symposium, Yonsei University College of Medicine Severance Biomedical Science Institute, Seoul, South Korea, 26-27 October 2015",
+          "upload_path": "/admin/files/uploads/sue_goo_rhee_international_peroxiredoxin_symposium_seoul_korea_26-27_oct_2015.pdf"
+        }
+      ]
+    }
   ]
 }
