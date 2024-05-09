@@ -9,7 +9,7 @@ export default function SFRRSocieties() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>SFRR Regional Societies</h2>
+                <Typography variant='h2'>SFRR Regional Societies</Typography>
                 <Grid container spacing={6} sx={{ marginTop: 0, }}>
                     {data.sfrr_society && data.sfrr_society.map(item => (
                         !item.affiliated_society &&
