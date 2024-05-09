@@ -9,7 +9,8 @@ export default async function SFRRISponsoredConferences() {
             <Paper variant="padded" elevation={3}>
                 <Typography variant="h2">SFRRI Sponsored Conferences</Typography>
                 {data.outreach_years && data.outreach_years.map(item => {
-                    return <React.Fragment key={item.year}><h4>{item.year}</h4>
+                    return <React.Fragment key={item.year}>
+                        <Typography variant='h4'>{item.year}</Typography>
                         {item.meetings.map(entry => {
                             return <p key={entry.link_text}>
                                 <a
