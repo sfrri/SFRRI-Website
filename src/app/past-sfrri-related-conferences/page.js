@@ -11,7 +11,7 @@ export default function SFRRIRelatedConferences() {
             <Paper variant="padded" elevation={3}>
                 <Typography variant="h2">Past SFRRI Related Conferences</Typography>
                 {data.past_sfrri_related_conferences && data.past_sfrri_related_conferences.map(item => (
-                    <React.Fragment>
+                    <React.Fragment key={item.meeting_title}>
                         <NewsItem
                             date={item.date}
                             title={item.meeting_title}
@@ -19,7 +19,6 @@ export default function SFRRIRelatedConferences() {
                             link={item.further_information_link_hypertext ? item.further_information_link_hypertext : item.upload_path[0]}
                             linkText={item.further_information_link_text}
                             body={item.body}
-                            key={item.meeting_title}
                         />
                         <Divider orientation="horizontal" flexItem sx={{ marginTop: '0 !important', }} />
                     </React.Fragment>
