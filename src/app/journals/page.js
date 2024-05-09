@@ -52,7 +52,7 @@ export default async function RedoxJournalsatElsevier() {
                             />
                         </>
                     ))}
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12}>
                         <p>Official and affiliated journals of:</p>
                         {logoData.map(item => (
                             <JournalSocieties
