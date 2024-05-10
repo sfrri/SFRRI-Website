@@ -12,7 +12,7 @@ export default async function Contact() {
             <Paper variant="padded" elevation={3}>
                 <Typography variant="h2">Contact</Typography>
                 {data.body && <span className='pNoMarginBottom'><MarkdownComponent>{data.body}</MarkdownComponent></span>}
-                <p style={{ marginTop: '2em', marginBottom: 0, }}>Website designed and developed by <Link href='https://danielfraser.me' target="_blank">Daniel Fraser</Link></p>
+                <p style={{ marginTop: '2em', marginBottom: 0, }}>Website designed and developed by <Link href='https://danielfraser.me' target="_blank" prefetch={false}>Daniel Fraser</Link></p>
             </Paper>
         </main>
     );

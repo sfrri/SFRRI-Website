@@ -40,10 +40,10 @@ const NewsItem = ({ date, title, location, link, linkText, body, }) => {
                 {link && <>
                     <span className="italic">Further information:&nbsp;</span>
                     <Link
+                        prefetch={false}
                         href={link}
                         target="_blank"
-                        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(linkText) }}
-                        prefetch={false}
+                        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(linkText) }}                       
                     />
                     <br />
                 </>}

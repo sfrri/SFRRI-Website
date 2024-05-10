@@ -72,7 +72,7 @@ export default async function LeopoldFlohe() {
                             York 2007, pp.1-389, in particular pp. 1-25, 83-114 and 207-218<br />
                             Comini, M., Menge, U., Wissing, J. and Flohé, L., Trypanothione Synthesis in Crithidia Revisited. J Biol Chem 2005. 280: 6850-6860<br />
                             Ursini, F.; Heim, S.; Kiess, M.; Maiorino, M.; Roveri, A.; Wissing, J.; Flohé, L., Dual function of the selenoprotein PHGPx during sperm maturation. Science 1999, 285, (5432), 1393-1396.</p>
-                        <p><Link href='sfrri-awards-&-fellowships'>Back to SFRRI Awards & Fellowships</Link></p>
+                        <p><Link href='sfrri-awards-&-fellowships' prefetch={false}>Back to SFRRI Awards & Fellowships</Link></p>
                     </Grid>
                 </Grid>
             </Paper>
