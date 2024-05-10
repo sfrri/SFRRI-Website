@@ -14,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import { NavButton } from './NavButton';
+import NavButton from './NavButton';
 import { kebabize } from '@/utils';
 import BasicMenu from './BasicMenu';
 import Collapse from '@mui/material/Collapse';
