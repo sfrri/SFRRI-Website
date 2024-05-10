@@ -7,7 +7,7 @@ export default function NotFound() {
             <div>
                 <h2>Not Found</h2>
                 <p>404 - Could not find requested resource</p>
-                <Link href="/" prefetch={false}>Return Home</Link>
+                <Link href="/"prefetch={false}>Return Home</Link>
             </div>
         </Paper>
     )
