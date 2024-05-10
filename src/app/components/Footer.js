@@ -93,7 +93,7 @@ export default function Footer() {
                             paddingRight: '32px',
                         }}
                     >
-                        <Link href='/'prefetch={false}>
+                        <Link href='/' prefetch={false}>
                             <Image
                                 src={`/static/images/SFRRI-footer-logo.png`}
                                 alt='SFRRI footer logo'

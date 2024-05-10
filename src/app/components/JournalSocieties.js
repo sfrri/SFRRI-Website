@@ -8,7 +8,7 @@ const JournalSocieties = ({ url, name, imgSrc, width, height, }) => {
     const [loading, setLoading] = useState(true);
     return (
         <Link
-          prefetch={false}s
+            prefetch={false}
             href={url}
             sx={{ display: 'inline-block', padding: '0 9px', position: 'relative', }}
             target="_blank"
