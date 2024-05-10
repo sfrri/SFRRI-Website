@@ -1,16 +1,11 @@
-import * as React from 'react';
-import Paper from '@mui/material/Paper';
 import data from '../../../_data/careers-&-training.json'
-import { MarkdownComponent } from '@/utils';
-import Typography from '@mui/material/Typography';
+import BasicPage from '../components/BasicPAge';
 
-export default async function CareersAndTraining() {
+export default function CareersAndTraining() {
     return (
-        <main>
-            <Paper variant="padded" elevation={3}>
-            <Typography variant="h2">Careers and Training</Typography>
-                {data.body && <MarkdownComponent>{data.body}</MarkdownComponent>}
-            </Paper>
-        </main>
+        <BasicPage
+            title='Careers and Training'
+            dataArray={data.body}
+        />
     );
 }
