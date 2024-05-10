@@ -37,15 +37,10 @@ export const CustomBreakpoints = ({ children }) => {
 };
 
 //markdown component
-const TypographyH2Renderer = (props) => {
+const TypographyRenderer = (props) => {
+    const hNo = `h${props.hLevel}`
     return (
-        <Typography variant='h2'>{props.children}</Typography>
-    )
-}
-
-const TypographyH4Renderer = (props) => {
-    return (
-        <Typography variant='h4'>{props.children}</Typography>
+        <Typography variant={hNo}>{props.children}</Typography>
     )
 }
 
@@ -54,8 +49,8 @@ export const MarkdownComponent = ({ children, ...props }) => {
         <Markdown
             rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}
             components={{
-                h2: ({ node, ...props }) => <TypographyH2Renderer {...props} />,
-                h4: ({ node, ...props }) => <TypographyH4Renderer {...props} />
+                h2: ({ node, ...props }) => <TypographyRenderer {...props} hLevel={2} />,
+                h4: ({ node, ...props }) => <TypographyRenderer {...props} hLevel={4} />
             }}
             {...props}
         >
