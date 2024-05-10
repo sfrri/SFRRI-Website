@@ -1,5 +1,5 @@
 import data from '../../../_data/membership.json'
-import BasicPage from '../components/BasicPAge';
+import BasicPage from '../components/BasicPage';
 
 export default function Membership() {
     return (

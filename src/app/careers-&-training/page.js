@@ -1,5 +1,5 @@
 import data from '../../../_data/careers-&-training.json'
-import BasicPage from '../components/BasicPAge';
+import BasicPage from '../components/BasicPage';
 
 export default function CareersAndTraining() {
     return (

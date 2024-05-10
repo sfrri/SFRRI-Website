@@ -1,5 +1,5 @@
 import data from '../../../_data/conferences/rules-for-conference-organisation.json'
-import BasicPage from '../components/BasicPAge';
+import BasicPage from '../components/BasicPage';
 
 export default function RulesforConferenceOrganisation() {
     return (
