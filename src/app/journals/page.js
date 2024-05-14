@@ -1,10 +1,10 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
-import Image from 'next/image';
 import ImageLinkGridItem from '../components/ImageLinkGridItem';
 import data from '../../../_data/journals.json'
+import JournalSocieties from '../components/JournalSocieties'
+import Typography from '@mui/material/Typography';
 
 const logoData = [
     {
@@ -31,11 +31,10 @@ const logoData = [
 ]
 
 export default async function RedoxJournalsatElsevier() {
-    "use server";
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>Redox Journals at Elsevier</h2>
+                <Typography variant="h2">Redox Journals at Elsevier</Typography>
                 <p>Submit your latest research to our community of redox journals supported by the Society for Free Radical Research International (SFRR-International), Society for Redox Biology & Medicine (SfRBM) and Society for Free Radical Research Europe (SFRR-Europe).</p>
                 <Grid container spacing={6} sx={{ marginTop: 0, }}>
                     {data.journal && data.journal.map(item => (
@@ -53,22 +52,17 @@ export default async function RedoxJournalsatElsevier() {
                             />
                         </>
                     ))}
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12}>
                         <p>Official and affiliated journals of:</p>
                         {logoData.map(item => (
-                            <Link
-                                href={item.url}
-                                sx={{ display: 'inline-block', padding: '0 12px', }}
-                                target="_blank"
+                            <JournalSocieties
+                                url={item.url}
+                                name={item.name}
+                                imgSrc={item.imgSrc}
+                                width={item.width}
+                                height={item.height}
                                 key={item.name}
-                            >
-                                <Image
-                                    src={item.imgSrc}
-                                    width={item.width}
-                                    height={item.height}
-                                    alt={`${item.name} Logo`}
-                                />
-                            </Link>
+                            />
                         ))}
                     </Grid>
                 </Grid>

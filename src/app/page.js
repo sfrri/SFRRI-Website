@@ -5,6 +5,7 @@ import { News } from './components/News';
 import AboutSection from './components/AboutSection';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
+import Typography from '@mui/material/Typography';
 
 const imageLinkArr = [
     { linkName: 'Related Meetings', bgImgUrl: '/static/images/Blood_clot_in_scanning_electron_microscopy.jpg', },
@@ -24,7 +25,7 @@ export default function HomePage() {
             <main style={{ position: 'relative' }}>
                 <HomeNews sx={{ borderRadius: '3px', }}>
                     <Grid item xs={12} sx={{ width: '100%', }}>
-                        <h2 style={{ fontSize: '3rem', letterSpacing: '-3px', zIndex: 1, position: 'relative', }}>Latest News</h2>
+                        <Typography variant="h2" style={{ fontSize: '3rem', letterSpacing: '-3px', zIndex: 1, position: 'relative', }}>Latest News</Typography>
                     </Grid>
                     <News />
                 </HomeNews>

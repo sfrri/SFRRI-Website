@@ -1,6 +1,12 @@
 'use client';
 import { Roboto } from 'next/font/google';
 import { createTheme } from '@mui/material/styles';
+import localFont from 'next/font/local'
+ 
+const avenir = localFont({
+  src: '../../public/static/fonts/AvenirNext/AvenirNextCyr-Bold.woff2',
+  display: 'swap',
+})
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -12,6 +18,28 @@ const theme = createTheme({
   typography: {
     fontFamily: roboto.style.fontFamily,
     fontSize: 16,
+    h1: {
+      fontFamily: avenir.style.fontFamily,
+    },
+    h2: {
+      fontFamily: avenir.style.fontFamily,
+      fontSize: '1.875rem',
+      letterSpacing: '-2px',
+      marginBottom: '20px',
+      lineHeight: 1.5,
+    },
+    h3: {
+      fontFamily: avenir.style.fontFamily,
+      fontSize: '3rem',
+      letterSpacing: '-3px',
+    },
+    h4: {
+      fontFamily: avenir.style.fontFamily,
+      fontSize: '1.375rem',
+      letterSpacing: '-1px',
+      marginBlockStart: '1.33em',
+      marginBlockEnd: '1.33em',
+    },
   },
   palette: {
     text: {
@@ -38,6 +66,7 @@ const theme = createTheme({
                 padding: '30px',
                 borderRadius: '3px',
                 boxShadow: theme.shadows[ownerState.elevation],
+                minHeight: '410px',
             })
           },
       ]

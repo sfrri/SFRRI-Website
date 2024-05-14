@@ -53,6 +53,7 @@ for (let i = 0; i < colLinks.length; i++) {
                         sx={{listStyle: 'none', }}
                     >
                         <Link 
+                          prefetch={false}
                             variant='HomeNav' 
                             href={`/${kebabize(item)}`}
                         >
@@ -92,7 +93,7 @@ export default function Footer() {
                             paddingRight: '32px',
                         }}
                     >
-                        <Link href='/'>
+                        <Link href='/' prefetch={false}>
                             <Image
                                 src={`/static/images/SFRRI-footer-logo.png`}
                                 alt='SFRRI footer logo'

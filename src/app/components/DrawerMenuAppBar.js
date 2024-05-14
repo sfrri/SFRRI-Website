@@ -14,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import { NavButton } from './NavButton';
+import NavButton from './NavButton';
 import { kebabize } from '@/utils';
 import BasicMenu from './BasicMenu';
 import Collapse from '@mui/material/Collapse';
@@ -44,6 +44,7 @@ function DrawerMenuAppBar(props) {
         <Box sx={{
             textAlign: 'center',
             background: '#222',
+            paddingBottom: '200px',
         }}>
             <Typography variant="h6" sx={{
                 height: '172px',
@@ -170,10 +171,10 @@ function DrawerMenuAppBar(props) {
                                 flexGrow: 1,
                                 display: { xs: 'block', sm: 'block', md: 'block', lg: 'block' },
                                 background: 'url(/static/images/SFRRI-Logox2.png) no-repeat',
-                                backgroundPosition: { xs: '', sm: '0 2px',/*lg: '0 -14px', */xl: '0 2px', },
+                                backgroundPosition: { xs: '0 16px', sm: '0 10px',lg: '0 10px', /**/xl: '0 2px', },
                                 backgroundSize: '70px',
                                 padding: { xs: '26px 40px 10px 90px', xl: '10px 40px 10px 90px', },
-                                fontFamily: 'AvenirNextLTProBold',
+                                // fontFamily: 'AvenirNextLTProBold',
                                 fontSize: { xs: '1.5rem', sm: '1.625rem', lg: '2rem', xl: '3rem', },
                                 letterSpacing: { xs: '-1.625px', lg: '-2px', xl: '-3px', },
                             }}

@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const ImageLink = ({ linkName, bgImgUrl }) => {
     return (
-        linkName ? <Link href={`/${kebabize(linkName)}`} prefetch='false'>
+        linkName ? <Link href={`/${kebabize(linkName)}`} prefetch={false}>
             <Paper
                 sx={{
                     // width: '290px',
@@ -31,6 +31,7 @@ const ImageLink = ({ linkName, bgImgUrl }) => {
                         type="image/jpg"
                     />
                     <Image
+                        priority
                         src={`${bgImgUrl}`}/*?width=290&height=202&format=auto*/
                         alt={`${linkName} link image`}
                         width={290}

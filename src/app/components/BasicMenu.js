@@ -92,7 +92,8 @@ export default function MenuListComposition({ name, subMenuItems, id }) {
                                     onKeyDown={handleListKeyDown}
                                 >
                                     {subMenuItems.map(item => {
-                                        return <MenuItem 
+                                        return <MenuItem
+                                            prefetch={false}
                                             onClick={handleClose}
                                             component={Link}
                                             href={kebabize(item.name)}

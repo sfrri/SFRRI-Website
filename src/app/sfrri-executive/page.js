@@ -2,12 +2,13 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import SFRRIExecutiveItem from '../components/SFRRIExecutiveItem';
 import data from '../../../_data/society/sfrri-executive.json'
+import Typography from '@mui/material/Typography';
 
 export default function SFRRIExecutive() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2 style={{ marginBottom: '1em', }}>SFRRI Executive</h2>
+                <Typography variant="h2" sx={{ marginBottom: '1em', }}>SFRRI Executive</Typography>
                 {data.sfrri_executive_member && data.sfrri_executive_member.map(item => (
                     <SFRRIExecutiveItem
                         imgSrc={item.upload_path}

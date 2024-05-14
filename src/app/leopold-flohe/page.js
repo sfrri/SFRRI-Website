@@ -3,13 +3,14 @@ import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
+import Typography from '@mui/material/Typography';
 
 export default async function LeopoldFlohe() {
     "use server";
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                <h2>Trevor Slater Awardee</h2>
+                <Typography variant="h2">Trevor Slater Awardee</Typography>
                 <Grid container spacing={6} sx={{ marginTop: 0, }}>
                     <Grid item xs={12} md={4}>
                         <div className="row">
@@ -19,7 +20,7 @@ export default async function LeopoldFlohe() {
                         </div>
                     </Grid>
                     <Grid item xs={12} md={8}>
-                        <h2>Leopold Flohe</h2>
+                        <Typography variant="h4">Leopold Flohe</Typography>
                         <p><span className='bold'>Education</span><br />
                             1957-1959: Universities of Cologne and Heidelberg (Philosophy)<br />
                             1959-1968: University of Tübingen (Medicine), Staatsexamen 1968<br />
@@ -71,7 +72,7 @@ export default async function LeopoldFlohe() {
                             York 2007, pp.1-389, in particular pp. 1-25, 83-114 and 207-218<br />
                             Comini, M., Menge, U., Wissing, J. and Flohé, L., Trypanothione Synthesis in Crithidia Revisited. J Biol Chem 2005. 280: 6850-6860<br />
                             Ursini, F.; Heim, S.; Kiess, M.; Maiorino, M.; Roveri, A.; Wissing, J.; Flohé, L., Dual function of the selenoprotein PHGPx during sperm maturation. Science 1999, 285, (5432), 1393-1396.</p>
-                        <p><Link href='sfrri-awards-&-fellowships'>Back to SFRRI Awards & Fellowships</Link></p>
+                        <p><Link href='sfrri-awards-&-fellowships' prefetch={false}>Back to SFRRI Awards & Fellowships</Link></p>
                     </Grid>
                 </Grid>
             </Paper>

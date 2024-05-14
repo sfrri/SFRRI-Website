@@ -2,11 +2,11 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import BioAccordion from './BioAccordion';
 import { kebabize } from '@/utils';
-import Markdown from 'react-markdown'
-import rehypeExternalLinks from 'rehype-external-links'
+import { MarkdownComponent } from '@/utils';
 import ImageLoading from './ImageLoading';
+import Typography from '@mui/material/Typography';
 
-const SFRRIExecutiveItem = ({ title, name, bio, address, contact_details,  }) => {
+const SFRRIExecutiveItem = ({ title, name, bio, address, contact_details, }) => {
 
     const src = `/static/images/SFRRIExecutive/${kebabize(name)}.jpg`
 
@@ -17,14 +17,28 @@ const SFRRIExecutiveItem = ({ title, name, bio, address, contact_details,  }) =>
             </Grid>
             <Grid item xs={12} lg={10} sx={{ padding: { lg: '0 1em' }, }}>
                 <Grid container spacing={0}>
-                    {title && <Grid item xs={12} sx={{ padding: { lg: '0 1em' }, }}><h4>{title}</h4></Grid>}
-                    {name && <Grid item xs={12} sx={{ padding: { lg: '0 1em' }, }}><p className='bold'>{name}</p></Grid>}
+                    {title &&
+                        <Grid item xs={12} sx={{ padding: { lg: '0 1em' }, }}>
+                            <Typography variant="h4">{title}</Typography>
+                        </Grid>
+                    }
+                    {name &&
+                        <Grid item xs={12} sx={{ padding: { lg: '0 1em' }, }}>
+                            <p className='bold'>{name}</p>
+                        </Grid>
+                    }
                     <BioAccordion bio={bio} />
-                    {address && <Grid item xs={12} lg={6} className='pNoMarginBottom' sx={{ padding: { lg: '0 1em' }, }}>
-                        <Markdown >{address}</Markdown>
-                    </Grid>}
+                    {address &&
+                        <Grid item xs={12} lg={6} className='pNoMarginBottom' sx={{ padding: { lg: '0 1em' }, }}>
+                            <MarkdownComponent>{address}</MarkdownComponent>
+                        </Grid>
+                    }
                     <Grid item xs={12} lg={6} className='pNoMarginBottom' sx={{ padding: { lg: '0 1em' }, }}>
-                        {contact_details && <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }]]}>{contact_details}</Markdown>}
+                        {contact_details &&
+                            <MarkdownComponent>
+                                {contact_details}
+                            </MarkdownComponent>
+                        }
                     </Grid>
                 </Grid>
             </Grid>

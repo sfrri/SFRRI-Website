@@ -452,16 +452,32 @@ collections:
         name: "sfrri_outreach"
         file: "_data/sfrri-outreach.json"
         fields:
-          - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
-            name: "upload_path"
-            widget: "file"
-            required: false
-            # default: "/admin/files/uploads"
-            media_library:
-              config:
-                # max_file_size: 512000
-                multiple: true
+          - label: 'Outreach years'
+            label_singular: 'Outreach year'
+            name: 'outreach_years'
+            widget: 'list'
+            allow_add: true
+            collapsed: true
+            fields:
+            - { name: 'year', label: 'Year' }
+            - label: 'Meetings'
+              label_singular: 'Meeting'
+              name: 'meetings'
+              widget: 'list'
+              allow_add: true
+              collapsed: true
+              fields:
+                - { name: 'link_text', label: 'Link text', required: true }
+                - { name: 'link_hypertext', label: 'Link hypertext', required: false }
+                - label: "Upload File"
+                  name: "upload_path"
+                  widget: "file"
+                  required: false
+                  # default: "/admin/files/uploads"
+                  media_library:
+                    config:
+                      # max_file_size: 512000
+                      multiple: false
 
   - name: 'journals'
     label: 'Journals'

@@ -1,26 +1,12 @@
-import * as React from 'react';
-import Paper from '@mui/material/Paper';
-import NewsItem from '../components/NewsComponents';
 import data from '../../../_data/news/meetings.json'
+import MeetingStylePage from '../components/MeetingStylePage';
 
-export default async function ForthcomingRelatedMeetings() {
-    "use server";
+export default function ForthcomingRelatedMeetings() {
     return (
-        <main>
-            <Paper variant="padded" elevation={3}>
-                <h2>Forthcoming Related Meetings</h2>
-                {data.meetings && data.meetings.map(item => (
-                    item.add_to_related_meetings === true &&
-                    <NewsItem
-                        date={item.date}
-                        title={item.meeting_title}
-                        location={item.location}
-                        link={item.further_information_link_hypertext ? item.further_information_link_hypertext : item.upload_path[0]}
-                        linkText={item.further_information_link_text}
-                        key={item.meeting_title}
-                    />
-                ))}
-            </Paper>
-        </main>
+        <MeetingStylePage
+            title='Forthcoming Related Meetings'
+            dataArray={data.meetings}
+            relatedMeetings={true}
+        />
     );
 }

@@ -2,9 +2,10 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 
-export const NavButton = ({url, name}) => {
+const NavButton = ({url, name}) => {
     return (
         <Button
+            prefetch={false}
             component={Link}
             variant='HomeNav'
             href={`/${url}`}
@@ -25,3 +26,5 @@ export const NavButton = ({url, name}) => {
         </Button>
     )
 }
+
+export default NavButton

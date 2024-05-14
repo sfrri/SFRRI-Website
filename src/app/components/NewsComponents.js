@@ -1,25 +1,12 @@
 import React from "react";
 import Link from 'next/link'
 import DOMPurify from 'isomorphic-dompurify';
-import Markdown from 'react-markdown'
-import rehypeExternalLinks from 'rehype-external-links'
-import rehypeRaw from 'rehype-raw'
-
-// export const AwardLectureItem = ({ link, person, award, }) => {
-//     return (
-//         <li>
-//             <Link href={link} target="_blank">
-//                 {person}
-//             </Link>
-//             {` - ${award}`}
-//         </li>
-//     )
-// }
+import { MarkdownComponent } from '@/utils'
 
 const NewsItem = ({ date, title, location, link, linkText, body, }) => {
     return (
         <>
-            <div style={{marginBottom: '1em', wordWrap: 'break-word',}}>
+            <div style={{ marginBottom: '1em', wordWrap: 'break-word', }}>
                 {date && <>
                     <span
                         className="italic"
@@ -36,33 +23,28 @@ const NewsItem = ({ date, title, location, link, linkText, body, }) => {
                 </>}
                 {location && <>
                     <span className="italic">Location:&nbsp;</span>
-                    <Markdown rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]} components={{ p: React.Fragment, }}>{location}</Markdown>
+                    <MarkdownComponent
+                        components={{
+                            p: ({ node, ...props }) => <React.Fragment {...props} />
+                        }}
+                    >{location}
+                    </MarkdownComponent>
                     <br />
                 </>}
                 {link && <>
                     <span className="italic">Further information:&nbsp;</span>
                     <Link
+                        prefetch={false}
                         href={link}
                         target="_blank"
                         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(linkText) }}
-                        prefetch={false}
                     />
                     <br />
                 </>}
-                {body && <Markdown rehypePlugins={[[rehypeExternalLinks, {target: '_blank'}], [rehypeRaw]]}>{body}</Markdown>}
+                {body && <MarkdownComponent>{body}</MarkdownComponent>}
             </div>
         </>
     )
 }
 
 export default NewsItem
-
-// export const InMemoriamItem = ({ link, person, }) => {
-//     return (
-//        person && <p style={{ fontVariant: 'small-caps', textTransform: 'capitalize', }}>
-//             <Link href={link} target="_blank">
-//                 {person}
-//             </Link>
-//         </p>
-//     )
-// }
