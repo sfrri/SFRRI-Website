@@ -26,6 +26,10 @@ function Copyright() {
 export const metadata = {
     title: "Society for Free Radical Research International",
     description: "The object of the International Society is to advance education in free radical processes with particular reference to those of industrial and medical importance, such education being for the benefit of the public.",
+    icon: {
+          url: '/static/images/favicon.ico',
+          href: '/static/images/favicon.ico',
+        },
 };
 
 export default function RootLayout({ children }) {
