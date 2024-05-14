@@ -1,6 +1,7 @@
 'use client';
 import React, { useRef, useEffect, useState } from 'react';
 import "leaflet/dist/leaflet.css";
+import Image from 'next/image';
 
 import L from "leaflet";
 
@@ -40,23 +41,23 @@ const Map = () => {
         const sfrriIcon = new SFRRIIcon({ iconUrl: "/SFRRIMapMarker.png" });
 
         L.marker([39.9125, -86.1365], { icon: sfrriIcon })
-            .bindPopup("<a href='http://sfrbm.org/' target='_blank'><img style='width:65px; margin: 0 auto -10px; display: block;' src='static/images/societyLogos/SFRBM-logo.png' draggable='false' /></a><br />Society for<br />Redox Biology<br />and Medicine<br /><a href='http://sfrbm.org/' target='_blank'>sfrbm.org</a>")
+            .bindPopup("<a href='http://sfrbm.org/' target='_blank'><Image priority style='width:65px; margin: 0 auto -10px; display: block;' src='static/images/societyLogos/SFRBM-logo.png' draggable='false' /></a><br />Society for<br />Redox Biology<br />and Medicine<br /><a href='http://sfrbm.org/' target='_blank'>sfrbm.org</a>")
             .addTo(map.current)
 
         L.marker([-8.466939, 33.574219], { icon: sfrriIcon })
-            .bindPopup("<a href='http://vcilt.uom.ac.mu/sfrr/' target='_blank'><img style='width:65px; margin: 0 auto -10px; display: block;' src='static/images/societyLogos/SFRR-Africa-logo.png' draggable='false' /></a><br />Society for<br />Free Radical<br />Research Africa<br /><a href='http://vcilt.uom.ac.mu/sfrr/' target='_blank'>vcilt.uom.ac.mu/sfrr/</a>")
+            .bindPopup("<a href='http://vcilt.uom.ac.mu/sfrr/' target='_blank'><Image priority style='width:65px; margin: 0 auto -10px; display: block;' src='static/images/societyLogos/SFRR-Africa-logo.png' draggable='false' /></a><br />Society for<br />Free Radical<br />Research Africa<br /><a href='http://vcilt.uom.ac.mu/sfrr/' target='_blank'>vcilt.uom.ac.mu/sfrr/</a>")
             .addTo(map.current)
 
         L.marker([35.6764, 139.65], { icon: sfrriIcon })
-            .bindPopup("<a href='http://sfrrj.umin.jp/asia/' target='_blank'><img style='width:65px; margin: 0 auto -10px; display: block;' src='static/images/societyLogos/SFRR-Asia-logo.png' draggable='false' /></a><br />Society for<br />Free Radical<br />Research Asia<br /><a href='http://sfrrj.umin.jp/asia/' target='_blank'>sfrrj.umin.jp/asia</a>")
+            .bindPopup("<a href='http://sfrrj.umin.jp/asia/' target='_blank'><Image priority style='width:65px; margin: 0 auto -10px; display: block;' src='static/images/societyLogos/SFRR-Asia-logo.png' draggable='false' /></a><br />Society for<br />Free Radical<br />Research Asia<br /><a href='http://sfrrj.umin.jp/asia/' target='_blank'>sfrrj.umin.jp/asia</a>")
             .addTo(map.current)
 
         L.marker([-26.431228064506424, 134.296875], { icon: sfrriIcon })
-            .bindPopup("<a href='http://www.sfrr-australasia.org/' target='_blank'><img style='width:65px; margin: 0 auto -10px; display: block;' src='static/images/societyLogos/SFRR-Australasia-logo.png' draggable='false' /></a><br />Society for<br />Free Radical<br />Research <br />Australasia<br /><a href='http://www.sfrr-australasia.org/' target='_blank'>sfrr-australasia.org</a>")
+            .bindPopup("<a href='http://www.sfrr-australasia.org/' target='_blank'><Image priority style='width:65px; margin: 0 auto -10px; display: block;' src='static/images/societyLogos/SFRR-Australasia-logo.png' draggable='false' /></a><br />Society for<br />Free Radical<br />Research <br />Australasia<br /><a href='http://www.sfrr-australasia.org/' target='_blank'>sfrr-australasia.org</a>")
             .addTo(map.current)
 
         L.marker([47, 8.3], { icon: sfrriIcon })
-            .bindPopup("<a href='http://sfrr-europe.org' target='_blank'><img style='width:65px; margin: 0 auto -10px; display: block;' src='static/images/societyLogos/SFRR-Europe-logo.png' draggable='false' /></a><br />Society for<br />Free Radical<br />Research Europe<br /><a href='http://sfrr-europe.org' target='_blank'>sfrr-europe.org</a>")
+            .bindPopup("<a href='http://sfrr-europe.org' target='_blank'><Image priority style='width:65px; margin: 0 auto -10px; display: block;' src='static/images/societyLogos/SFRR-Europe-logo.png' draggable='false' /></a><br />Society for<br />Free Radical<br />Research Europe<br /><a href='http://sfrr-europe.org' target='_blank'>sfrr-europe.org</a>")
             .addTo(map.current)
 
         // Create a MapTiler Layer inside Leaflet
