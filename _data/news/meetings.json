@@ -62,16 +62,6 @@
         "/admin/files/uploads/sfrra-j-flyer.pdf"
       ],
       "further_information_link_text": "download flyer"
-    },
-    {
-      "add_to_related_meetings": true,
-      "body": "Optional extra information to go here. It will appear at the bottom of the meeting item.",
-      "meeting_title": "Meeting title",
-      "date": "Dates",
-      "location": "Location",
-      "further_information_link_hypertext": "https://example.com",
-      "further_information_link_text": "For further information click here",
-      "upload_path": ""
     }
   ]
 }
