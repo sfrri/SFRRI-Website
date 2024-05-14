@@ -68,7 +68,7 @@ collections:
                 media_library:
                   config:
                     # max_file_size: 512000
-                    multiple: true
+                    multiple: false
               - { label: "Add to Related Meetings", name: "add_to_related_meetings", widget: "boolean", default: false }
               - { name: 'body', label: 'Body', widget: 'markdown', required: false }
       - label: "News - After Meetings"
