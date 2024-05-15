@@ -132,8 +132,9 @@ collections:
         name: "sfrri-executive"
         file: "_data/society/sfrri-executive.json"
         fields:
-          - label: 'SFRRI Executive Member'
-            name: 'sfrri_executive_member'
+          - label: 'SFRRI Executive Members'
+            name: 'sfrri_executive_members'
+            label_singular: 'SFRRI Executive Member'
             widget: 'list'
             allow_add: true
             collapsed: true
