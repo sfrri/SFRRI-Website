@@ -6,14 +6,17 @@ import { MarkdownComponent } from '@/utils';
 import ImageLoading from './ImageLoading';
 import Typography from '@mui/material/Typography';
 
-const SFRRIExecutiveItem = ({ title, name, bio, address, contact_details, }) => {
+const SFRRIExecutiveItem = ({ imgSrc, title, name, bio, address, contact_details, }) => {
 
     const src = `/static/images/SFRRIExecutive/${kebabize(name)}.jpg`
 
+    if (imgSrc.startsWith('public')) {
+        imgSrc = imgSrc.replace('public', '')
+    }
     return (
         <Grid container spacing={0} sx={{ marginTop: '2em', }}>
             <Grid item xs={12} lg={2} sx={{ marginTop: '2em', }}>
-                {name && <ImageLoading imgSrc={src} name={name} />}
+                {name && <ImageLoading imgSrc={imgSrc} name={name} />}
             </Grid>
             <Grid item xs={12} lg={10} sx={{ padding: { lg: '0 1em' }, }}>
                 <Grid container spacing={0}>

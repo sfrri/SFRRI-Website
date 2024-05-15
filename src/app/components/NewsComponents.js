@@ -4,6 +4,11 @@ import DOMPurify from 'isomorphic-dompurify';
 import { MarkdownComponent } from '@/utils'
 
 const NewsItem = ({ date, title, location, link, linkText, body, }) => {
+
+    if(link.startsWith('public')) {
+        link = link.replace('public','')
+    }
+    
     return (
         <>
             <div style={{ marginBottom: '1em', wordWrap: 'break-word', }}>

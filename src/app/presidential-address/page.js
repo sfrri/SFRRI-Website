@@ -4,9 +4,15 @@ import { MarkdownComponent } from '@/utils';
 import ImageLoading from '../components/ImageLoading';
 
 export default function PresidentialAddress() {
+    let imgSrc = data.upload_path
+
+    if (imgSrc.startsWith('public')) {
+        imgSrc = imgSrc.replace('public', '')
+    }
+
     return (
         <React.Fragment>
-            {data.upload_path && <ImageLoading imgSrc={data.upload_path} name={data.name && data.name} prAdd={true} />}
+            {imgSrc && <ImageLoading imgSrc={imgSrc} name={data.name && data.name} prAdd={true} />}
             {data.body && <MarkdownComponent>{data.body}</MarkdownComponent>}
         </React.Fragment>
     );

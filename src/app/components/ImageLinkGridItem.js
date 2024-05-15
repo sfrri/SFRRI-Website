@@ -7,6 +7,10 @@ import ImageLoading from './ImageLoading';
 
 const ImageLinkGridItem = ({ xs, md, href, src, name, body }) => {
 
+    if (src.startsWith('public')) {
+        src = src.replace('public', '')
+    }
+
     return (
         href && src && name ? <Grid item xs={xs} md={md}>
             <Box
