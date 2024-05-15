@@ -73,6 +73,7 @@ collections:
               - { name: 'body', label: 'Body', widget: 'markdown', required: false }
               - label: "Upload File"
                 name: "upload_path"
+                name: "upload_path_link"
                 widget: "file"
                 required: false
                 media_library:
