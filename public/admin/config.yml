@@ -253,7 +253,8 @@ collections:
         name: "sfrr-societies"
         file: "_data/sfrr-societies.json"
         fields:
-          - label: 'SFRR Society'
+          - label: 'SFRR Societies'
+            label_singular: 'SFRR Society'
             name: 'sfrr_society'
             widget: 'list'
             allow_add: true
@@ -309,6 +310,7 @@ collections:
         file: "_data/conferences/future-sfrri-conferences.json"
         fields:
           - label: 'Future SFRRI Conferences'
+            label_singular: 'Future SFRRI Conference'
             name: 'future_sfrri_conferences'
             widget: 'list'
             allow_add: true
@@ -334,6 +336,7 @@ collections:
         file: "_data/conferences/past-sfrri-related-conferences.json"
         fields:
           - label: 'Past SFRRI Related Conferences'
+            label_singular: 'Past SFRRI Related Conference'
             name: 'past_sfrri_related_conferences'
             widget: 'list'
             allow_add: true
@@ -405,40 +408,40 @@ collections:
                 # max_file_size: 512000
                 multiple: true
 
-  - name: 'forthcoming-related-meetings'
-    label: 'Forthcoming Related Meetings'
-    # label_singular: 'Meeting'
-    extension: json
-    format: json
-    create: false
-    editor:
-      preview: true
-    files:      
-      - label: "Forthcoming Related Meetings"
-        name: "forthcoming-related-meetings"
-        file: "_data/related-meetings.json"
-        fields:
-          - label: 'Forthcoming Related Meetings'
-            name: 'future_sfrri_conferences'
-            widget: 'list'
-            allow_add: true
-            collapsed: true
-            fields:
-              - { name: 'meeting_title', label: 'Meeting title' }
-              - { name: 'date', label: 'Date' }
-              - { name: 'location', label: 'Location', widget: "markdown" }
-              - { name: 'further_information_link_text', label: 'Further information link text', required: false }
-              - { name: 'further_information_link_hypertext', label: 'Further information link hypertext', required: false }
-              - label: "Upload File"
-                name: "upload_path"
-                widget: "file"
-                required: false
-                # default: "/admin/files/uploads"
-                media_library:
-                  config:
-                    # max_file_size: 512000
-                    multiple: true
-              - { label: "Body", name: "body", widget: "markdown" }
+  # - name: 'forthcoming-related-meetings'
+  #   label: 'Forthcoming Related Meetings'
+  #   # label_singular: 'Meeting'
+  #   extension: json
+  #   format: json
+  #   create: false
+  #   editor:
+  #     preview: true
+  #   files:      
+  #     - label: "Forthcoming Related Meetings"
+  #       name: "forthcoming-related-meetings"
+  #       file: "_data/related-meetings.json"
+  #       fields:
+  #         - label: 'Forthcoming Related Meetings'
+  #           name: 'future_sfrri_conferences'
+  #           widget: 'list'
+  #           allow_add: true
+  #           collapsed: true
+  #           fields:
+  #             - { name: 'meeting_title', label: 'Meeting title' }
+  #             - { name: 'date', label: 'Date' }
+  #             - { name: 'location', label: 'Location', widget: "markdown" }
+  #             - { name: 'further_information_link_text', label: 'Further information link text', required: false }
+  #             - { name: 'further_information_link_hypertext', label: 'Further information link hypertext', required: false }
+  #             - label: "Upload File"
+  #               name: "upload_path"
+  #               widget: "file"
+  #               required: false
+  #               # default: "/admin/files/uploads"
+  #               media_library:
+  #                 config:
+  #                   # max_file_size: 512000
+  #                   multiple: true
+  #             - { label: "Body", name: "body", widget: "markdown" }
 
   - name: 'sfrri-outreach'
     label: 'SFRRI Outreach'
@@ -493,7 +496,8 @@ collections:
         name: "journals"
         file: "_data/journals.json"
         fields:
-          - label: 'Journal'
+          - label: 'Journals'
+            label_singular: 'Journal'
             name: 'journal'
             widget: 'list'
             allow_add: true
