@@ -278,7 +278,7 @@ collections:
                 media_library:
                   config:
                     max_file_size: 512000
-                    multiple: true
+                    multiple: false
               - { label: "Affiliated Society", name: "affiliated_society", widget: "boolean", default: false }
 
   - name: 'membership'
