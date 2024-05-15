@@ -13,24 +13,30 @@ const NewsConditional = ({ children }) => {
 
     return (
         <Container maxWidth="lg" sx={{ position: 'relative', marginTop: '10px', }}>
-            <Suspense fallback={<Skeleton />}>
-                {pathname === '/' ?
-                    <>{children}</>
-                    :
-                    <Grid container spacing={2}>
-                        <Grid item xs={12} md={8.5} lg={9}>
-                            {children}
-                        </Grid>
-                        <Grid item xs={12} md={3.5} lg={3}>
+            {pathname === '/' ?
+                <>{children}</>
+                :
+                <Grid container spacing={2}>
+                    <Grid item xs={12} md={8.5} lg={9}>
+                        <main>
                             <Paper variant="padded" elevation={3}>
+                                <Suspense fallback={<Skeleton />}>
+                                    {children}
+                                </Suspense>
+                            </Paper>
+                        </main>
+                    </Grid>
+                    <Grid item xs={12} md={3.5} lg={3}>
+                        <Paper variant="padded" elevation={3}>
+                            <Suspense fallback={<Skeleton />}>
                                 <Typography variant="h2">News</Typography>
                                 <News />
-                            </Paper>
-                        </Grid>
+                            </Suspense>
+                        </Paper>
                     </Grid>
-                }
-            </Suspense>
-        </Container>
+                </Grid>
+            }
+        </Container >
     )
 }
 
