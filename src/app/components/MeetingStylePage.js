@@ -20,10 +20,11 @@ const MeetingStylePage = ({ title, dataArray, relatedMeetings, }) => {
                             date={item.date}
                             title={item.meeting_title}
                             location={item.location}
-                            link={item.further_information_link_hypertext ? item.further_information_link_hypertext : item.upload_path[0]}
+                            link={item.further_information_link_hypertext ? item.further_information_link_hypertext : item.upload_path}
                             linkText={item.further_information_link_text}
                             body={item.body}
                         />
+                        {console.log(item.upload_path)}
                         <Divider orientation="horizontal" flexItem sx={{ marginTop: '0 !important', marginBottom: '1em', }} />
                     </React.Fragment>
                 ))}
