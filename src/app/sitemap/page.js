@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Link from '@mui/material/Link';
+import Link from 'next/link';
 import navItems from '../components/NavItems';
 import { kebabize } from '@/utils';
 import Typography from '@mui/material/Typography';

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Link from '@mui/material/Link';
+import Link from 'next/link';
 import data from '../../../_data/contact.json'
 import { MarkdownComponent } from '@/utils';
 import Typography from '@mui/material/Typography';

@@ -6,7 +6,7 @@ import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
-import Link from '@mui/material/Link';
+import Link from 'next/link';
 import { kebabize } from '@/utils';
 
 export default function MenuListComposition({ name, subMenuItems, id }) {

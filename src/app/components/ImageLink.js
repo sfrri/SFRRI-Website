@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import { useState } from 'react';
-import Link from '@mui/material/Link';
+import Link from 'next/link';
 import { kebabize } from '@/utils';
 import Paper from '@mui/material/Paper';
 import Image from 'next/image';

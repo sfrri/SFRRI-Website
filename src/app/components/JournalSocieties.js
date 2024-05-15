@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import Link from '@mui/material/Link';
+import Link from 'next/link';
 import Image from 'next/image';
 import { CircularProgress } from '@mui/material';
 
