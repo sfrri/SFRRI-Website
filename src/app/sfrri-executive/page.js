@@ -7,7 +7,7 @@ export default function SFRRIExecutive() {
     return (
         <React.Fragment>
             <Typography variant="h2" sx={{ marginBottom: '1em', }}>SFRRI Executive</Typography>
-            {data.sfrri_executive_member && data.sfrri_executive_member.map(item => (
+            {data.sfrri_executive_members && data.sfrri_executive_members.map(item => (
                 <SFRRIExecutiveItem
                     imgSrc={item.upload_path}
                     title={item.title}
