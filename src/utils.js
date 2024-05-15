@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Markdown from 'react-markdown';
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypeRaw from 'rehype-raw'
+import Link from 'next/link';
 
 //convert string to kebab case
 export const kebabize = string => string.toString()
@@ -44,13 +45,24 @@ const TypographyRenderer = (props) => {
     )
 }
 
+const LinkModifiedHref = (props) => {
+    let newHref
+    if(props.href.includes('public/admin/')) {
+        newHref = props.href.replace('public/admin/','admin/')
+        return <Link href={newHref} prefetch= {false} target='_blank'>{props.children}</Link>
+    } else {
+        return <Link href={props.href} prefetch= {false} target='_blank'>{props.children}</Link>
+    }
+}
+
 export const MarkdownComponent = ({ children, ...props }) => {
     return (
         <Markdown
             rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }], [rehypeRaw]]}
             components={{
                 h2: ({ node, ...props }) => <TypographyRenderer {...props} hLevel={2} />,
-                h4: ({ node, ...props }) => <TypographyRenderer {...props} hLevel={4} />
+                h4: ({ node, ...props }) => <TypographyRenderer {...props} hLevel={4} />,
+                a: ({ node, ...props }) => <LinkModifiedHref {...props} />
             }}
             {...props}
         >
