@@ -19,7 +19,7 @@ export default function SFRRSocieties() {
                             href={item.link}
                             width={174}
                             height={156}
-                            src={item.upload_path[0]}
+                            src={item.upload_path}
                             name={item.name}
                             key={item.name}
                         />
@@ -35,7 +35,7 @@ export default function SFRRSocieties() {
                             href={item.link}
                             width={174}
                             height={156}
-                            src={item.upload_path[0]}
+                            src={item.upload_path}
                             name={item.name}
                             key={item.name}
                         />
