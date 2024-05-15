@@ -8,7 +8,7 @@ export default function PresidentialAddress() {
     return (
         <main>
             <Paper variant="padded" elevation={3}>
-                {data.upload_path && <ImageLoading imgSrc={data.upload_path[0]} name={data.name && data.name} prAdd={true} />}
+                {data.upload_path && <ImageLoading imgSrc={data.upload_path} name={data.name && data.name} prAdd={true} />}
                 {data.body && <MarkdownComponent>{data.body}</MarkdownComponent>}
             </Paper>
         </main>
