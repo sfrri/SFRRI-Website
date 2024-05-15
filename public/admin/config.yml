@@ -61,7 +61,7 @@ collections:
               - { name: 'location', label: 'Location', widget: "markdown" }
               - { name: 'further_information_link_text', label: 'Further information link text' , required: false }
               - { name: 'further_information_link_hypertext', label: 'Further information link hypertext', required: false }
-              - label: "Upload File"
+              - label: "Upload File to use in above link"
                 name: "upload_path"
                 widget: "file"
                 required: false
@@ -127,7 +127,7 @@ collections:
         fields:
           - { label: "Name", name: "name"}
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload Image File"
             name: "upload_path"
             widget: "file"
             required: false
@@ -149,7 +149,7 @@ collections:
             fields:
               - { label: "Title", name: "title"}
               - { label: "Name", name: "name"}
-              - label: "Upload File"
+              - label: "Upload Image File"
                 name: "upload_path"
                 widget: "file"
                 required: false
@@ -270,7 +270,7 @@ collections:
             fields:
               - { label: "Name", name: "name"}
               - { label: "Link", name: "link"}
-              - label: "Upload File"
+              - label: "Upload Image File"
                 name: "upload_path"
                 widget: "file"
                 required: true
@@ -329,7 +329,7 @@ collections:
               - { name: 'location', label: 'Location', widget: "markdown" }
               - { name: 'further_information_link_text', label: 'Further information link text', required: false }
               - { name: 'further_information_link_hypertext', label: 'Further information link hypertext', required: false }
-              - label: "Upload File"
+              - label: "Upload File to use in above link"
                 name: "upload_path"
                 widget: "file"
                 required: false
@@ -364,7 +364,7 @@ collections:
               - { name: 'location', label: 'Location', widget: "markdown" }
               - { name: 'further_information_link_text', label: 'Further information link text', required: false }
               - { name: 'further_information_link_hypertext', label: 'Further information link hypertext', required: false }
-              - label: "Upload File"
+              - label: "Upload File to use in above link"
                 name: "upload_path"
                 widget: "file"
                 required: false
@@ -499,7 +499,7 @@ collections:
               fields:
                 - { name: 'link_text', label: 'Link text', required: true }
                 - { name: 'link_hypertext', label: 'Link hypertext', required: false }
-                - label: "Upload File"
+                - label: "Upload File to use in above link"
                   name: "upload_path"
                   widget: "file"
                   required: false
@@ -531,7 +531,7 @@ collections:
             fields:
               - { label: "Name", name: "name"}
               - { label: "Link", name: "link"}
-              - label: "Upload File"
+              - label: "Upload Image File"
                 name: "upload_path"
                 widget: "file"
                 required: true
