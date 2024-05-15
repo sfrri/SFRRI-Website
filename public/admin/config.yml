@@ -36,7 +36,7 @@ collections:
         file: "_data/news/before-meetings.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -71,8 +71,7 @@ collections:
                     multiple: false
               - { label: "Add to Related Meetings", name: "add_to_related_meetings", widget: "boolean", default: false }
               - { name: 'body', label: 'Body', widget: 'markdown', required: false }
-              - label: "Upload File"
-                name: "upload_path"
+              - label: "Upload File to use as link in above text"
                 name: "upload_path_link"
                 widget: "file"
                 required: false
@@ -85,7 +84,7 @@ collections:
         file: "_data/news/after-meetings.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -104,7 +103,7 @@ collections:
             collapsed: true
             fields:
               - { name: 'name', label: 'Name', widget: "markdown" }
-              - label: "Upload File"
+              - label: "Upload File to use as link in above text"
                 name: "upload_path"
                 widget: "file"
                 required: false
@@ -167,7 +166,7 @@ collections:
         file: "_data/society/past-presidents.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -181,7 +180,7 @@ collections:
         file: "_data/society/history.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -195,7 +194,7 @@ collections:
         file: "_data/society/governance-&-byelaws.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -210,7 +209,7 @@ collections:
         fields:
           - { label: "Body column 1", name: "body_col1", widget: "markdown" }
           - { label: "Body column 2", name: "body_col2", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -224,7 +223,7 @@ collections:
         file: "_data/society/women-in-science-forum.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -238,7 +237,7 @@ collections:
         file: "_data/society/obituaries.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -295,7 +294,7 @@ collections:
         file: "_data/membership.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -364,7 +363,7 @@ collections:
                 media_library:
                   config:
                     # max_file_size: 512000
-                    multiple: true    
+                    multiple: false    
               - { name: 'body', label: 'Body', widget: 'markdown' } 
         # fields:
         #   - label: 'SFRRI Related Conferences'
@@ -393,7 +392,7 @@ collections:
         file: "_data/conferences/past-sfrri-conferences.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -407,7 +406,7 @@ collections:
         file: "_data/conferences/rules-for-conference-organisation.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -539,7 +538,7 @@ collections:
         file: "_data/education.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -553,7 +552,7 @@ collections:
         file: "_data/careers-&-training.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
@@ -577,7 +576,7 @@ collections:
         file: "_data/contact.json"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Upload File"
+          - label: "Upload File to use as link in above text"
             name: "upload_path"
             widget: "file"
             required: false
