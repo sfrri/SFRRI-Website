@@ -138,6 +138,8 @@ collections:
             allow_add: true
             collapsed: true
             fields:
+              - { label: "Title", name: "title"}
+              - { label: "Name", name: "name"}
               - label: "Upload File"
                 name: "upload_path"
                 widget: "file"
@@ -147,8 +149,6 @@ collections:
                   config:
                     max_file_size: 512000
                     multiple: false
-              - { label: "Title", name: "title"}
-              - { label: "Name", name: "name"}
               - { label: "Bio", name: "bio", widget: "markdown" }
               - { label: "Address", name: "address", widget: "markdown" }
               - { label: "Contact details", name: "contact_details", widget: "markdown" }
