@@ -62,6 +62,14 @@
         "/admin/files/uploads/sfrra-j-flyer.pdf"
       ],
       "further_information_link_text": "download flyer"
+    },
+    {
+      "add_to_related_meetings": false,
+      "meeting_title": "test",
+      "date": "test",
+      "location": "test",
+      "further_information_link_text": "test",
+      "upload_path": "/admin/files/uploads/20th-sfrri-agm-210121-sfrri-2021-program.pdf"
     }
   ]
 }
