@@ -3,6 +3,8 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import ClientSideOnlyMap from './ClientSideOnlyMap'
 import Typography from '@mui/material/Typography';
+import { Suspense } from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const AboutSection = () => {
     return (
@@ -14,7 +16,9 @@ const AboutSection = () => {
                     <p>The object of the International Society is to advance education in free radical processes with particular reference to those of industrial and medical importance, such education being for the benefit of the public.</p>
                 </Grid>
                 <Grid item xs={12} lg={6}>
-                    <ClientSideOnlyMap />
+                    <Suspense fallback={<CircularProgress />}>
+                        <ClientSideOnlyMap />
+                    </Suspense>
                 </Grid>
                 <Grid item xs={12}>
                     <Typography variant="h3">Objectives</Typography>
