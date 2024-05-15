@@ -339,15 +339,15 @@ collections:
                     # max_file_size: 512000
                     multiple: false
               - { name: 'body', label: 'Body', widget: 'markdown', required: false }
-                - label: "Upload File to use as link in above text"
-                  name: "upload_path"
-                  widget: "file"
-                  required: false
-                  # default: "/admin/files/uploads"
-                  media_library:
-                    config:
-                      # max_file_size: 512000
-                      multiple: true     
+              - label: "Upload File to use as link in above text"
+                name: "upload_path"
+                widget: "file"
+                required: false
+                # default: "/admin/files/uploads"
+                media_library:
+                  config:
+                    # max_file_size: 512000
+                    multiple: true     
       - label: "Past SFRRI Related Conferences"
         name: "past-sfrri-related-conferences"
         file: "_data/conferences/past-sfrri-related-conferences.json"
