@@ -340,7 +340,7 @@ collections:
                     multiple: false
               - { name: 'body', label: 'Body', widget: 'markdown', required: false }
               - label: "Upload File to use as link in above text"
-                name: "upload_path"
+                name: "upload_path_link"
                 widget: "file"
                 required: false
                 # default: "/admin/files/uploads"
@@ -375,7 +375,7 @@ collections:
                     multiple: false    
               - { name: 'body', label: 'Body', widget: 'markdown', required: false } 
               - label: "Upload File to use as link in above text"
-                name: "upload_path"
+                name: "upload_path_link"
                 widget: "file"
                 required: false
                 # default: "/admin/files/uploads"
