@@ -31,30 +31,30 @@ const colLinks = [
 const navColumns = [];
 for (let i = 0; i < colLinks.length; i++) {
     navColumns.push(
-        <Grid 
-            item 
-            xs={12} 
-            sm={6} 
-            md={2.8} 
-            key={i} 
+        <Grid
+            item
+            xs={12}
+            sm={6}
+            md={2.8}
+            key={i}
             sx={{
                 borderLeft: {
-                    xs: 'none', 
+                    xs: 'none',
                     sm: '1px solid rgba(255,255,255,0.5)',
-                }, 
-                paddingTop: '0 !important', 
-                marginTop:'16px', 
+                },
+                paddingTop: '0 !important',
+                marginTop: '16px',
             }}
         >
             <List>
                 {colLinks[i].map(item =>
-                    <ListItem 
-                        key={item} 
-                        sx={{listStyle: 'none', }}
+                    <ListItem
+                        key={item}
+                        sx={{ listStyle: 'none', }}
                     >
-                        <Link 
-                          prefetch={false}
-                            variant='HomeNav' 
+                        <Link
+                            prefetch={false}
+                            variant='HomeNav'
                             href={`/${kebabize(item)}`}
                         >
                             {item}
@@ -79,17 +79,17 @@ export default function Footer() {
             }}
         >
             <Container maxWidth='lg'>
-                <Grid 
-                    container 
-                    spacing={2} 
+                <Grid
+                    container
+                    spacing={2}
                     sx={{ position: 'relative' }}
                 >
-                    <Grid 
-                        item 
-                        xs={12} 
-                        sm={6} 
-                        md={3.4} 
-                        sx={{ 
+                    <Grid
+                        item
+                        xs={12}
+                        sm={6}
+                        md={3.4}
+                        sx={{
                             paddingRight: '32px',
                         }}
                     >
@@ -104,7 +104,7 @@ export default function Footer() {
                                 style={{
                                     width: '100%',
                                     height: 'auto',
-                                    margin:'32px 0 0 0',
+                                    margin: '32px 0 0 0',
                                     maxWidth: '275px',
                                 }}
                             />
