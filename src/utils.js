@@ -61,6 +61,11 @@ const LinkSanitised = (props) => {
             sanitisedHref = `mailto:${sanitisedHref}`
         }
         return <Link href={sanitisedHref} prefetch={false} target='_blank'>{props.children}</Link>
+    }
+    //don't render empty links
+    if (props.children === undefined) {
+        return
+    //otherwise render a next link component as usual
     } else {
         return <Link href={props.href} prefetch={false} target='_blank'>{props.children}</Link>
     }
