@@ -2,7 +2,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
+import Link from 'next/link';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import { kebabize } from '../../utils';
@@ -55,6 +56,10 @@ for (let i = 0; i < colLinks.length; i++) {
                         <Link
                             prefetch={false}
                             variant='HomeNav'
+                            style={{
+                                color: '#fff',
+                                textDecoration: 'none',
+                            }}
                             href={`/${kebabize(item)}`}
                         >
                             {item}
