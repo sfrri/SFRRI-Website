@@ -45,13 +45,24 @@ const TypographyRenderer = (props) => {
     )
 }
 
-const LinkModifiedHref = (props) => {
+const LinkSanitised = (props) => {
     let newHref
-    if(props.href.includes('public/admin/')) {
-        newHref = props.href.replace('public/admin/','admin/')
-        return <Link href={newHref} prefetch= {false} target='_blank'>{props.children}</Link>
+    const regexpEmail = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi
+    const regexpMatch = props.href.match(regexpEmail)
+    //check upload path from CMS does not include 'public/'
+    if (props.href.includes('public/admin/')) {
+        newHref = props.href.replace('public/admin/', 'admin/')
+        return <Link href={newHref} prefetch={false} target='_blank'>{props.children}</Link>
+    }
+    //check mailto: is appended to email address href
+    if (regexpMatch) {
+        let sanitisedHref = props.href
+        if (props.href.substring(0, 7) != 'mailto:') {
+            sanitisedHref = `mailto:${sanitisedHref}`
+        }
+        return <Link href={sanitisedHref} prefetch={false} target='_blank'>{props.children}</Link>
     } else {
-        return <Link href={props.href} prefetch= {false} target='_blank'>{props.children}</Link>
+        return <Link href={props.href} prefetch={false} target='_blank'>{props.children}</Link>
     }
 }
 
@@ -62,7 +73,7 @@ export const MarkdownComponent = ({ children, ...props }) => {
             components={{
                 h2: ({ node, ...props }) => <TypographyRenderer {...props} hLevel={2} />,
                 h4: ({ node, ...props }) => <TypographyRenderer {...props} hLevel={4} />,
-                a: ({ node, ...props }) => <LinkModifiedHref {...props} />
+                a: ({ node, ...props }) => <LinkSanitised {...props} />
             }}
             {...props}
         >
