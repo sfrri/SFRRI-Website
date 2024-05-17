@@ -13,9 +13,9 @@ import NewsConditional from "./components/NewsConditional";
 
 function Copyright() {
     return (
-        <Typography variant="body2" color="text.secondary" sx={{ fontSize: '11px',}}>
+        <Typography variant="body2" color="text.secondary" sx={{ fontSize: '11px', }}>
             {'Copyright © '}
-                Society for Free Radical Research International{' '}
+            Society for Free Radical Research International{' '}
             {new Date().getFullYear()}
         </Typography>
     );
@@ -24,12 +24,15 @@ function Copyright() {
 //const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-    title: "Society for Free Radical Research International",
+    title: {
+        template: '%s | Society for Free Radical Research International',
+        default: 'Society for Free Radical Research International',
+    },
     description: "The object of the International Society is to advance education in free radical processes with particular reference to those of industrial and medical importance, such education being for the benefit of the public.",
     icon: {
-          url: '/static/images/favicon.ico',
-          href: '/static/images/favicon.ico',
-        },
+        url: '/static/images/favicon.ico',
+        href: '/static/images/favicon.ico',
+    },
 };
 
 export default function RootLayout({ children }) {

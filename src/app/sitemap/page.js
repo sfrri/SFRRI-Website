@@ -4,11 +4,17 @@ import navItems from '../components/NavItems';
 import { kebabize } from '@/utils';
 import Typography from '@mui/material/Typography';
 
+const title = 'Sitemap'
+
+export const metadata = {
+    title: title,
+}
+
 export default async function Sitemap() {
     "use server";
     return (
         <React.Fragment>
-            <Typography variant="h2">Sitemap</Typography>
+            <Typography variant="h2">{title}</Typography>
             <ul>
                 {navItems.map(item => (
                     item.subMenu != undefined ?

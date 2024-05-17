@@ -3,6 +3,12 @@ import data from '../../../_data/society/presidential-address.json'
 import { MarkdownComponent } from '@/utils';
 import ImageLoading from '../components/ImageLoading';
 
+const title = 'Presidential Address'
+
+export const metadata = {
+    title: title,
+}
+
 export default function PresidentialAddress() {
     let imgSrc = data.upload_path
 

@@ -3,10 +3,16 @@ import data from '../../../_data/sfrri-outreach.json'
 import Typography from '@mui/material/Typography';
 import SFRRIOutreachItem from '../components/SFRRIOutreachItem';
 
+const title = 'SFRRI Sponsored Conferences'
+
+export const metadata = {
+    title: title,
+}
+
 export default async function SFRRISponsoredConferences() {
     return (
         <React.Fragment>
-            <Typography variant="h2">SFRRI Sponsored Conferences</Typography>
+            <Typography variant="h2">{title}</Typography>
             {data.outreach_years && data.outreach_years.map(item => {
                 return <React.Fragment key={item.year}>
                     <Typography variant='h4'>{item.year}</Typography>

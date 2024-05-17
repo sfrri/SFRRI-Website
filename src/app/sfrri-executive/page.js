@@ -3,10 +3,16 @@ import SFRRIExecutiveItem from '../components/SFRRIExecutiveItem';
 import data from '../../../_data/society/sfrri-executive.json'
 import Typography from '@mui/material/Typography';
 
+const title = 'SFRRI Executive'
+
+export const metadata = {
+    title: title,
+}
+
 export default function SFRRIExecutive() {
     return (
         <React.Fragment>
-            <Typography variant="h2" sx={{ marginBottom: '1em', }}>SFRRI Executive</Typography>
+            <Typography variant="h2" sx={{ marginBottom: '1em', }}>{title}</Typography>
             {data.sfrri_executive_members && data.sfrri_executive_members.map(item => (
                 <SFRRIExecutiveItem
                     imgSrc={item.upload_path}

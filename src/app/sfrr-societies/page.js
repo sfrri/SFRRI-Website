@@ -4,10 +4,16 @@ import ImageLinkGridItem from '../components/ImageLinkGridItem';
 import data from '../../../_data/sfrr-societies.json'
 import Typography from '@mui/material/Typography';
 
+const title = 'SFRR Regional Societies'
+
+export const metadata = {
+    title: title,
+}
+
 export default function SFRRSocieties() {
     return (
         <React.Fragment>
-            <Typography variant='h2'>SFRR Regional Societies</Typography>
+            <Typography variant='h2'>{title}</Typography>
             <Grid container spacing={6} sx={{ marginTop: 0, }}>
                 {data.sfrr_society && data.sfrr_society.map(item => (
                     !item.affiliated_society &&

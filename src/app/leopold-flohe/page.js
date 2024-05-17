@@ -4,6 +4,12 @@ import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import Typography from '@mui/material/Typography';
 
+const title = 'Leopold Flohe'
+
+export const metadata = {
+    title: title,
+}
+
 export default async function LeopoldFlohe() {
     "use server";
     return (
@@ -18,7 +24,7 @@ export default async function LeopoldFlohe() {
                     </div>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                    <Typography variant="h4">Leopold Flohe</Typography>
+                    <Typography variant="h4">{title}</Typography>
                     <p><span className='bold'>Education</span><br />
                         1957-1959: Universities of Cologne and Heidelberg (Philosophy)<br />
                         1959-1968: University of Tübingen (Medicine), Staatsexamen 1968<br />
