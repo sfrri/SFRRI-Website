@@ -14,7 +14,7 @@ const colLinks = [
         'History',
         'Membership',
         'SFRRI Executive',
-        'SFRR Regional Societies',
+        'SFRR Societies',
     ],
     [
         'Past SFRRI Conferences',
