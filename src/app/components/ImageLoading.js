@@ -33,6 +33,7 @@ const ImageLoading = ({ imgSrc, name, prAdd }) => {
                 }
                 <Image
                     priority
+                    fetchPriority='high'
                     width={maxImgWidth}
                     height={maxImgHeight}
                     onLoad={() => setLoading(false)}
