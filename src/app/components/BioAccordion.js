@@ -15,7 +15,7 @@ export default function AccordionUsage({bio}) {
           id="panel-header"
           sx={{
             padding:{xs: 0, lg: '0 1em'},
-            color: '#4282dd !important',
+            color: '#1976d2 !important',
             fontWeight: 500,
           }}
         >
