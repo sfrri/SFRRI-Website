@@ -13,6 +13,7 @@ const SFRRIExecutiveItem = ({ imgSrc, title, name, bio, address, contact_details
     if (imgSrc.startsWith('public')) {
         imgSrc = imgSrc.replace('public', '')
     }
+    
     return (
         <Grid container spacing={0} sx={{ marginTop: '2em', }}>
             <Grid item xs={12} lg={2} sx={{ marginTop: '2em', }}>
