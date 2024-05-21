@@ -6,7 +6,16 @@ import { News } from "./News";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { Suspense } from "react";
-import Skeleton from "@mui/material/Skeleton";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
+
+const CircularLoading = () => {
+    return (
+        <Box sx={{ width: '40px', margin: '50px auto', }}>
+            <CircularProgress />
+        </Box>
+    )
+}
 
 const NewsConditional = ({ children }) => {
     const pathname = usePathname();
@@ -20,7 +29,7 @@ const NewsConditional = ({ children }) => {
                     <Grid item xs={12} md={8.5} lg={9}>
                         <main>
                             <Paper variant="padded" elevation={3}>
-                                <Suspense fallback={<Skeleton />}>
+                                <Suspense fallback={<CircularLoading />}>
                                     {children}
                                 </Suspense>
                             </Paper>
@@ -28,7 +37,7 @@ const NewsConditional = ({ children }) => {
                     </Grid>
                     <Grid item xs={12} md={3.5} lg={3}>
                         <Paper variant="padded" elevation={3}>
-                            <Suspense fallback={<Skeleton />}>
+                            <Suspense fallback={<CircularLoading />}>
                                 <Typography variant="h2">News</Typography>
                                 <News />
                             </Suspense>
