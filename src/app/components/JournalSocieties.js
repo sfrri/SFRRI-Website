@@ -10,7 +10,7 @@ const JournalSocieties = ({ url, name, imgSrc, width, height, }) => {
         <Link
             prefetch={false}
             href={url}
-            sx={{ display: 'inline-block', padding: '0 9px', position: 'relative', }}
+            style={{ display: 'inline-block', padding: '0 9px', position: 'relative', }}
             target="_blank"
             key={name}
         >
