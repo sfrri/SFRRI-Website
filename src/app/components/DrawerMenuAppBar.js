@@ -153,34 +153,61 @@ function DrawerMenuAppBar(props) {
                             right: '-3px',
                             bottom: 'auto',
                             background: '#111',
-                            '&:hover': {
-                                background: '#111',
-                            },
+                            zIndex: 1,
                         }}
                     >
                         <MenuIcon />
                     </IconButton>
                     <CustomBreakpoints>
-                        <Typography
-                            variant="h1"
-                            component="div"
+                        <Box
                             sx={{
-                                width: { sm: '400px', lg: '1068px', },
-                                height: { xs: '144px', sm: '107px',/* md: '144px', md: '70px',*/ xl: '70px' },
+                                width: { xs: '100%',sm: '100%', lg: '1068px', },
+                                height: { xs: '144px', sm: '107px', xl: '70px' },
                                 marginBottom: '10px',
-                                flexGrow: 1,
-                                display: { xs: 'block', sm: 'block', md: 'block', lg: 'block' },
-                                background: 'url(/static/images/SFRRI-Logox2.png) no-repeat',
-                                backgroundPosition: { xs: '0 16px', sm: '0 10px',lg: '0 10px', /**/xl: '0 2px', },
-                                backgroundSize: '70px',
-                                padding: { xs: '26px 40px 10px 90px', xl: '10px 40px 10px 90px', },
-                                // fontFamily: 'AvenirNextLTProBold',
-                                fontSize: { xs: '1.5rem', sm: '1.625rem', lg: '2rem', xl: '3rem', },
-                                letterSpacing: { xs: '-1.625px', lg: '-2px', xl: '-3px', },
+                                position: 'relative',
                             }}
                         >
-                            Society for Free Radical Research International
-                        </Typography>
+                            <Box
+                                sx={{
+                                    position: 'absolute',
+                                    bottom: { xs: '-16px', sm: '-10px', lg: '-10px', xl: '-2px', },
+                                    left: 0,
+                                    display: 'block',
+                                    position: 'relative',
+
+                                }}
+                            >
+                                <Image
+                                    priority
+                                    fetchPriority='high'
+                                    src='/static/images/SFRRI-Logox2.png'
+                                    width={70}
+                                    height={70}
+                                    alt='SFRRI Logo'
+                                    style={{
+                                        position: 'absolute',
+                                        top: 0,
+                                        left: 0,
+                                        display: 'block',
+                                    }}
+                                />
+                            </Box>
+                            <Typography
+                                variant="h1"
+                                component="div"
+                                sx={{
+                                    width: { xs: '92%', sm: '92%', xl: '1068px' },
+                                    display: { xs: 'inline-block', sm: 'inline-block', md: 'inline-block', lg: 'inline-block' },
+                                    position: 'absolute',
+                                    left: '90px',
+                                    padding: { xs: '26px 90px 10px 0px', xl: '10px 90px 10px 0px', },
+                                    fontSize: { xs: '1.5rem', sm: '1.625rem', lg: '2rem', xl: '3rem', },
+                                    letterSpacing: { xs: '-1.625px', lg: '-2px', xl: '-3px', },
+                                }}
+                            >
+                                Society for Free Radical Research International
+                            </Typography>
+                        </Box>
                     </CustomBreakpoints>
                     <Box
                         component={Container}
