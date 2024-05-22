@@ -38,7 +38,7 @@ const ImageLoading = ({ imgSrc, name, prAdd }) => {
                     height={maxImgHeight}
                     onLoad={() => setLoading(false)}
                     src={imgSrc}
-                    alt={name}
+                    alt={`image of ${name}`}
                     style={{
                         width: '100%',
                         maxWidth: maxImgWidth,
