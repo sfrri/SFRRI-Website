@@ -154,6 +154,9 @@ function DrawerMenuAppBar(props) {
                             bottom: 'auto',
                             background: '#111',
                             zIndex: 1,
+                            '&:hover': {
+                                backgroundColor: '#111',
+                            }
                         }}
                     >
                         <MenuIcon />
