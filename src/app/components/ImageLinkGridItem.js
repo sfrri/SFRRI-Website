@@ -18,9 +18,9 @@ const ImageLinkGridItem = ({ xs, md, href, src, name, body }) => {
                 href={href}
                 target="_blank"
                 sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
+                    // display: 'flex',
+                    // flexDirection: 'column',
+                    // alignItems: 'center',
                     textAlign: 'center',
                 }}
             >
