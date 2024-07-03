@@ -29,22 +29,21 @@ export default function SFRRSocieties() {
                     />
                 ))}
             </Grid>
-            <Typography variant="h4">SFRRI Affiliated Society</Typography>
-            <Grid container spacing={6}>
-                {data.sfrr_society && data.sfrr_society.map(item => (
-                    item.name === 'Oxygen Club of California' &&
-                    <ImageLinkGridItem
-                        xs={12}
-                        md={4}
-                        href={item.link}
-                        width={174}
-                        height={156}
-                        src={item.upload_path}
-                        name={item.name}
-                        key={item.name}
-                    />
-                ))}
-            </Grid>
+            {data.sfrr_society && data.sfrr_society.map(item => (
+                item.name === 'Oxygen Club of California' && <React.Fragment key={item.name}>
+                    <Typography variant="h4">SFRRI Affiliated Society</Typography>
+                    <Grid container spacing={6}>
+                        <ImageLinkGridItem
+                            xs={12}
+                            md={4}
+                            href={item.link}
+                            width={174}
+                            height={156}
+                            src={item.upload_path}
+                            name={item.name}
+                        />
+                    </Grid>
+                </React.Fragment>))}
         </React.Fragment>
     );
 }
