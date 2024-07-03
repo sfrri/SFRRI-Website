@@ -1,14 +1,15 @@
 {
   "meetings": [
     {
-      "add_to_related_meetings": false,
-      "meeting_title": "22nd Society for Free Radical Research International Biennial Meeting",
-      "date": "June 3-6, 2025",
-      "location": "University of Galway, Ireland",
-      "further_information_link_text": "22nd SFRRI Biennial Conference, Galway, Ireland",
+      "body": "*[CALL FOR SYMPOSIA PROPOSALS](https://www.sfrr-europe.org/index.php/meetings/sfrr-international-biennial-meeting-2025)*\n\nCALL FOR SFRRI AWARD NOMINATIONS\n\nNominations Guidelines for SFRR-I Trevor Slater Award Lecture 2025\n\nNomination Guidelines for SFRR-I Lester Packer Award Lecture 2025\n\nNomination Guidelines for SFRR-I Alberto Boveris Award Lecture 2025\n\nNominations Guidelines for SFRR-I Kelvin and Joanna Davies Rising Star Award Lecture 2025",
       "further_information_link_hypertext": "https://www.sfrrgalway2025.com/",
       "upload_path": "",
-      "body": "*[CALL FOR SYMPOSIA PROPOSALS](https://www.sfrr-europe.org/index.php/meetings/sfrr-international-biennial-meeting-2025)*"
+      "further_information_link_text": "22nd SFRRI Biennial Conference, Galway, Ireland",
+      "date": "June 3-6, 2025",
+      "add_to_related_meetings": false,
+      "meeting_title": "22nd Society for Free Radical Research International Biennial Meeting",
+      "location": "University of Galway, Ireland",
+      "upload_path_link": ""
     },
     {
       "add_to_related_meetings": false,
