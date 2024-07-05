@@ -16,7 +16,8 @@ const ImageLoading = ({ imgSrc, name, prAdd }) => {
             <Box sx={{
                 width: maxImgWidth,
                 // height: prAdd ? 'auto' : '180px',
-                height: 'auto',
+                // height: 'auto',
+                height: '140px',
                 minHeight: '140px',
                 position: 'relative',
                 float: prAdd ? { xs: 'left', sm: 'right' } : 'auto',
