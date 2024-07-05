@@ -12,7 +12,7 @@ const ImageLinkGridItem = ({ xs, md, href, src, name, body }) => {
     }
 
     return (
-        href && src && name ? <Grid item xs={xs} md={md} wrap={"nowrap"}>
+        href && src && name ? <Grid item xs={xs} md={md}>
             <Box
                 component={Link}
                 href={href}
