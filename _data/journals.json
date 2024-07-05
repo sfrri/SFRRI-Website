@@ -1,29 +1,28 @@
 {
-    "journal": [
-      {
-        "name": " Free Radical Biology & Medicine",
-        "body": "* *FRBM* is the premier forum for publishing ground-breaking research in the redox biology of both health and disease\n* 2.3 weeks to a first decision\n* 3.2 weeks for review",
-        "link": "https://www.journals.elsevier.com/free-radical-biology-and-medicine/",
-        "upload_path": "/admin/files/uploads/free-radical-biology-medicine1.jpg"
-      },
-      {
-        "name": "Redox Biology",
-        "link": "https://www.journals.elsevier.com/redox-biology/",
-        "upload_path": "/admin/files/uploads/redox-biology1.jpg",
-        "body": "* *Redox Biology* is an open access forum for novel research, methods and review articles in redox biology in the areas of both health and disease\n* 1.8 weeks to a first decision\n* 2.3 weeks for review"
-      },
-      {
-        "body": "* *ARR* publishes open access research focused on the broadest range of studies in oxidation-reduction (redox) processes in biology, biological chemistry, and health and disease - if biologically relevant.\n* Acceptance rate ~36%\n* Article Publication Charge free through June 2023!",
-        "name": "Advances in Redox Research",
-        "link": "https://www.journals.elsevier.com/advances-in-redox-research",
-        "upload_path": "/admin/files/uploads/advances-in-redox-research.jpg"
-      },
-      {
-        "body": "* *RBC* is an open access multidisciplinary platform bridging the fields of redox, biochemistry, chemistry, pollution/environmental health research, toxicology and antioxidant mechanisms.\n* 2.2 weeks to a first decision\n* 2.2 weeks for review\n* Article Publication Charge free through June 2023!",
-        "name": "Redox Biochemistry and Chemistry",
-        "link": "https://www.sciencedirect.com/journal/redox-biochemistry-and-chemistry",
-        "upload_path": "/admin/files/uploads/redox-biochemistry-and-chemistry.jpg"
-      }
-    ]
-  }
-  
+  "journal": [
+    {
+      "name": " Free Radical Biology & Medicine",
+      "body": "* *FRBM* is the premier forum for publishing ground-breaking research in the redox biology of both health and disease\n* 2.3 weeks to a first decision\n* 3.2 weeks for review",
+      "link": "https://www.journals.elsevier.com/free-radical-biology-and-medicine/",
+      "upload_path": "/admin/files/uploads/free-radical-biology-medicine-scores.jpg"
+    },
+    {
+      "name": "Redox Biology",
+      "link": "https://www.journals.elsevier.com/redox-biology/",
+      "upload_path": "/admin/files/uploads/redox-biology1.jpg",
+      "body": "* *Redox Biology* is an open access forum for novel research, methods and review articles in redox biology in the areas of both health and disease\n* 1.8 weeks to a first decision\n* 2.3 weeks for review"
+    },
+    {
+      "body": "* *ARR* publishes open access research focused on the broadest range of studies in oxidation-reduction (redox) processes in biology, biological chemistry, and health and disease - if biologically relevant.\n* Acceptance rate ~36%\n* Article Publication Charge free through June 2023!",
+      "name": "Advances in Redox Research",
+      "link": "https://www.journals.elsevier.com/advances-in-redox-research",
+      "upload_path": "/admin/files/uploads/advances-in-redox-research.jpg"
+    },
+    {
+      "body": "* *RBC* is an open access multidisciplinary platform bridging the fields of redox, biochemistry, chemistry, pollution/environmental health research, toxicology and antioxidant mechanisms.\n* 2.2 weeks to a first decision\n* 2.2 weeks for review\n* Article Publication Charge free through June 2023!",
+      "name": "Redox Biochemistry and Chemistry",
+      "link": "https://www.sciencedirect.com/journal/redox-biochemistry-and-chemistry",
+      "upload_path": "/admin/files/uploads/redox-biochemistry-and-chemistry.jpg"
+    }
+  ]
+}
