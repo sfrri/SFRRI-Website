@@ -14,11 +14,11 @@ const ImageLoading = ({ imgSrc, name, prAdd }) => {
     return (
         <CustomBreakpoints>
             <Box sx={{
-                width: maxImgWidth,
+                // width: maxImgWidth,
                 // height: prAdd ? 'auto' : '180px',
                 // height: 'auto',
-                height: '140px',
-                minHeight: '140px',
+                height: '160px',
+                // minHeight: '140px',
                 position: 'relative',
                 float: prAdd ? { xs: 'left', sm: 'right' } : 'auto',
                 margin: prAdd ? { xs: '0 100px 11px 0', sm: '11px 18px' } : '0 auto',
@@ -39,14 +39,18 @@ const ImageLoading = ({ imgSrc, name, prAdd }) => {
                     priority
                     fetchPriority='high'
                     width={maxImgWidth}
-                    height={maxImgHeight}
+                    // height={maxImgHeight}
+                    // width={'auto'}
+                    height={140}
                     onLoad={() => setLoading(false)}
                     src={imgSrc}
                     alt={`image of ${name}`}
                     style={{
-                        width: '100%',
-                        maxWidth: maxImgWidth,
-                        height: 'auto',
+                        // width: '100%',
+                        width: 'auto',
+                        // maxWidth: maxImgWidth,
+                        // height: 'auto',
+                        height: '140px',
                         // display: loading ? 'none' : 'block',
                         opacity: loading ? 0 : 1,
                         transitionProperty: 'opacity',
