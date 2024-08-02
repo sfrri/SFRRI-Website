@@ -46,7 +46,7 @@ const NewsItem = ({ date, title, location, link, linkText, body, }) => {
                     />
                     <br />
                 </>}
-                {body && <MarkdownComponent>{body}</MarkdownComponent>}
+                <div style={{marginTop: '1em',}}>{body && <MarkdownComponent>{body}</MarkdownComponent>}</div>
             </div>
         </>
     )
