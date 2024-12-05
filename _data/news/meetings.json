@@ -14,38 +14,6 @@
       ]
     },
     {
-      "add_to_related_meetings": false,
-      "meeting_title": "31st Annual Conference of the Society for Redox Biology & Medicine",
-      "date": "November 20-23, 2024",
-      "location": "Savannah Convention Center, Savannah, Georgia, USA",
-      "further_information_link_text": "https://sfrbm.org/",
-      "further_information_link_hypertext": "https://sfrbm.org/"
-    },
-    {
-      "add_to_related_meetings": true,
-      "meeting_title": "16th International Conference on Reactive Oxygen and Nitrogen Species in Plants",
-      "date": "May 29-31, 2024",
-      "location": "Antibes Juan-les-Pins, France",
-      "further_information_link_text": "https://www.alphavisa.com/pog/2024/",
-      "further_information_link_hypertext": "https://www.alphavisa.com/pog/2024/"
-    },
-    {
-      "add_to_related_meetings": true,
-      "meeting_title": "HNE Club Meeting: Lipid Oxidation: New Biochemical Insights and Clinical Applications",
-      "date": "October 10-12, 2024",
-      "location": "Genoa, Italy",
-      "further_information_link_text": "download flyer",
-      "upload_path": "/admin/files/uploads/hne-club-meeting.pdf"
-    },
-    {
-      "add_to_related_meetings": true,
-      "meeting_title": "11th Biennial Meeting of SFRR Asia and Chinese National Conference of Redox Biology & Medicine 2024",
-      "date": "October 21-23, 2024",
-      "location": "[Kuntai Hotel](http://www.kuntaihotel.com/) (Beijing Wangjing), Beijing, China",
-      "further_information_link_text": "http://www.sfrr-asia2024.com.cn/",
-      "further_information_link_hypertext": "http://www.sfrr-asia2024.com.cn/"
-    },
-    {
       "add_to_related_meetings": true,
       "meeting_title": "32nd Meeting of The Society for Redox Research Australasia and 11th Joint Meeting with The Society for Free Radical Research Japan",
       "date": "December 9-11, 2024",
