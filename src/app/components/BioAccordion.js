@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -6,9 +7,15 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { MarkdownComponent } from '@/utils';
 
 export default function AccordionUsage({bio}) {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
   return (
     <div>
-      <Accordion elevation={0}>
+      <Accordion elevation={0} onChange={handleChange('panel1')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel-content"
@@ -19,7 +26,7 @@ export default function AccordionUsage({bio}) {
             fontWeight: 500,
           }}
         >
-          Read Bio
+          {!expanded ? 'Read Bio' : 'Close Bio'}
         </AccordionSummary>
         <AccordionDetails>
             {bio && <MarkdownComponent>{bio}</MarkdownComponent>}
