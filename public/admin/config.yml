@@ -161,6 +161,36 @@ collections:
               - { label: "Bio", name: "bio", widget: "markdown" }
               - { label: "Address", name: "address", widget: "markdown" }
               - { label: "Contact details", name: "contact_details", widget: "markdown" }
+      - label: "SFRRI Executive Minutes"
+        name: "sfrri-executive-minutes"
+        file: "_data/society/sfrri-executive-minutes.json"
+        fields:
+        - label: 'SFRRI Executive Minutes years'
+          label_singular: 'SFRRI Executive Minutes year'
+          name: 'minutes_years'
+          widget: 'list'
+          allow_add: true
+          collapsed: true
+          fields:
+          - { name: 'year', label: 'Year' }
+          - label: 'Minutes'
+            label_singular: 'Minutes'
+            name: 'minutes'
+            widget: 'list'
+            allow_add: true
+            collapsed: true
+            fields:
+              - { name: 'meeting_title', label: 'Meeting title', required: true }
+              # - { name: 'link_hypertext', label: 'Link hypertext', required: false }
+              - label: "Upload File to use in above link"
+                name: "upload_path"
+                widget: "file"
+                required: true
+                # default: "/admin/files/uploads"
+                media_library:
+                  config:
+                    # max_file_size: 512000
+                    multiple: false
       - label: "Past Presidents"
         name: "past-presidents"
         file: "_data/society/past-presidents.json"

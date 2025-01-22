@@ -5,6 +5,7 @@ const navItems = [
         subMenu: [
             { name: 'Presidential Address' },
             { name: 'SFRRI Executive' },
+            { name: 'SFRRI Executive Minutes' },
             { name: 'Past Presidents' },
             { name: 'History' },
             { name: 'Governance & Byelaws' },
