@@ -1,14 +1,14 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import BioAccordion from './BioAccordion';
-import { kebabize } from '@/utils';
+// import { kebabize } from '@/utils';
 import { MarkdownComponent } from '@/utils';
 import ImageLoading from './ImageLoading';
 import Typography from '@mui/material/Typography';
 
 const SFRRIExecutiveItem = ({ imgSrc, title, name, bio, address, contact_details, }) => {
 
-    const src = `/static/images/SFRRIExecutive/${kebabize(name)}.jpg`
+    // const src = `/static/images/SFRRIExecutive/${kebabize(name)}.jpg`
 
     if (imgSrc.startsWith('public')) {
         imgSrc = imgSrc.replace('public', '')
