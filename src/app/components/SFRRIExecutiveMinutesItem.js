@@ -4,7 +4,7 @@ const SFRRIExecutiveMinutesItem = ({ minutes }) => {
 
     return (
         minutes.map(item => (
-            <p>
+            <p key={item.meeting_title}>
                 <a href={item.upload_path} target="_blank">
                     {item.meeting_title}
                 </a>
