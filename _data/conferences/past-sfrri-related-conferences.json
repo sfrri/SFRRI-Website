@@ -18,6 +18,17 @@
       "upload_path_link": [
         "/admin/files/uploads/the-future-of-redox-biology-locandina-OCC-SFRRE.pdf"
       ]
+    },
+    {
+      "meeting_title": "The 11th Biennial Meeting of the Society for Free Radical Research-Asia (SFRR-Asia 2024) and the Chinese National Conference of Redox Biology and Medicine 2024",
+      "date": " October 21-23, 2024",
+      "location": "Beijing, China",
+      "further_information_link_text": "Book of Abstracts and Conference Program",
+      "upload_path": "/admin/files/uploads/annex-3-book-of-abstracts-and-conference-program.pdf",
+      "upload_path_link": [
+        "/admin/files/uploads/annex-2-scientific-report-cc.pdf"
+      ],
+      "body": "[Scientific Report](/admin/files/uploads/annex-2-scientific-report-cc.pdf)"
     }
   ]
 }
