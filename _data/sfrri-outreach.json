@@ -29,6 +29,19 @@
           "upload_path": "/admin/files/uploads/sue_goo_rhee_international_peroxiredoxin_symposium_seoul_korea_26-27_oct_2015.pdf"
         }
       ]
+    },
+    {
+      "year": "2024",
+      "meetings": [
+        {
+          "link_text": "The 11th Biennial Meeting of the Society for Free Radical Research-Asia (SFRR-Asia 2024) and the Chinese National Conference of Redox Biology and Medicine 2024: Book of Abstracts and Conference Program",
+          "upload_path": "/admin/files/uploads/annex-3-book-of-abstracts-and-conference-program.pdf"
+        },
+        {
+          "link_text": "The 11th Biennial Meeting of the Society for Free Radical Research-Asia (SFRR-Asia 2024) and the Chinese National Conference of Redox Biology and Medicine 2024: Scientific Report",
+          "upload_path": "/admin/files/uploads/annex-2-scientific-report-cc.pdf"
+        }
+      ]
     }
   ]
 }
