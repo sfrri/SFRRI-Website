@@ -512,6 +512,16 @@ collections:
         name: "sfrri_outreach"
         file: "_data/sfrri-outreach.json"
         fields:
+          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Upload File to use as link in above text"
+            name: "upload_path"
+            widget: "file"
+            required: false
+            # default: "/admin/files/uploads"
+            media_library:
+              config:
+                # max_file_size: 512000
+                multiple: true 
           - label: 'Outreach years'
             label_singular: 'Outreach year'
             name: 'outreach_years'
