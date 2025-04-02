@@ -36,6 +36,7 @@ export default function HomeBGImg() {
                     objectFit: 'cover',
                     borderRadius: '3px',
                 }} 
+                alt='Hinge_top_vials_on_a_vial_rack'
             />
         </picture>
     )
