@@ -26,7 +26,9 @@ export default function HomeBGImg() {
             <source media="(min-width: 1024px)" srcSet={desktop} />
             <source media="(min-width: 300px)" srcSet={mobile} />
             <img 
+                fetchPriority='high'
                 priority='true'
+                loading='eager'
                 style={{
                     width: '100%',
                     height: '100%',
