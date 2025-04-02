@@ -12,7 +12,6 @@ const ImageLink = ({ linkName, bgImgUrl }) => {
         linkName ? <Paper
                 component={Link}
                 href={`/${kebabize(linkName)}`}
-                prefetch={false}
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
                 sx={{
@@ -38,13 +37,11 @@ const ImageLink = ({ linkName, bgImgUrl }) => {
             >
                 <picture style={{borderRadius: '3px', }}>
                     <source
-                        srcSet={`${bgImgUrl}`}/*?width=290&height=202&format=jpg*/
+                        srcSet={`${bgImgUrl}`}
                         type="image/jpg"
                     />
                     <Image
-                        fetchPriority='low'
-                        priority='false'
-                        src={`${bgImgUrl}`}/*?width=290&height=202&format=auto*/
+                        src={`${bgImgUrl}`}
                         alt={`${linkName} link image`}
                         width={290}
                         height={202}
