@@ -1,18 +1,13 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
-import Image from 'next/image';
+import HomeBGImg from './HomeBGImg';
 
 export default function HomeNews({ children }) {
-    const bgImgUrl = '/static/images/Hinge_top_vials_on_a_vial_rack.webp'
     return (
         <Paper
-            // variant="padded"
             className={'MuiPaper-elevation3'}
             sx={{
                 marginBottom: '10px',
-                // backgroundImage: 'url(/static/images/Hinge_top_vials_on_a_vial_rack.jpg)',
-                // backgroundRepeat: 'no-repeat',
-                // backgroundSize: 'cover',
                 color: '#fff',
                 position: 'relative',
                 borderRadius: '3px',
@@ -36,26 +31,7 @@ export default function HomeNews({ children }) {
                 },
             }}
         >
-            <picture style={{ borderRadius: '3px', }}>
-                <source
-                    srcSet={`${bgImgUrl}`}//?width=1280&height=720&format=jpg
-                    type="image/jpg"
-                />
-                <Image
-                    priority
-                    src={`${bgImgUrl}`}//?width=1280&height=720&format=auto
-                    alt='Hinge_top_vials_on_a_vial_rack'
-                    width={1280}
-                    height={720}
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        position: 'absolute',
-                        objectFit: 'cover',
-                        borderRadius: '3px',
-                    }}
-                />
-            </picture>
+            <HomeBGImg />
             <div style={{
                 zIndex: 1,
                 position: 'relative',
