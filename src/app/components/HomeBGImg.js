@@ -12,7 +12,7 @@ export default function HomeBGImg() {
         src: '/static/images/Hinge_top_vials_on_a_vial_rack.webp',
     })
     const {
-        props: { srcSet: mobile, ...rest },
+        props: { srcSet: mobile },
     } = getImageProps({
         ...common,
         width: 750,
@@ -26,7 +26,7 @@ export default function HomeBGImg() {
             <source media="(min-width: 1024px)" srcSet={desktop} />
             <source media="(min-width: 300px)" srcSet={mobile} />
             <img 
-                {...rest} 
+                priority='true'
                 style={{
                     width: '100%',
                     height: '100%',
